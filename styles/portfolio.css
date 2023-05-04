@@ -1,0 +1,276 @@
+:root {
+  --primary-color: #b6cdbd;
+  --secondary-color: #f2f9f1;
+  --tertiary-color: #272142;
+  --heading-font-family: "Playfair Display", serif;
+  --default-font-family: "Poppins", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font-family);
+}
+
+body {
+  font-family: var(--default-font-family);
+}
+
+h1 {
+  font-size: 96px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+footer {
+  margin: 80px 0 50px 0;
+}
+
+.navbar {
+  padding: 0 120px;
+}
+
+.nav-link {
+  padding: 0 30px;
+  line-height: 38px;
+  color: var(--tertiary-color) !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+.active {
+  color: var(--primary-color) !important;
+}
+
+.hero {
+  background: var(--secondary-color);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero p {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  color: var(--tertiary-color);
+}
+
+.hero h2 {
+  font-family: var(--default-font-family);
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.container h2 {
+  margin-bottom: 25px;
+}
+
+.btn-main {
+  background: var(--primary-color);
+  font-size: 18px;
+  line-height: 27px;
+  color: white;
+  border-radius: 4px;
+  padding: 15px 30px;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-main:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-second {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  font-size: 18px;
+  line-height: 27px;
+  border-radius: 4px;
+  padding: 15px 30px;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-second:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.btn-third {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  font-size: 18px;
+  line-height: 27px;
+  border-radius: 4px;
+  padding: 15px 30px;
+}
+
+.btn-third:hover {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  cursor: default;
+}
+
+.project-description {
+  padding: 60px;
+}
+
+.content-container {
+  padding: 80px 20px;
+}
+
+.content h1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.content h2 {
+  font-family: var(--default-font-family);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.content h3 {
+  font-family: var(--default-font-family);
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.content p {
+  font-size: 14px;
+}
+
+.contact-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.content-container p {
+  font-size: 16px;
+}
+
+.content {
+  margin: 30px;
+}
+
+.portrait {
+  border-radius: 20px;
+}
+
+.contact-box {
+  background: var(--secondary-color);
+  padding: 30px 120px;
+  border-radius: 10px;
+}
+
+.contact-box p {
+  margin: 0;
+}
+
+.email-link {
+  margin: 40px 0 20px 0;
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+  font-weight: 500;
+  transition: all 200ms ease-in-out;
+}
+
+.email-link:hover {
+  color: var(--primary-color);
+}
+
+.social-links a {
+  margin: 0 15px;
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: all 200ms ease-in-out;
+}
+
+.social-links a:hover {
+  color: var(--secondary-color);
+  background: var(--primary-color);
+}
+
+.github-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: all 200ms ease-in-out;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .project-description {
+    padding: 0;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero p {
+    font-size: 24px;
+    line-height: 1.8;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .content-container {
+    text-align: center;
+    padding: 0 5px 10px 5px;
+  }
+
+  h1 {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  footer {
+    border-top: 1px solid var(--primary-color);
+  }
+
+  .navbar {
+    padding: 0;
+  }
+}
