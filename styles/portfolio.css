@@ -60,6 +60,7 @@ footer {
   line-height: 38px;
   color: var(--tertiary-color) !important;
   font-weight: 500;
+  font-size: 18px;
 }
 
 .nav-link:hover {
@@ -148,6 +149,10 @@ footer {
   cursor: default;
 }
 
+.github-project {
+  margin-left: 20px;
+}
+
 .project-description {
   padding: 60px;
 }
@@ -200,6 +205,10 @@ footer {
   font-size: 16px;
 }
 
+.content-container.work {
+  padding: 40px 20px;
+}
+
 .content {
   margin: 30px;
 }
@@ -230,6 +239,11 @@ footer {
 .skills i {
   color: var(--quaternary-color);
   font-size: 18px;
+}
+
+.container.skills h2 {
+  font-size: 40px;
+  margin-top: 20px;
 }
 
 .contact-box {
@@ -311,7 +325,7 @@ footer {
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 36px;
   }
 
   h3 {
@@ -345,5 +359,14 @@ footer {
 
   .logo {
     max-width: 60px;
+  }
+
+  .skills .h3 {
+    margin-top: 40px;
+  }
+
+  .github-project {
+    display: block;
+    margin: 10px 20px;
   }
 }
