@@ -98,11 +98,6 @@ footer {
   color: var(--quaternary-color);
 }
 
-.homepage-portrait {
-  border-radius: 400px;
-  max-width: 360px;
-}
-
 .container h2 {
   margin-bottom: 25px;
 }
@@ -310,6 +305,10 @@ footer {
     text-align: center;
   }
 
+  .about-me {
+    margin: 40px 0;
+  }
+
   footer {
     border-top: 1px solid var(--primary-color);
   }
@@ -319,6 +318,15 @@ footer {
   }
 
   .portrait {
-    margin: 0;
+    margin: 0 0 40px 0;
+    max-width: 350px;
+  }
+
+  .projects {
+    padding-top: 60px;
+  }
+
+  .logo {
+    max-width: 60px;
   }
 }
