@@ -215,6 +215,23 @@ footer {
   padding: 40px;
 }
 
+.skills {
+  background: var(--secondary-color);
+  margin: 0;
+  padding: 40px;
+  max-width: 100%;
+}
+
+.skills .row {
+  margin: 0 60px;
+}
+
+.skills p,
+.skills i {
+  color: var(--quaternary-color);
+  font-size: 18px;
+}
+
 .contact-box {
   background: var(--secondary-color);
   padding: 30px 120px;
