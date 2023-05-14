@@ -366,6 +366,10 @@ footer {
     padding-top: 60px;
   }
 
+  .work h1 {
+    font-size: 36px;
+  }
+
   .logo {
     max-width: 60px;
   }
