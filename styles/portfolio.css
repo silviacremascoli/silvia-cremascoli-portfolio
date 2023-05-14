@@ -374,6 +374,10 @@ footer {
     margin-top: 40px;
   }
 
+  .skills .row {
+    margin: 0 30px;
+  }
+
   .github-project {
     display: block;
     margin: 10px 20px;
