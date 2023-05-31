@@ -169,9 +169,6 @@ footer {
   margin-right: 20px;
 }
 
-.certificate-link {
-}
-
 .content-container {
   padding: 80px 20px;
 }
@@ -392,12 +389,16 @@ footer {
 
   .github-project {
     display: block;
-    margin: 10px 20px;
+    margin: 10px 90px;
   }
 }
 
 @media (max-width: 576px) {
   .resume-link {
     margin-right: 0px;
+  }
+  .github-project {
+    display: block;
+    margin: 10px 20px;
   }
 }
