@@ -111,12 +111,14 @@ footer {
   border-radius: 4px;
   padding: 15px 30px;
   transition: all 200ms ease-in-out;
+  transition: transform 0.5s;
 }
 
 .btn-main:hover {
   background: var(--secondary-color);
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
+  transform: scale(1.1);
 }
 
 .btn-second {
@@ -127,11 +129,13 @@ footer {
   border-radius: 4px;
   padding: 15px 30px;
   transition: all 200ms ease-in-out;
+  transition: transform 0.5s;
 }
 
 .btn-second:hover {
   background: var(--primary-color);
   color: var(--secondary-color);
+  transform: scale(1.1);
 }
 
 .btn-third {
@@ -141,12 +145,14 @@ footer {
   line-height: 27px;
   border-radius: 4px;
   padding: 15px 30px;
+  transition: transform 0.5s;
 }
 
 .btn-third:hover {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
   cursor: default;
+  transform: scale(1.1);
 }
 
 .github-project {
