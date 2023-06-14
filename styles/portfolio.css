@@ -175,6 +175,10 @@ footer {
   margin-right: 20px;
 }
 
+.personal-image {
+  margin-top: 40px;
+}
+
 .content-container {
   padding: 80px 20px;
 }
@@ -326,9 +330,8 @@ footer {
     border-top: 1px solid var(--primary-color);
   }
 
-  .project-description {
+  .navbar {
     padding: 0;
-    text-align: center;
   }
 
   .hero {
@@ -361,20 +364,25 @@ footer {
 
   .resume-link {
     margin-bottom: 15px;
-    margin-right: 10px;
+    margin-right: 15px;
   }
 
   .certificate-link {
     margin-bottom: 15px;
   }
 
-  .navbar {
-    padding: 0;
+  .personal-image {
+    margin-top: 0;
   }
 
   .portrait {
     margin: 0 0 40px 0;
-    max-width: 350px;
+    max-width: 400px;
+  }
+
+  .project-description {
+    padding: 0;
+    text-align: center;
   }
 
   .projects {
