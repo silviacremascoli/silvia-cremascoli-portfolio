@@ -56,7 +56,7 @@ footer {
 }
 
 .nav-link {
-  padding: 0 30px;
+  padding: 10px 30px 5px 0;
   line-height: 25px;
   color: var(--tertiary-color) !important;
   font-weight: 500;
@@ -400,6 +400,9 @@ footer {
   .github-project {
     display: block;
     margin: 10px 90px;
+  }
+  .contact-footer {
+    border-top: none;
   }
 }
 
