@@ -24,7 +24,6 @@ h1 {
   font-size: 96px;
   font-weight: bold;
   line-height: 1;
-  color: var(--quaternary-color);
 }
 
 h2 {
@@ -75,6 +74,16 @@ footer {
   background: var(--secondary-color);
   text-align: center;
   padding: 100px;
+}
+
+.my-name {
+  background-image: linear-gradient(to right, #5c715e 0%, #b6cdbd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-size: 100%;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 .hero p {
