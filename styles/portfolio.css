@@ -24,6 +24,7 @@ h1 {
   font-size: 96px;
   font-weight: bold;
   line-height: 1;
+  color: var(--quaternary-color);
 }
 
 h2 {
