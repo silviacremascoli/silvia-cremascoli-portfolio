@@ -85,6 +85,7 @@ footer {
   background-size: 100%;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--quaternary-color);
 }
 
 .hero p {
