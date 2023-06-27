@@ -519,4 +519,8 @@ footer {
   .contact-form {
     padding: 0 40px;
   }
+  .contact-details h1 {
+    font-size: 56px;
+    margin: 40px 0;
+  }
 }
