@@ -18,10 +18,19 @@ h6 {
 
 body {
   font-family: var(--default-font-family);
+  background: #fcf9f480;
+}
+
+nav {
+  background: #fcf9f480;
+}
+
+nav:hover {
+  background: #fcf9f4;
 }
 
 h1 {
-  font-size: 96px;
+  font-size: 104px;
   font-weight: bold;
   line-height: 1;
   color: var(--quaternary-color);
@@ -52,7 +61,7 @@ footer {
 }
 
 .navbar {
-  padding: 0 120px;
+  padding: 10px 120px;
 }
 
 .nav-link {
@@ -244,6 +253,10 @@ footer {
   margin-left: 50px;
 }
 
+.work-title {
+  margin-top: 20px;
+}
+
 .projects {
   background: var(--secondary-color);
   padding: 40px;
@@ -327,7 +340,7 @@ footer {
 
 @media (max-width: 992px) {
   h1 {
-    font-size: 56px;
+    font-size: 64px;
     line-height: 1.2;
   }
 
