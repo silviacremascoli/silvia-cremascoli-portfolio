@@ -18,7 +18,7 @@ h6 {
 
 body {
   font-family: var(--default-font-family);
-  background: #fcf9f480;
+  background: #fcf9f4;
 }
 
 nav {
@@ -318,6 +318,7 @@ footer {
   padding: 10px 16px;
   font-size: 18px;
   border-radius: 50%;
+  border: 0.5px solid var(--primary-color);
   transition: all 200ms ease-in-out;
 }
 
@@ -351,10 +352,11 @@ footer {
 .contact-form {
   border-right: 1px solid var(--primary-color);
   margin: 0 auto;
-  padding: 0px 80px;
+  padding: 0 80px;
   color: var(--quaternary-color);
 }
 
+.contact-form input,
 .contact-form select {
   color: var(--quaternary-color);
 }
@@ -485,6 +487,7 @@ footer {
     border-right: none;
     margin: 0 auto 40px auto;
     text-align: left;
+    padding: 0 60px;
   }
 
   .contact-form input,
@@ -504,7 +507,7 @@ footer {
 
 @media (max-width: 576px) {
   .resume-link {
-    margin-right: 0px;
+    margin-right: 0;
   }
   .github-project {
     display: block;
@@ -512,5 +515,8 @@ footer {
   }
   .portrait {
     max-width: 350px;
+  }
+  .contact-form {
+    padding: 0 40px;
   }
 }
