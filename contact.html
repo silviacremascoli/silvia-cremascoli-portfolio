@@ -78,28 +78,76 @@
         </div>
       </div>
     </nav>
-    <div class="content-container container">
-      <div class="content mt-0 mb-0 text-center">
-        <h1 class="mt-5 mb-5">👋<br />Let's get in touch!</h1>
-        <h3><i class="fa-regular fa-envelope me-2"></i>Email</h3>
-        <p>
-          <a
-            href="mailto:silcremascoli@gmail.com"
-            class="contact-link"
-            title="Email Silvia Cremascoli"
-            >silcremascoli@gmail.com</a
-          >
-        </p>
-        <h3><i class="fa-brands fa-linkedin me-2"></i>LinkedIn</h3>
-        <p>
-          <a
-            href="https://www.linkedin.com/in/silvia-cremascoli/"
-            class="contact-link"
-            target="_blank"
-            title="LinkedIn Silvia Cremascoli"
-            >@Silvia Cremascoli</a
-          >
-        </p>
+    <div class="contact-details content-container container">
+      <h1 class="mb-5 text-center">👋<br />Let's get in touch!</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mt-5 contact-form">
+            <h2 class="mb-5 text-center">Write me a message 📩</h2>
+            <form method="POST" name="contact" data-netlify="true">
+              <div class="form-group mb-3">
+                <label for="name-surname" class="ms-2">Name and surname</label>
+                <input
+                  type="text"
+                  class="form-control mt-2"
+                  id="name-surname"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="email-address" class="ms-2">Email address</label>
+                <input
+                  type="email"
+                  class="form-control mt-2"
+                  id="email-address"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="I-want-to" class="ms-2">I want to:</label>
+                <select class="form-control mt-2" id="I-want-to" required>
+                  <option>offer you a permanent job</option>
+                  <option>hire you for a freelance project</option>
+                  <option>get your help for my project</option>
+                  <option>just have a chat with you</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="your-message" class="ms-2">Your message:</label>
+                <textarea
+                  class="form-control mt-2"
+                  id="your-message"
+                  rows="8"
+                  required
+                ></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-6 mt-5 d-flex flex-column justify-content-center">
+            <div class="text-center">
+              <h2 class="mb-5">Or find me here:</h2>
+              <h3><i class="fa-regular fa-envelope me-2"></i>Email</h3>
+              <p>
+                <a
+                  href="mailto:silcremascoli@gmail.com"
+                  class="contact-link"
+                  title="Email Silvia Cremascoli"
+                  >silcremascoli@gmail.com</a
+                >
+              </p>
+              <h3><i class="fa-brands fa-linkedin me-2"></i>LinkedIn</h3>
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/silvia-cremascoli/"
+                  class="contact-link"
+                  target="_blank"
+                  title="LinkedIn Silvia Cremascoli"
+                  >@Silvia Cremascoli</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container">
