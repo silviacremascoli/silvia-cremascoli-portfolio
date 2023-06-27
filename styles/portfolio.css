@@ -352,6 +352,16 @@ footer {
   border-right: 1px solid var(--primary-color);
   margin: 0 auto;
   padding: 0px 80px;
+  color: var(--quaternary-color);
+}
+
+.contact-form select {
+  color: var(--quaternary-color);
+}
+
+.contact-form .btn-second {
+  font-size: 16px;
+  padding: 10px 20px;
 }
 
 .contact-footer {
@@ -480,6 +490,11 @@ footer {
   .contact-form input,
   .contact-form select {
     font-size: 16px;
+  }
+
+  .contact-form .btn-second {
+    display: block;
+    margin: 0 auto;
   }
 
   .contact-footer {
