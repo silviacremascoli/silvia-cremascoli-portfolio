@@ -394,6 +394,10 @@ footer {
     padding: 5px;
   }
 
+  .contact-nav-link {
+    margin-bottom: 10px;
+  }
+
   .hero {
     padding: 60px 20px;
   }
