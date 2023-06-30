@@ -320,11 +320,13 @@ footer {
   border-radius: 50%;
   border: 0.5px solid var(--primary-color);
   transition: all 200ms ease-in-out;
+  transition: transform 0.5s;
 }
 
 .social-links a:hover {
   color: var(--secondary-color);
   background: var(--primary-color);
+  transform: scale(1.2);
 }
 
 .github-link {
