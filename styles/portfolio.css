@@ -542,6 +542,9 @@ footer {
 }
 
 @media (max-width: 576px) {
+  .hero i {
+    padding: 8px;
+  }
   .resume-link {
     margin-right: 0;
   }
@@ -551,6 +554,11 @@ footer {
   }
   .portrait {
     max-width: 350px;
+  }
+  .work h1 {
+    font-size: 52px;
+    padding: 0 30px 0 30px;
+    line-height: 1.2;
   }
   .contact-form {
     padding: 0 40px;
