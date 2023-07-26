@@ -65,20 +65,28 @@ footer {
 }
 
 .navbar {
-  padding: 5px 120px;
+  padding: 2px 120px;
 }
 
 .nav-link {
-  padding: 10px 30px 5px 0;
+  padding: 10px 40px 5px 0;
   line-height: 25px;
   color: var(--tertiary-color) !important;
   font-weight: 500;
   font-size: 18px;
   transition: all 300ms ease-in-out;
+  transition: transform 0.5s;
 }
 
 .nav-link:hover {
   color: var(--primary-color) !important;
+  transform: scale(1.1);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  box-shadow: none;
 }
 
 .active {
@@ -86,7 +94,12 @@ footer {
 }
 
 .hero {
-  background: var(--secondary-color);
+  background: linear-gradient(
+    180deg,
+    rgb(182, 205, 189) 0%,
+    rgb(242, 249, 241) 100%
+  );
+
   text-align: center;
   padding: 100px;
 }
@@ -122,6 +135,16 @@ footer {
   padding: 15px;
   margin-bottom: 15px;
   color: var(--quaternary-color);
+}
+
+.white-curve {
+  background: var(--secondary-color);
+  fill: #fcf9f4;
+}
+
+.green-curve {
+  background: #fcf9f4;
+  fill: var(--secondary-color);
 }
 
 .container h2 {
@@ -206,7 +229,7 @@ footer {
 }
 
 .content-container {
-  padding: 80px 20px;
+  padding: 50px 20px;
 }
 
 .content h1 {
@@ -398,8 +421,13 @@ footer {
     padding: 5px;
   }
 
+  .nav-link:hover {
+    color: var(--primary-color) !important;
+    transform: none;
+  }
+
   .contact-nav-link {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .hero {
