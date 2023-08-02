@@ -39,7 +39,7 @@ footer {
     transition: all 300ms ease-in-out;
     transition: transform 0.5s;
 
-    & :hover {
+    &:hover {
       color: $secondary-color;
       background: $primary-color;
       transform: scale(1.2);

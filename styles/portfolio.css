@@ -55,53 +55,59 @@ p {
   }
 }
 .btn-main {
-  background: #b6cdbd;
   font-size: 18px;
   line-height: 27px;
-  color: white;
   border-radius: 4px;
   padding: 15px 30px;
   transition: all 300ms ease-in-out;
   transition: transform 0.5s;
+  background: #b6cdbd;
+  color: white;
+}
+.btn-main:hover {
+  transform: scale(1.1);
 }
 .btn-main:hover {
   background: #f2f9f1;
   color: #b6cdbd;
   border: 1px solid #b6cdbd;
-  transform: scale(1.1);
 }
 
 .btn-second {
-  color: #b6cdbd;
-  border: 1px solid #b6cdbd;
   font-size: 18px;
   line-height: 27px;
   border-radius: 4px;
   padding: 15px 30px;
   transition: all 300ms ease-in-out;
   transition: transform 0.5s;
+  color: #b6cdbd;
+  border: 1px solid #b6cdbd;
+}
+.btn-second:hover {
+  transform: scale(1.1);
 }
 .btn-second:hover {
   background: #b6cdbd;
   color: #f2f9f1;
-  transform: scale(1.1);
 }
 
 .btn-third {
-  color: #b6cdbd;
-  border: 1px solid #b6cdbd;
   font-size: 18px;
   line-height: 27px;
   border-radius: 4px;
   padding: 15px 30px;
   transition: all 300ms ease-in-out;
   transition: transform 0.5s;
+  color: #b6cdbd;
+  border: 1px solid #b6cdbd;
+}
+.btn-third:hover {
+  transform: scale(1.1);
 }
 .btn-third:hover {
   color: #b6cdbd;
   border: 1px solid #b6cdbd;
   cursor: default;
-  transform: scale(1.1);
 }
 
 .contact-details h1 {
@@ -258,7 +264,7 @@ footer p {
   transition: all 300ms ease-in-out;
   transition: transform 0.5s;
 }
-.social-links a :hover {
+.social-links a:hover {
   color: #f2f9f1;
   background: #b6cdbd;
   transform: scale(1.2);
