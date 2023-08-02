@@ -1,0 +1,71 @@
+.project-description {
+  padding: 60px;
+}
+
+.about-me {
+  margin: 20px 10px 30px 80px;
+  p {
+    text-align: justify;
+  }
+}
+
+.resume-link {
+  margin-right: 20px;
+}
+
+.personal-image {
+  margin-top: 40px;
+}
+
+.portrait {
+  border-radius: 400px;
+  max-width: 500px;
+  margin-left: 50px;
+}
+
+@media (max-width: 992px) {
+  .about-me {
+    margin: 40px 0;
+    p {
+      text-align: center;
+      margin: 0 20px;
+    }
+  }
+
+  .resume-link {
+    margin-bottom: 15px;
+    margin-right: 15px;
+  }
+
+  .certificate-link {
+    margin-bottom: 15px;
+  }
+
+  .personal-image {
+    margin-top: 0;
+  }
+
+  .portrait {
+    margin: 0 0 40px 0;
+    max-width: 450px;
+  }
+
+  .project-description {
+    padding: 0;
+    text-align: center;
+  }
+
+  .projects {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .resume-link {
+    margin-right: 0;
+  }
+
+  .portrait {
+    max-width: 350px;
+  }
+}

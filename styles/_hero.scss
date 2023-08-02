@@ -1,0 +1,70 @@
+.my-name {
+  background-image: linear-gradient(
+    to right,
+    $quaternary-color 0%,
+    $primary-color 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-size: 100%;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -webkit-text-stroke: 1px $quaternary-color;
+}
+
+.hero {
+  background: linear-gradient(
+    180deg,
+    rgb(182, 205, 189) 0%,
+    rgb(242, 249, 241) 100%
+  );
+  text-align: center;
+  padding: 100px;
+
+  p {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    color: $tertiary-color;
+  }
+
+  h2 {
+    font-family: $default-font-family;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+
+  i {
+    font-size: 30px;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: $quaternary-color;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    padding: 60px 20px;
+    p {
+      font-size: 24px;
+      line-height: 1.8;
+    }
+
+    h2 {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    i {
+      padding: 8px;
+      font-size: 26px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+nav {
+  background: rgba($quinary-color, 0.3);
+  &:hover {
+    background: $quinary-color;
+  }
+}
+
+.logo {
+  max-width: 60px;
+}
+
+.navbar {
+  padding: 2px 120px;
+}
+
+.nav-link {
+  padding: 10px 40px 5px 0;
+  line-height: 25px;
+  color: $tertiary-color !important;
+  font-weight: 500;
+  font-size: 18px;
+  transition: all 300ms ease-in-out;
+  transition: transform 0.5s;
+  &:hover {
+    color: $primary-color !important;
+    transform: scale(1.1);
+  }
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  box-shadow: none;
+}
+
+.active {
+  color: $primary-color !important;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 5px;
+  }
+
+  .nav-link:hover {
+    transform: none;
+  }
+
+  .contact-nav-link {
+    margin-bottom: 12px;
+  }
+}

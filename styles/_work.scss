@@ -1,0 +1,60 @@
+.github-project {
+  margin-left: 20px;
+}
+
+.work-title {
+  margin-top: 50px;
+}
+
+.projects {
+  background: $secondary-color;
+  padding: 40px;
+}
+
+.skills {
+  background: $secondary-color;
+  margin: 0;
+  padding: 40px;
+  max-width: 100%;
+
+  .row {
+    margin: 0 60px;
+  }
+
+  p,
+  i {
+    color: $quaternary-color;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .skills {
+    h3 {
+      margin-top: 40px;
+    }
+
+    .row {
+      margin: 0 30px;
+    }
+  }
+
+  .github-project {
+    display: block;
+    margin: 10px 90px;
+  }
+}
+
+@media (max-width: 576px) {
+  .work {
+    h1 {
+      font-size: 52px;
+      padding: 0 30px 0 30px;
+      line-height: 1.2;
+    }
+  }
+  .github-project {
+    display: block;
+    margin: 10px 20px;
+  }
+}
