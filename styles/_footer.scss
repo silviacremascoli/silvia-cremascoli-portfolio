@@ -20,7 +20,7 @@ footer {
   font-size: 22px;
   color: $quaternary-color;
   font-weight: 500;
-  transition: all 300ms ease-in-out;
+  transition: $transition;
 
   &:hover {
     color: $primary-color;
@@ -36,8 +36,8 @@ footer {
     font-size: 18px;
     border-radius: 50%;
     border: 0.5px solid $primary-color;
-    transition: all 300ms ease-in-out;
-    transition: transform 0.5s;
+    transition: $transition;
+    transition: $transform;
 
     &:hover {
       color: $secondary-color;
@@ -50,7 +50,7 @@ footer {
 .github-link {
   text-decoration: none;
   color: $primary-color;
-  transition: all 300ms ease-in-out;
+  transition: $transition;
 
   &:hover {
     text-decoration: underline;

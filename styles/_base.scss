@@ -5,6 +5,7 @@ h4,
 h5,
 h6 {
   font-family: $title-font-family;
+  color: $quaternary-color;
 }
 
 body {
@@ -13,31 +14,29 @@ body {
   overflow-x: hidden;
 }
 
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+
 h1 {
   font-size: 104px;
-  font-weight: bold;
   line-height: 1;
   color: $quaternary-color;
 }
 
 h2 {
   font-size: 56px;
-  font-weight: bold;
-  color: $quaternary-color;
 }
 
 h3 {
   font-size: 48px;
-  font-weight: bold;
-  color: $quaternary-color;
-}
-
-h4 {
-  color: $quaternary-color;
 }
 
 p {
   font-size: $standard-font-size;
+  color: $tertiary-color;
   line-height: 30px;
 }
 

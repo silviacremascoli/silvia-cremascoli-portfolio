@@ -21,11 +21,19 @@
   }
 
   .btn-second {
-    font-size: 16px;
+    font-size: $standard-font-size;
     padding: 10px 20px;
   }
 }
 
+.contact-link {
+  color: $primary-color;
+  text-decoration: none;
+  transition: $transition;
+  &:hover {
+    color: $quaternary-color;
+  }
+}
 .contact-footer {
   margin: 50px auto;
   padding-top: 35px;
