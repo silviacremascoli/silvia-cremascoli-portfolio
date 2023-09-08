@@ -158,6 +158,7 @@ function displaySkill() {
   });
   skillHTML = skillHTML + `</div>`;
   skill.innerHTML = skillHTML;
+  AOS.init();
 }
 
 function displayTool() {
@@ -168,6 +169,7 @@ function displayTool() {
   });
   toolHTML = toolHTML + `</div>`;
   tool.innerHTML = toolHTML;
+  AOS.init();
 }
 
 function displayLearning() {
@@ -178,6 +180,7 @@ function displayLearning() {
   });
   learningHTML = learningHTML + `</div>`;
   learningDiv.innerHTML = learningHTML;
+  AOS.init();
 }
 
 function displayProject() {
@@ -223,7 +226,6 @@ function displayProject() {
   AOS.init();
 }
 
-AOS.init();
 displayProject();
 displaySkill();
 displayTool();
