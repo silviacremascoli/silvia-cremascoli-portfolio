@@ -61,125 +61,125 @@ const projects = [
   },
 ];
 
-const skills = [
-  {
-    name: "HTML",
-    class: "fa-brands fa-html5",
+const skillsToolsLearning = {
+  skills: {
+    title: "My Skills",
+    types: [
+      {
+      name: "HTML",
+      class: "fa-brands fa-html5",
+      },
+      {
+        name: "CSS",
+        class: "fa-brands fa-css3-alt",
+      },
+      {
+        name: "SASS",
+        class: "fa-brands fa-sass",
+      },
+      {
+        name: "BOOTSTRAP",
+        class: "fa-brands fa-bootstrap",
+      },
+      {
+        name: "JAVASCRIPT",
+        class: "fa-brands fa-square-js",
+      },
+      {
+        name: "API",
+        class: "fa-solid fa-gear",
+      },
+      {
+        name: "REACT.JS",
+        class: "fa-brands fa-react",
+      },
+      {
+        name: "VUE.JS",
+        class: "fa-brands fa-vuejs",
+      },
+      {
+        name: "PHP",
+        class: "fa-brands fa-php",
+      }
+    ]
   },
-  {
-    name: "CSS",
-    class: "fa-brands fa-css3-alt",
+  tools: {
+      title: "My Tools",
+      types: [
+      {
+        name: "VISUAL STUDIO CODE",
+        class: "fa-solid fa-code",
+      },
+      {
+        name: "PHPSTORM",
+        class: "fa-solid fa-laptop-code",
+      },
+      {
+        name: "GITHUB",
+        class: "fa-brands fa-github",
+      },
+      {
+        name: "FIGMA",
+        class: "fa-brands fa-figma",
+      },
+      {
+        name: "CANVA",
+        class: "fa-solid fa-pencil",
+      },
+      {
+        name: "WORDPRESS",
+        class: "fa-brands fa-wordpress",
+      },
+      {
+        name: "JIRA",
+        class: "fa-brands fa-jira",
+      },
+      {
+        name: "CONFLUENCE",
+        class: "fa-brands fa-confluence",
+      }
+    ]
   },
-  {
-    name: "SASS",
-    class: "fa-brands fa-sass",
-  },
-  {
-    name: "BOOTSTRAP",
-    class: "fa-brands fa-bootstrap",
-  },
-  {
-    name: "JAVASCRIPT",
-    class: "fa-brands fa-square-js",
-  },
-  {
-    name: "API",
-    class: "fa-solid fa-gear",
-  },
-  {
-    name: "REACT.JS",
-    class: "fa-brands fa-react",
-  },
-  {
-    name: "VUE.JS",
-    class: "fa-brands fa-vuejs",
-  },
-  {
-    name: "PHP",
-    class: "fa-brands fa-php",
-  },
-];
+  learning: {
+    title: "Learning...",
+    types: [
+      {
+        name: "UNIT TESTING",
+        class: "fa-solid fa-wrench",
+      },
+      {
+        name: "TYPESCRIPT",
+        class: "fa-brands fa-windows",
+      },
+      {
+        name: "NEXT.JS",
+        class: "fa-brands fa-react",
+      },
+    ]
+  }
+}
 
-const tools = [
-  {
-    name: "VISUAL STUDIO CODE",
-    class: "fa-solid fa-code",
-  },
-  {
-    name: "PHPSTORM",
-    class: "fa-solid fa-laptop-code",
-  },
-  {
-    name: "GITHUB",
-    class: "fa-brands fa-github",
-  },
-  {
-    name: "FIGMA",
-    class: "fa-brands fa-figma",
-  },
-  {
-    name: "CANVA",
-    class: "fa-solid fa-pencil",
-  },
-  {
-    name: "WORDPRESS",
-    class: "fa-brands fa-wordpress",
-  },
-  {
-    name: "JIRA",
-    class: "fa-brands fa-jira",
-  },
-  {
-    name: "CONFLUENCE",
-    class: "fa-brands fa-confluence",
-  },
-];
-
-const learning = [
-  {
-    name: "UNIT TESTING",
-    class: "fa-solid fa-wrench",
-  },
-  {
-    name: "TYPESCRIPT",
-    class: "fa-brands fa-windows",
-  },
-  {
-    name: "NEXT.JS",
-    class: "fa-brands fa-react",
-  },
-];
 
 function displaySkill() {
   const skill = document.getElementById("my-skills");
-  let skillHTML = `<div>`;
-  skills.forEach((mySkill) => {
-    skillHTML = skillHTML + `<p><i class="${mySkill.class}"></i> ${mySkill.name}</p>`;
+  let skillHTML = `<div class="row">`;
+  Object.values(skillsToolsLearning).forEach((mySkill) => {
+    skillHTML = skillHTML +
+        `
+        <div class="col-lg-4 text-center"
+             data-aos="fade-up"
+             data-aos-duration="2000"
+             data-aos-easing="ease-in-sine">
+          <h2 class="mb-4">${mySkill.title}</h2>
+        `;
+    let typeArray = mySkill.types;
+    typeArray.forEach((value) => {
+      skillHTML = skillHTML +
+          `<p><i class="${value.class}"></i> ${value.name}</p>`;
+    });
+    skillHTML = skillHTML + `</div>`;
+    skill.innerHTML = skillHTML;
   });
-  skillHTML = skillHTML + `</div>`;
-  skill.innerHTML = skillHTML;
-  AOS.init();
-}
-
-function displayTool() {
-  const tool = document.getElementById("my-tools");
-  let toolHTML = `<div>`;
-  tools.forEach((myTool) => {
-    toolHTML = toolHTML + `<p><i class="${myTool.class}"></i> ${myTool.name}</p>`;
-  });
-  toolHTML = toolHTML + `</div>`;
-  tool.innerHTML = toolHTML;
-  AOS.init();
-}
-
-function displayLearning() {
-  const learningDiv = document.getElementById("learning");
-  let learningHTML = `<div>`;
-  learning.forEach((topic) => {
-    learningHTML = learningHTML + `<p><i class="${topic.class}"></i> ${topic.name}</p>`;
-  });
-  learningHTML = learningHTML + `</div>`;
-  learningDiv.innerHTML = learningHTML;
   AOS.init();
 }
 
@@ -228,5 +228,3 @@ function displayProject() {
 
 displayProject();
 displaySkill();
-displayTool();
-displayLearning();

@@ -28,17 +28,18 @@ const languages = [
 function displayLanguage() {
     const language = document.getElementById("languages");
     let languageHTML = `<div>`;
-    languages.forEach((myLanguage) => {
+    languages.forEach((value) => {
         languageHTML = languageHTML +
             `<i
-                class="${myLanguage.class}"
+                class="${value.class}"
                 data-aos="zoom-in"
-                data-aos-duration="${myLanguage.AOS}"
+                data-aos-duration="${value.AOS}"
                 data-aos-easing="ease-in-sine"
             ></i>`;
     });
     languageHTML = languageHTML + `</div>`;
     language.innerHTML = languageHTML;
+    AOS.init();
 }
 
 displayLanguage();
