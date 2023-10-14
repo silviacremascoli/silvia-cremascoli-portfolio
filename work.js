@@ -66,8 +66,8 @@ const skillsToolsLearning = {
     title: "My Skills",
     types: [
       {
-      name: "HTML",
-      class: "fa-brands fa-html5",
+        name: "HTML",
+        class: "fa-brands fa-html5",
       },
       {
         name: "CSS",
@@ -86,6 +86,10 @@ const skillsToolsLearning = {
         class: "fa-brands fa-square-js",
       },
       {
+        name: "TYPESCRIPT",
+        class: "fa-brands fa-windows",
+      },
+      {
         name: "API",
         class: "fa-solid fa-gear",
       },
@@ -100,12 +104,12 @@ const skillsToolsLearning = {
       {
         name: "PHP",
         class: "fa-brands fa-php",
-      }
-    ]
+      },
+    ],
   },
   tools: {
-      title: "My Tools",
-      types: [
+    title: "My Tools",
+    types: [
       {
         name: "VISUAL STUDIO CODE",
         class: "fa-solid fa-code",
@@ -137,8 +141,8 @@ const skillsToolsLearning = {
       {
         name: "CONFLUENCE",
         class: "fa-brands fa-confluence",
-      }
-    ]
+      },
+    ],
   },
   learning: {
     title: "Learning...",
@@ -148,24 +152,20 @@ const skillsToolsLearning = {
         class: "fa-solid fa-wrench",
       },
       {
-        name: "TYPESCRIPT",
-        class: "fa-brands fa-windows",
-      },
-      {
         name: "NEXT.JS",
         class: "fa-brands fa-react",
       },
-    ]
-  }
-}
-
+    ],
+  },
+};
 
 function displaySkill() {
   const skill = document.getElementById("my-skills");
   let skillHTML = `<div class="row">`;
   Object.values(skillsToolsLearning).forEach((mySkill) => {
-    skillHTML = skillHTML +
-        `
+    skillHTML =
+      skillHTML +
+      `
         <div class="col-lg-4 text-center"
              data-aos="fade-up"
              data-aos-duration="2000"
@@ -174,8 +174,8 @@ function displaySkill() {
         `;
     let typeArray = mySkill.types;
     typeArray.forEach((value) => {
-      skillHTML = skillHTML +
-          `<p><i class="${value.class}"></i> ${value.name}</p>`;
+      skillHTML =
+        skillHTML + `<p><i class="${value.class}"></i> ${value.name}</p>`;
     });
     skillHTML = skillHTML + `</div>`;
     skill.innerHTML = skillHTML;
