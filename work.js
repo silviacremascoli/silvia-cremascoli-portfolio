@@ -123,6 +123,10 @@ const skillsToolsLearning = {
         class: "fa-brands fa-github",
       },
       {
+        name: "GITLAB",
+        class: "fa-brands fa-gitlab",
+      },
+      {
         name: "FIGMA",
         class: "fa-brands fa-figma",
       },
