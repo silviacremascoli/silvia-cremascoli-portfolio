@@ -135,6 +135,10 @@ const skillsToolsLearning = {
         class: "fa-brands fa-wordpress",
       },
       {
+        name: "TYPO3",
+        class: "fa-brands fa-typo3",
+      },
+      {
         name: "JIRA",
         class: "fa-brands fa-jira",
       },
