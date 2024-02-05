@@ -82,6 +82,10 @@ const skillsToolsLearning = {
         class: "fa-brands fa-bootstrap",
       },
       {
+        name: "FOUNDATION FRAMEWORK",
+        class: "fa-solid fa-user-astronaut",
+      },
+      {
         name: "JAVASCRIPT",
         class: "fa-brands fa-square-js",
       },
@@ -141,6 +145,10 @@ const skillsToolsLearning = {
       {
         name: "TYPO3",
         class: "fa-brands fa-typo3",
+      },
+      {
+        name: "PATTERN-LAB",
+        class: "fa-regular fa-circle",
       },
       {
         name: "JIRA",
