@@ -1,61 +1,61 @@
 .github-project {
-  margin-left: 20px;
+  margin-left: rem(20);
 }
 
 .work-title {
-  margin-top: 50px;
+  margin-top: rem(50);
 }
 
 .projects {
   background: $secondary-color;
-  padding: 40px;
+  padding: rem(40);
 }
 
 .skills {
   background: $secondary-color;
   margin: 0;
-  padding: 40px;
+  padding: rem(40);
   max-width: 100%;
 
   .row {
-    margin: 0 60px;
+    margin: 0 rem(60);
   }
 
   p,
   i {
     color: $quaternary-color;
-    font-size: 18px;
+    font-size: rem(18);
   }
 }
 
 @media (max-width: 992px) {
   .skills {
     h2 {
-      margin-top: 40px;
-      font-size: 48px;
+      margin-top: rem(40);
+      font-size: rem(48);
     }
 
     .row {
-      margin: 0 30px;
+      margin: 0 rem(30);
     }
   }
 
   .github-project {
     display: block;
-    margin: 10px 90px;
+    margin: rem(10) rem(90);
   }
 }
 
 @media (max-width: 576px) {
   .work {
     h1 {
-      font-size: 52px;
-      padding: 0 30px 0 30px;
+      font-size: rem(52);
+      padding: 0 rem(30) 0 rem(30);
       line-height: 1.2;
     }
   }
   .github-project {
     display: block;
-    margin: 10px 20px;
+    margin: rem(10) rem(20);
   }
 }

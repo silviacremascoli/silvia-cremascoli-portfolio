@@ -1,44 +1,44 @@
 .project-description {
-  padding: 60px;
+  padding: rem(60);
 }
 
 .about-me {
-  margin: 20px 10px 30px 80px;
+  margin: rem(20) rem(10) rem(30) rem(80);
   p {
     text-align: justify;
   }
 }
 
 .resume-link {
-  margin-right: 20px;
+  margin-right: rem(20);
 }
 
 .personal-image {
-  margin-top: 40px;
+  margin-top: rem(40);
 }
 
 .portrait {
-  border-radius: 400px;
-  max-width: 500px;
-  margin-left: 50px;
+  border-radius: rem(400);
+  max-width: rem(500);
+  margin-left: rem(50);
 }
 
 @media (max-width: 992px) {
   .about-me {
-    margin: 40px 0;
+    margin: rem(40) 0;
     p {
       text-align: center;
-      margin: 0 20px;
+      margin: 0 rem(20);
     }
   }
 
   .resume-link {
-    margin-bottom: 15px;
-    margin-right: 15px;
+    margin-bottom: rem(15);
+    margin-right: rem(15);
   }
 
   .certificate-link {
-    margin-bottom: 15px;
+    margin-bottom: rem(15);
   }
 
   .personal-image {
@@ -46,8 +46,8 @@
   }
 
   .portrait {
-    margin: 0 0 40px 0;
-    max-width: 450px;
+    margin: 0 0 rem(40) 0;
+    max-width: rem(450);
   }
 
   .project-description {
@@ -56,7 +56,7 @@
   }
 
   .projects {
-    padding-top: 60px;
+    padding-top: rem(60);
   }
 }
 
@@ -66,6 +66,6 @@
   }
 
   .portrait {
-    max-width: 350px;
+    max-width: rem(350);
   }
 }
