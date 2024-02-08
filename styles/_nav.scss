@@ -1,6 +1,6 @@
 nav {
   background: rgba($quinary-color, 0.3);
-  padding: 2px 120px;
+  padding: rem(2) rem(120);
 
   &:hover {
     background: $quinary-color;
@@ -8,24 +8,24 @@ nav {
 
   @include media-breakpoint-down(lg) {
     .navbar {
-      padding: 5px;
+      padding: rem(5);
     }
 
     .contact-nav-link {
-      margin-bottom: 12px;
+      margin-bottom: rem(12);
     }
   }
 
   .logo {
-    max-width: 60px;
+    max-width: rem(60);
   }
 
   .nav-link {
-    padding: 10px 40px 5px 0;
-    line-height: 25px;
+    padding: rem(10) rem(40) rem(5) 0;
+    line-height: rem(25);
     color: $tertiary-color !important;
     font-weight: 500;
-    font-size: 18px;
+    font-size: rem(18);
     transition: all 300ms ease-in-out;
     transition: transform 0.5s;
 

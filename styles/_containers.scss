@@ -1,51 +1,51 @@
 .container {
   h2 {
-    margin-bottom: 25px;
+    margin-bottom: rem(25);
   }
   .skills h2 {
-    font-size: 40px;
-    margin-top: 20px;
+    font-size: rem(40);
+    margin-top: rem(20);
   }
 }
 
 .content-container {
-  padding: 50px 20px;
+  padding: rem(50) rem(20);
   p {
     font-size: $standard-font-size;
   }
   .work {
-    padding: 40px 20px;
+    padding: rem(40) rem(20);
   }
 }
 
 .content {
-  margin: 30px;
+  margin: rem(30);
   h1 {
-    font-size: 64px;
-    line-height: 80px;
+    font-size: rem(64);
+    line-height: rem(80);
   }
 
   h2 {
     font-family: $default-font-family;
-    font-size: 18px;
+    font-size: rem(18);
     line-height: 1;
   }
 
   h3 {
     font-family: $default-font-family;
-    font-size: 24px;
+    font-size: rem(24);
     font-weight: bold;
     line-height: 1.5;
   }
 
   p {
-    font-size: 14px;
+    font-size: rem(14);
   }
 }
 
 @media (max-width: 992px) {
   .content-container {
     text-align: center;
-    padding: 0 5px 10px 5px;
+    padding: 0 rem(5) rem(10) rem(5);
   }
 }

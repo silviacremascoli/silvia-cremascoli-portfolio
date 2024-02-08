@@ -1,5 +1,5 @@
 footer {
-  margin: 80px 0 50px 0;
+  margin: rem(80) 0 rem(50) 0;
   p {
     opacity: 0.7;
   }
@@ -7,17 +7,17 @@ footer {
 
 .contact-box {
   background: $secondary-color;
-  padding: 30px 120px;
-  border-radius: 10px;
+  padding: rem(30) rem(120);
+  border-radius: rem(10);
   p {
     margin: 0;
   }
 }
 
 .email-link {
-  margin: 40px 0 20px 0;
+  margin: rem(40) 0 rem(20) 0;
   text-decoration: none;
-  font-size: 22px;
+  font-size: rem(22);
   color: $quaternary-color;
   font-weight: 500;
   transition: $transition;
@@ -29,11 +29,11 @@ footer {
 
 .social-links {
   a {
-    margin: 0 15px;
+    margin: 0 rem(15);
     color: $primary-color;
     background: $secondary-color;
-    padding: 10px 16px;
-    font-size: 18px;
+    padding: rem(10) rem(16);
+    font-size: rem(18);
     border-radius: 50%;
     border: 0.5px solid $primary-color;
     transition: $transition;
@@ -65,6 +65,6 @@ footer {
 
 @media (max-width: 576px) {
   footer {
-    padding: 0 50px;
+    padding: 0 rem(50);
   }
 }

@@ -21,36 +21,34 @@ h3 {
 }
 
 h1 {
-  font-size: 104px;
-  line-height: 1;
   color: $quaternary-color;
+  font-size: rem(64);
+  line-height: 1.2;
+
+  @include media-breakpoint-up(lg) {
+    font-size: rem(104);
+    line-height: 1;
+  }
 }
 
 h2 {
-  font-size: 56px;
+  font-size: rem(36);
+
+  @include media-breakpoint-up(lg) {
+    font-size: rem(56);
+  }
 }
 
 h3 {
-  font-size: 48px;
+  font-size: rem(38);
+
+  @include media-breakpoint-up(lg) {
+    font-size: rem(48);
+  }
 }
 
 p {
   font-size: $standard-font-size;
   color: $tertiary-color;
-  line-height: 30px;
-}
-
-@media (max-width: 992px) {
-  h1 {
-    font-size: 64px;
-    line-height: 1.2;
-  }
-
-  h2 {
-    font-size: 36px;
-  }
-
-  h3 {
-    font-size: 38px;
-  }
+  line-height: rem(30);
 }

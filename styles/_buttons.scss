@@ -1,15 +1,3 @@
-@mixin button {
-  font-size: $standard-font-size;
-  line-height: 27px;
-  border-radius: 4px;
-  padding: 15px 30px;
-  transition: $transition;
-  transition: $transform;
-  &:hover {
-    transform: $scale;
-  }
-}
-
 .btn-main {
   @include button;
   background: $primary-color;
