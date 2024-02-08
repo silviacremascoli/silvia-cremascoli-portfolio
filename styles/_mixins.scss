@@ -14,3 +14,15 @@
     transform: $scale;
   }
 }
+
+@mixin hero-hr {
+    position: absolute;
+    top: rem(-14);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: calc(100% + 24px) 0;
+    content: "";
+    height: rem(24);
+}

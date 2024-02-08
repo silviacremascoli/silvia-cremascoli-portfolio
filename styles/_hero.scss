@@ -20,56 +20,42 @@
     rgb(242, 249, 241) 100%
   );
   text-align: center;
-  padding: rem(100);
+  padding: rem(60) rem(20);
 
-  p {
-    font-size: rem(36);
-    font-weight: bold;
-    margin: 0;
-    color: $tertiary-color;
+  @include media-breakpoint-up(lg) {
+    padding: rem(100);
   }
 
   h2 {
     font-family: $default-font-family;
     font-weight: normal;
-    font-size: rem(24);
-    line-height: 1.5;
+    font-size: rem(20);
+    line-height: 1.6;
     margin-top: rem(20);
+
+    @include media-breakpoint-up(lg) {
+      font-size: rem(24);
+      line-height: 1.5;
+    }
   }
 
   i {
-    font-size: rem(30);
-    padding: rem(15);
+    padding: rem(8);
+    font-size: rem(26);
     margin-bottom: rem(15);
     color: $quaternary-color;
-  }
-}
 
-@media (max-width: 992px) {
-  .hero {
-    padding: rem(60) rem(20);
-    p {
-      font-size: rem(24);
-      line-height: 1.8;
-    }
-
-    h2 {
-      font-size: rem(20);
-      line-height: 1.6;
-    }
-  }
-}
-
-@media (max-width: 576px) {
-  .hero {
-    i {
-      padding: rem(8);
-      font-size: rem(26);
+    @include media-breakpoint-up(sm) {
+      font-size: rem(30);
+      padding: rem(15);
     }
   }
 
   .btn-main {
-    margin-top: rem(15);
-    margin-bottom: rem(15);
+    margin: 0;
+
+    @include media-breakpoint-up(sm) {
+      margin-top: rem(15) 0;
+    }
   }
 }
