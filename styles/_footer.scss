@@ -1,5 +1,18 @@
 footer {
   margin: rem(80) 0 rem(50) 0;
+  border-top: 1px solid $primary-color;
+  padding: 0 rem(50);
+
+
+  @include media-breakpoint-up(sm) {
+    padding: 0;
+
+  }
+
+  @include media-breakpoint-up(lg) {
+    border-top: none;
+  }
+
   p {
     opacity: 0.7;
   }
@@ -54,17 +67,5 @@ footer {
 
   &:hover {
     text-decoration: underline;
-  }
-}
-
-@media (max-width: 992px) {
-  footer {
-    border-top: 1px solid $primary-color;
-  }
-}
-
-@media (max-width: 576px) {
-  footer {
-    padding: 0 rem(50);
   }
 }

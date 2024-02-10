@@ -12231,6 +12231,18 @@ p {
 
 footer {
   margin: 5rem 0 3.125rem 0;
+  border-top: 1px solid #b6cdbd;
+  padding: 0 3.125rem;
+}
+@media (min-width: 576px) {
+  footer {
+    padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  footer {
+    border-top: none;
+  }
 }
 footer p {
   opacity: 0.7;
@@ -12283,16 +12295,6 @@ footer p {
   text-decoration: underline;
 }
 
-@media (max-width: 992px) {
-  footer {
-    border-top: 1px solid #b6cdbd;
-  }
-}
-@media (max-width: 576px) {
-  footer {
-    padding: 0 3.125rem;
-  }
-}
 hr {
   border: 0;
   width: 100%;
