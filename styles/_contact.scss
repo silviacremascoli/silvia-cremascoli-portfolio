@@ -1,6 +1,8 @@
 .contact-details {
   h1 {
     font-size: rem(64);
+    @include media-breakpoint-up(lg) {
+    }
   }
   h2 {
     font-size: rem(36);
@@ -8,32 +10,38 @@
   h3 {
     font-size: rem(24);
   }
-}
-.contact-form {
-  border-right: 1px solid $primary-color;
-  margin: 0 auto;
-  padding: 0 rem(80);
-  color: $quaternary-color;
 
-  input,
-  select {
+  .contact-form {
+    border-right: none;
+    margin: 0 auto;
+    padding: 0 rem(80);
     color: $quaternary-color;
+
+    @include media-breakpoint-up(lg) {
+      border-right: 1px solid $primary-color;
+    }
+
+    input,
+    select {
+      color: $quaternary-color;
+    }
+
+    .btn-second {
+      font-size: $standard-font-size;
+      padding: rem(10) rem(20);
+    }
   }
 
-  .btn-second {
-    font-size: $standard-font-size;
-    padding: rem(10) rem(20);
+  .contact-link {
+    color: $primary-color;
+    text-decoration: none;
+    transition: $transition;
+    &:hover {
+      color: $quaternary-color;
+    }
   }
 }
 
-.contact-link {
-  color: $primary-color;
-  text-decoration: none;
-  transition: $transition;
-  &:hover {
-    color: $quaternary-color;
-  }
-}
 .contact-footer {
   margin: rem(50) auto;
   padding-top: rem(35);

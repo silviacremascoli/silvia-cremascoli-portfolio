@@ -12107,28 +12107,31 @@ p {
 .contact-details h3, .contact-details .h3 {
   font-size: 1.5rem;
 }
-
-.contact-form {
-  border-right: 1px solid #b6cdbd;
+.contact-details .contact-form {
+  border-right: none;
   margin: 0 auto;
   padding: 0 5rem;
   color: #5c715e;
 }
-.contact-form input,
-.contact-form select {
+@media (min-width: 992px) {
+  .contact-details .contact-form {
+    border-right: 1px solid #b6cdbd;
+  }
+}
+.contact-details .contact-form input,
+.contact-details .contact-form select {
   color: #5c715e;
 }
-.contact-form .btn-second {
+.contact-details .contact-form .btn-second {
   font-size: 100%;
   padding: 0.625rem 1.25rem;
 }
-
-.contact-link {
+.contact-details .contact-link {
   color: #b6cdbd;
   text-decoration: none;
   transition: all 300ms ease-in-out;
 }
-.contact-link:hover {
+.contact-details .contact-link:hover {
   color: #5c715e;
 }
 
@@ -12185,7 +12188,14 @@ p {
 }
 
 .content-container {
-  padding: 3.125rem 1.25rem;
+  padding: 0 0.3125rem 0.625rem 0.3125rem;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .content-container {
+    padding: 3.125rem 1.25rem;
+    text-align: left;
+  }
 }
 .content-container p {
   font-size: 100%;
@@ -12216,12 +12226,6 @@ p {
   font-size: 0.875rem;
 }
 
-@media (max-width: 992px) {
-  .content-container {
-    text-align: center;
-    padding: 0 0.3125rem 0.625rem 0.3125rem;
-  }
-}
 footer {
   margin: 5rem 0 3.125rem 0;
 }
@@ -12330,17 +12334,6 @@ hr:after {
     background-position: 0 0;
   }
 }
-.my-name {
-  background-image: linear-gradient(to right, #5c715e 0%, #b6cdbd 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-size: 100%;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  -webkit-text-stroke: 1px #5c715e;
-}
-
 .hero {
   background: linear-gradient(180deg, rgb(182, 205, 189) 0%, rgb(242, 249, 241) 100%);
   text-align: center;
@@ -12350,6 +12343,16 @@ hr:after {
   .hero {
     padding: 6.25rem;
   }
+}
+.hero .my-name {
+  background-image: linear-gradient(to right, #5c715e 0%, #b6cdbd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-size: 100%;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #5c715e;
 }
 .hero h2, .hero .h2 {
   font-family: "Poppins", serif;

@@ -1,4 +1,17 @@
-.my-name {
+.hero {
+  background: linear-gradient(
+    180deg,
+    rgb(182, 205, 189) 0%,
+    rgb(242, 249, 241) 100%
+  );
+  text-align: center;
+  padding: rem(60) rem(20);
+
+  @include media-breakpoint-up(lg) {
+    padding: rem(100);
+  }
+
+  .my-name {
   background-image: linear-gradient(
     to right,
     $quaternary-color 0%,
@@ -11,19 +24,6 @@
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   -webkit-text-stroke: 1px $quaternary-color;
-}
-
-.hero {
-  background: linear-gradient(
-    180deg,
-    rgb(182, 205, 189) 0%,
-    rgb(242, 249, 241) 100%
-  );
-  text-align: center;
-  padding: rem(60) rem(20);
-
-  @include media-breakpoint-up(lg) {
-    padding: rem(100);
   }
 
   h2 {
