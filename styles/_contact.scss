@@ -1,24 +1,49 @@
 .contact-details {
   h1 {
-    font-size: rem(64);
+    margin-top: rem(40);
+    font-size: rem(56);
+
+    @include media-breakpoint-up(sm) {
+      font-size: rem(64);
+    }
+
     @include media-breakpoint-up(lg) {
+      margin-top: rem(30);
+    }
+
+    .h1-emoji {
+      display: block;
+      margin-bottom: rem(10);
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: rem(20);
+      }
     }
   }
+
   h2 {
     font-size: rem(36);
   }
+
   h3 {
     font-size: rem(24);
   }
 
   .contact-form {
     border-right: none;
-    margin: 0 auto;
-    padding: 0 rem(80);
+    margin: 0 auto rem(40) auto;
+    padding: 0 rem(60);
+    text-align: left;
     color: $quaternary-color;
+
+    @include media-breakpoint-up(sm) {
+      padding: 0 rem(80);
+    }
 
     @include media-breakpoint-up(lg) {
       border-right: 1px solid $primary-color;
+      padding: 0 rem(40);
+      margin: 0 auto;
     }
 
     input,
@@ -29,6 +54,13 @@
     .btn-second {
       font-size: $standard-font-size;
       padding: rem(10) rem(20);
+      display: block;
+      margin: 0 auto;
+
+      @include media-breakpoint-up(lg) {
+        display: inline;
+        margin: 0;
+      }
     }
   }
 
@@ -43,56 +75,11 @@
 }
 
 .contact-footer {
-  margin: rem(50) auto;
+  margin: rem(80) auto rem(50) auto;
   padding-top: rem(35);
   border-top: 1px solid $primary-color;
-}
 
-@media (max-width: 992px) {
-  .contact-details {
-    h1 {
-      margin-top: rem(60);
-    }
-    h2 {
-      font-family: $title-font-family;
-      font-size: rem(36);
-    }
-
-    h3 {
-      font-size: rem(24);
-    }
-  }
-
-  .contact-form {
-    border-right: none;
-    margin: 0 auto rem(40) auto;
-    text-align: left;
-    padding: 0 rem(60);
-
-    input,
-    select {
-      font-size: $standard-font-size;
-    }
-
-    .btn-second {
-      display: block;
-      margin: 0 auto;
-    }
-  }
-
-  .contact-footer {
-    margin-top: rem(80);
-  }
-}
-
-@media (max-width: 576px) {
-  .contact-form {
-    padding: 0 rem(40);
-  }
-  .contact-details {
-    h1 {
-      font-size: rem(56);
-      margin: rem(40) 0;
-    }
+  @include media-breakpoint-up(lg) {
+    margin-top: rem(50);
   }
 }
