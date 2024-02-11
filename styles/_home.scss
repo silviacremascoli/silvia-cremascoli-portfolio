@@ -62,10 +62,11 @@
 }
 
 .projects {
-  padding-top: rem(60);
+  background: $secondary-color;
+  padding: rem(60) rem(40) rem(40) rem(40);
 
   @include media-breakpoint-up(lg) {
-    padding-top: 0;
+    padding-top: rem(40);
   }
 
   .project-description {

@@ -1,14 +1,26 @@
-.github-project {
-  margin-left: rem(20);
-}
+.work {
+  .work-title {
+    margin-top: rem(50);
+    font-size: rem(52);
+    padding: 0 rem(30);
+    line-height: 1.2;
 
-.work-title {
-  margin-top: rem(50);
-}
+    @include media-breakpoint-up(sm) {
+      line-height: 1;
+      font-size: rem(64);
+      padding: 0;
+    }
+  }
 
-.projects {
-  background: $secondary-color;
-  padding: rem(40);
+  .github-project {
+    display: block;
+    margin: rem(10) rem(40);
+
+    @include media-breakpoint-up(lg) {
+      display: inline;
+      margin: 0 0 0 rem(20);
+    }
+  }
 }
 
 .skills {
@@ -18,44 +30,26 @@
   max-width: 100%;
 
   .row {
-    margin: 0 rem(60);
+    margin: 0 rem(30);
+
+    @include media-breakpoint-up(lg) {
+      margin: 0 rem(60);
+    }
+  }
+
+  h2 {
+    margin-top: rem(30);
+    font-size: rem(48);
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 0;
+      font-size: rem(56);
+    }
   }
 
   p,
   i {
     color: $quaternary-color;
     font-size: rem(18);
-  }
-}
-
-@media (max-width: 992px) {
-  .skills {
-    h2 {
-      margin-top: rem(40);
-      font-size: rem(48);
-    }
-
-    .row {
-      margin: 0 rem(30);
-    }
-  }
-
-  .github-project {
-    display: block;
-    margin: rem(10) rem(90);
-  }
-}
-
-@media (max-width: 576px) {
-  .work {
-    h1 {
-      font-size: rem(52);
-      padding: 0 rem(30) 0 rem(30);
-      line-height: 1.2;
-    }
-  }
-  .github-project {
-    display: block;
-    margin: rem(10) rem(20);
   }
 }

@@ -12461,11 +12461,12 @@ hr:after {
 }
 
 .projects {
-  padding-top: 3.75rem;
+  background: #f2f9f1;
+  padding: 3.75rem 2.5rem 2.5rem 2.5rem;
 }
 @media (min-width: 992px) {
   .projects {
-    padding-top: 0;
+    padding-top: 2.5rem;
   }
 }
 .projects .project-description {
@@ -12534,17 +12535,28 @@ nav .active {
   fill: #f2f9f1;
 }
 
-.github-project {
-  margin-left: 1.25rem;
-}
-
-.work-title {
+.work .work-title {
   margin-top: 3.125rem;
+  font-size: 3.25rem;
+  padding: 0 1.875rem;
+  line-height: 1.2;
 }
-
-.projects {
-  background: #f2f9f1;
-  padding: 2.5rem;
+@media (min-width: 576px) {
+  .work .work-title {
+    line-height: 1;
+    font-size: 4rem;
+    padding: 0;
+  }
+}
+.work .github-project {
+  display: block;
+  margin: 0.625rem 2.5rem;
+}
+@media (min-width: 992px) {
+  .work .github-project {
+    display: inline;
+    margin: 0 0 0 1.25rem;
+  }
 }
 
 .skills {
@@ -12554,35 +12566,25 @@ nav .active {
   max-width: 100%;
 }
 .skills .row {
-  margin: 0 3.75rem;
+  margin: 0 1.875rem;
+}
+@media (min-width: 992px) {
+  .skills .row {
+    margin: 0 3.75rem;
+  }
+}
+.skills h2, .skills .h2 {
+  margin-top: 1.875rem;
+  font-size: 3rem;
+}
+@media (min-width: 992px) {
+  .skills h2, .skills .h2 {
+    margin-top: 0;
+    font-size: 3.5rem;
+  }
 }
 .skills p,
 .skills i {
   color: #5c715e;
   font-size: 1.125rem;
-}
-
-@media (max-width: 992px) {
-  .skills h2, .skills .h2 {
-    margin-top: 2.5rem;
-    font-size: 3rem;
-  }
-  .skills .row {
-    margin: 0 1.875rem;
-  }
-  .github-project {
-    display: block;
-    margin: 0.625rem 5.625rem;
-  }
-}
-@media (max-width: 576px) {
-  .work h1, .work .h1 {
-    font-size: 3.25rem;
-    padding: 0 1.875rem 0 1.875rem;
-    line-height: 1.2;
-  }
-  .github-project {
-    display: block;
-    margin: 0.625rem 1.25rem;
-  }
 }/*# sourceMappingURL=portfolio.css.map */
