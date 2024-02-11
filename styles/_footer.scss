@@ -22,23 +22,26 @@ footer {
   background: $secondary-color;
   padding: rem(30) rem(120);
   border-radius: rem(10);
+
   p {
     margin: 0;
   }
-}
 
-.email-link {
-  margin: rem(40) 0 rem(20) 0;
-  text-decoration: none;
-  font-size: rem(22);
-  color: $quaternary-color;
-  font-weight: 500;
-  transition: $transition;
+  .email-link {
+    margin: rem(40) 0 rem(20) 0;
+    text-decoration: none;
+    font-size: rem(22);
+    color: $quaternary-color;
+    font-weight: 500;
+    transition: $transition;
 
-  &:hover {
-    color: $primary-color;
+    &:hover {
+      color: $primary-color;
+    }
   }
 }
+
+
 
 .social-links {
   a {
