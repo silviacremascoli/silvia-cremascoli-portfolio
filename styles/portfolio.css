@@ -12039,7 +12039,7 @@ h3, .h3 {
 p {
   font-size: 100%;
   color: #272142;
-  line-height: 1.875rem;
+  line-height: 2;
 }
 
 .btn-main {
@@ -12480,48 +12480,54 @@ hr:after {
   }
 }
 
-nav {
+.navbar {
   background: rgba(252, 249, 244, 0.3);
-  padding: 0.125rem 7.5rem;
+  padding: 0.3125rem;
 }
-nav:hover {
+@media (min-width: 992px) {
+  .navbar {
+    padding: 0.125rem 7.5rem;
+    background: #fcf9f4;
+  }
+}
+.navbar:hover {
   background: #fcf9f4;
 }
-@media (max-width: 991.98px) {
-  nav .navbar {
-    padding: 0.3125rem;
-  }
-  nav .contact-nav-link {
-    margin-bottom: 0.75rem;
-  }
-}
-nav .logo {
+.navbar .logo {
   max-width: 3.75rem;
 }
-nav .nav-link {
+.navbar .nav-link {
   padding: 0.625rem 2.5rem 0.3125rem 0;
   line-height: 1.5625rem;
-  color: #272142 !important;
+  color: #272142;
   font-weight: 500;
   font-size: 1.125rem;
   transition: all 300ms ease-in-out;
   transition: transform 0.5s;
 }
-nav .nav-link:hover {
-  color: #b6cdbd !important;
-  transform: scale(1.1);
+.navbar .nav-link:hover {
+  color: #b6cdbd;
+  transform: none;
 }
-@media (max-width: 991.98px) {
-  nav .nav-link:hover {
-    transform: none;
+@media (min-width: 992px) {
+  .navbar .nav-link:hover {
+    transform: scale(1.1);
   }
 }
-nav .navbar-toggler:focus,
-nav .navbar-toggler:active,
-nav .navbar-toggler-icon:focus {
+.navbar .nav-link.contact-nav-link {
+  margin-bottom: 0.75rem;
+}
+@media (min-width: 992px) {
+  .navbar .nav-link.contact-nav-link {
+    margin-bottom: 0;
+  }
+}
+.navbar .navbar-toggler:focus,
+.navbar .navbar-toggler:active,
+.navbar .navbar-toggler-icon:focus {
   box-shadow: none;
 }
-nav .active {
+.navbar .active {
   color: #b6cdbd !important;
 }
 

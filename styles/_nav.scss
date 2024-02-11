@@ -1,19 +1,14 @@
-nav {
+.navbar {
   background: rgba($quinary-color, 0.3);
-  padding: rem(2) rem(120);
+  padding: rem(5);
 
-  &:hover {
+  @include media-breakpoint-up(lg) {
+    padding: rem(2) rem(120);
     background: $quinary-color;
   }
 
-  @include media-breakpoint-down(lg) {
-    .navbar {
-      padding: rem(5);
-    }
-
-    .contact-nav-link {
-      margin-bottom: rem(12);
-    }
+  &:hover {
+    background: $quinary-color;
   }
 
   .logo {
@@ -23,18 +18,26 @@ nav {
   .nav-link {
     padding: rem(10) rem(40) rem(5) 0;
     line-height: rem(25);
-    color: $tertiary-color !important;
+    color: $tertiary-color;
     font-weight: 500;
     font-size: rem(18);
     transition: all 300ms ease-in-out;
     transition: transform 0.5s;
 
     &:hover {
-      color: $primary-color !important;
-      transform: scale(1.1);
+      color: $primary-color;
+      transform: none;
 
-      @include media-breakpoint-down(lg) {
-        transform: none;
+      @include media-breakpoint-up(lg) {
+        transform: scale(1.1);
+      }
+    }
+
+    &.contact-nav-link {
+      margin-bottom: rem(12);
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
       }
     }
   }
