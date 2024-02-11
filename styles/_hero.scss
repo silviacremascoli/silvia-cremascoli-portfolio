@@ -12,18 +12,19 @@
   }
 
   .my-name {
-  background-image: linear-gradient(
-    to right,
-    $quaternary-color 0%,
-    $primary-color 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-size: 100%;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  -webkit-text-stroke: 1px $quaternary-color;
+    background-image: linear-gradient(
+      to right,
+      $quaternary-color 0%,
+      $primary-color 50%,
+      $quaternary-color 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-size: 100%;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-text-stroke: 1px $quaternary-color;
   }
 
   h2 {

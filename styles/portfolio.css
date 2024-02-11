@@ -12350,7 +12350,7 @@ hr:after {
   }
 }
 .hero .my-name {
-  background-image: linear-gradient(to right, #5c715e 0%, #b6cdbd 100%);
+  background-image: linear-gradient(to right, #5c715e 0%, #b6cdbd 50%, #5c715e 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
