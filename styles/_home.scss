@@ -1,71 +1,80 @@
-.project-description {
-  padding: rem(60);
-}
-
 .about-me {
-  margin: rem(20) rem(10) rem(30) rem(80);
-  p {
-    text-align: justify;
+  margin: rem(40) 0;
+
+  @include media-breakpoint-up(lg) {
+    margin: rem(20) rem(10) rem(30) rem(80);
   }
-}
 
-.resume-link {
-  margin-right: rem(20);
-}
+  p {
+    text-align: center;
+    margin: 0 rem(20);
 
-.personal-image {
-  margin-top: rem(40);
-}
-
-.portrait {
-  border-radius: rem(400);
-  max-width: rem(500);
-  margin-left: rem(50);
-}
-
-@media (max-width: 992px) {
-  .about-me {
-    margin: rem(40) 0;
-    p {
-      text-align: center;
-      margin: 0 rem(20);
+    @include media-breakpoint-up(lg) {
+      text-align: justify;
+      margin: 0;
     }
   }
 
   .resume-link {
     margin-bottom: rem(15);
-    margin-right: rem(15);
+    margin-right: 0;
+
+    @include media-breakpoint-up(sm) {
+      margin-right: rem(15);
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-right: rem(20);
+      margin-bottom: 0;
+    }
   }
 
   .certificate-link {
     margin-bottom: rem(15);
-  }
 
-  .personal-image {
-    margin-top: 0;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.personal-image {
+  margin-top: 0;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: rem(40);
   }
 
   .portrait {
+    border-radius: rem(400);
     margin: 0 0 rem(40) 0;
-    max-width: rem(450);
+    max-width: rem(350);
+
+    @include media-breakpoint-up(sm) {
+      max-width: rem(450);
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: rem(500);
+      margin-left: rem(50);
+    }
+  }
+}
+
+.projects {
+  padding-top: rem(60);
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
   }
 
   .project-description {
     padding: 0;
     text-align: center;
-  }
 
-  .projects {
-    padding-top: rem(60);
-  }
-}
-
-@media (max-width: 576px) {
-  .resume-link {
-    margin-right: 0;
-  }
-
-  .portrait {
-    max-width: rem(350);
+    @include media-breakpoint-up(lg) {
+      padding: rem(60);
+      text-align: left;
+    }
   }
 }

@@ -3,10 +3,8 @@ footer {
   border-top: 1px solid $primary-color;
   padding: 0 rem(50);
 
-
   @include media-breakpoint-up(sm) {
     padding: 0;
-
   }
 
   @include media-breakpoint-up(lg) {
@@ -26,22 +24,20 @@ footer {
   p {
     margin: 0;
   }
-
-  .email-link {
-    margin: rem(40) 0 rem(20) 0;
-    text-decoration: none;
-    font-size: rem(22);
-    color: $quaternary-color;
-    font-weight: 500;
-    transition: $transition;
-
-    &:hover {
-      color: $primary-color;
-    }
-  }
 }
 
+.email-link {
+  margin: rem(40) 0 rem(20) 0;
+  text-decoration: none;
+  font-size: rem(22);
+  color: $quaternary-color;
+  font-weight: 500;
+  transition: $transition;
 
+  &:hover {
+    color: $primary-color;
+  }
+}
 
 .social-links {
   a {
