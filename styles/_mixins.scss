@@ -5,6 +5,7 @@
 
 @mixin button {
   font-size: $standard-font-size;
+  font-family: $default-font-size;
   line-height: rem(27);
   border-radius: rem(4);
   padding: rem(15) rem(30);
@@ -16,13 +17,13 @@
 }
 
 @mixin hero-hr {
-    position: absolute;
-    top: rem(-14);
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-repeat: no-repeat;
-    background-position: calc(100% + 24px) 0;
-    content: "";
-    height: rem(24);
+  position: absolute;
+  top: rem(-14);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: calc(100% + 24px) 0;
+  content: "";
+  height: rem(24);
 }
