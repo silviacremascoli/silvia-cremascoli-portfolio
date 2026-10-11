@@ -1,13 +1,33 @@
 const projects = [
   {
-    name: "World Clock Project",
-    img: "world-clock-home",
-    alt: "world clock project",
-    id: "world-clock-project",
+    name: "Storybook Component Library",
+    img: "Storybook",
+    alt: "storybook component library project",
+    id: "storybook-project",
+    "built-with": "Storybook, Twig, React.js and Vue.js",
+    "aos-flip": "flip-right",
+    github: "https://github.com/silviacremascoli/core-ui-library",
+    link: "https://storybook-components-library.netlify.app/",
+  },
+  {
+    name: "Portfolio Project",
+    img: "portfolio-home",
+    alt: "portfolio project",
+    id: "portfolio-project",
+    "built-with": "HTML, CSS and Vue.js",
+    "aos-flip": "flip-left",
+    github: "https://github.com/silviacremascoli/professional-portfolio",
+    link: "https://vue-js-personal-portfolio.netlify.app/",
+  },
+  {
+    name: "Personal Finance Tracker",
+    img: "Finance Tracker",
+    alt: "finance tracker project",
+    id: "personal-finance-tracker",
     "built-with": "HTML, CSS and JavaScript",
     "aos-flip": "flip-right",
-    github: "https://github.com/silviacremascoli/world-clock",
-    link: "https://my-world-clock-app-silvia-cremascoli.netlify.app/",
+    github: "https://github.com/silviacremascoli/personal-finance-tracker",
+    link: "https://finance-tracker-tool.netlify.app/",
   },
   {
     name: "Weather Project",
@@ -20,6 +40,26 @@ const projects = [
     link: "https://react-weather-app-silvia-cremascoli.netlify.app/",
   },
   {
+    name: "Dictionary Project",
+    img: "dictionary-home",
+    alt: "dictionary project",
+    id: "dictionary-project",
+    "built-with": "HTML, CSS and React.js",
+    "aos-flip": "flip-right",
+    github: "https://github.com/silviacremascoli/react-dictionary-app",
+    link: "https://react-dictionary-silvia-cremascoli.netlify.app/",
+  },
+  {
+    name: "World Clock Project",
+    img: "world-clock-home",
+    alt: "world clock project",
+    id: "world-clock-project",
+    "built-with": "HTML, CSS and JavaScript",
+    "aos-flip": "flip-left",
+    github: "https://github.com/silviacremascoli/world-clock",
+    link: "https://my-world-clock-app-silvia-cremascoli.netlify.app/",
+  },
+  {
     name: "Travel Page Project",
     img: "travel-home",
     alt: "travel page project",
@@ -29,26 +69,6 @@ const projects = [
     github: "https://github.com/silviacremascoli/travel-page-bali",
     link: "https://travel-page-bali-silvia-cremascoli.netlify.app/",
   },
-  {
-    name: "Dictionary Project",
-    img: "dictionary-home",
-    alt: "dictionary project",
-    id: "dictionary-project",
-    "built-with": "HTML, CSS and React.js",
-    "aos-flip": "flip-left",
-    github: "https://github.com/silviacremascoli/react-dictionary-app",
-    link: "https://react-dictionary-silvia-cremascoli.netlify.app/",
-  },
-  {
-    name: "Portfolio Project",
-    img: "portfolio-home",
-    alt: "portfolio project",
-    id: "portfolio-project",
-    "built-with": "HTML, CSS and Vue.js",
-    "aos-flip": "flip-right",
-    github: "https://github.com/silviacremascoli/professional-portfolio",
-    link: "https://vue-js-personal-portfolio.netlify.app/",
-  }
 ];
 
 const skillsToolsLearning = {
@@ -81,7 +101,7 @@ const skillsToolsLearning = {
       },
       {
         name: "TWIG",
-        class: "fa-brands fa-leaf",
+        class: "fa-solid fa-leaf",
       },
       {
         name: "REACT.JS",
