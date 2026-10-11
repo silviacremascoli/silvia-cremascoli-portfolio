@@ -1,27 +1,33 @@
 const languages = [
     {
-        class: "fa-brands fa-html5",
+        class: "fa-brands fa-storybook",
+        title: "Storybook",
         AOS: 1000
     },
     {
-        class: "fa-brands fa-sass",
-        AOS: 1200
+        class: "fa-solid fa-leaf",
+        title: "Twig Templates",
+        AOS: 1600
     },
     {
-        class: "fa-brands fa-bootstrap",
-        AOS: 1400
-    },
-    {
-        class: "fa-brands fa-square-js",
+        class: "fa-brands fa-typescript",
+        title: "TypeScript",
         AOS: 1600
     },
     {
         class: "fa-brands fa-react",
+        title: "React.js",
         AOS: 1800
     },
     {
         class: "fa-brands fa-vuejs",
+        title: "Vue.js",
         AOS: 2000
+    },
+    {
+        class: "fa-brands fa-typo3",
+        title: "TYPO3",
+        AOS: 2200
     },
 ]
 
@@ -32,6 +38,7 @@ function displayLanguage() {
         languageHTML = languageHTML +
             `<i
                 class="${value.class}"
+                title="${value.title}"
                 data-aos="zoom-in"
                 data-aos-duration="${value.AOS}"
                 data-aos-easing="ease-in-sine"
