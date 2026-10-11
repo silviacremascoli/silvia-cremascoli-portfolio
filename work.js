@@ -46,19 +46,9 @@ const projects = [
     id: "portfolio-project",
     "built-with": "HTML, CSS and Vue.js",
     "aos-flip": "flip-right",
-    github: "https://github.com/silviacremascoli/nandor-bottyan-portfolio",
+    github: "https://github.com/silviacremascoli/professional-portfolio",
     link: "https://vue-js-personal-portfolio.netlify.app/",
-  },
-  {
-    name: "Restaurant Project",
-    img: "restaurant-home",
-    alt: "restaurant project",
-    id: "restaurant-project",
-    "built-with": "HTML, CSS and PHP",
-    "aos-flip": "flip-left",
-    github: "https://github.com/silviacremascoli/restaurant_dynamic_website",
-    link: "http://restaurantfrank.byethost32.com/",
-  },
+  }
 ];
 
 const skillsToolsLearning = {
@@ -106,9 +96,9 @@ const skillsToolsLearning = {
         class: "fa-brands fa-vuejs",
       },
       {
-        name: "PHP",
-        class: "fa-brands fa-php",
-      },
+        name: "STORYBOOK",
+        class: "fa-brands fa-storybook"
+      }
     ],
   },
   tools: {
@@ -147,10 +137,6 @@ const skillsToolsLearning = {
         class: "fa-brands fa-typo3",
       },
       {
-        name: "PATTERN-LAB",
-        class: "fa-regular fa-circle",
-      },
-      {
         name: "JIRA",
         class: "fa-brands fa-jira",
       },
@@ -164,12 +150,8 @@ const skillsToolsLearning = {
     title: "Learning...",
     types: [
       {
-        name: "UNIT TESTING",
+        name: "COMPONENT-DRIVEN DEVELOPMENT",
         class: "fa-solid fa-wrench",
-      },
-      {
-        name: "NEXT.JS",
-        class: "fa-brands fa-react",
       },
     ],
   },
