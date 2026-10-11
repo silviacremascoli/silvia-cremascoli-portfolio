@@ -72,20 +72,16 @@ const skillsToolsLearning = {
         class: "fa-brands fa-bootstrap",
       },
       {
-        name: "FOUNDATION FRAMEWORK",
-        class: "fa-solid fa-user-astronaut",
-      },
-      {
         name: "JAVASCRIPT",
         class: "fa-brands fa-square-js",
       },
       {
         name: "TYPESCRIPT",
-        class: "fa-brands fa-windows",
+        class: "fa-brands fa-typescript",
       },
       {
-        name: "API",
-        class: "fa-solid fa-gear",
+        name: "TWIG",
+        class: "fa-brands fa-leaf",
       },
       {
         name: "REACT.JS",
@@ -96,9 +92,9 @@ const skillsToolsLearning = {
         class: "fa-brands fa-vuejs",
       },
       {
-        name: "STORYBOOK",
-        class: "fa-brands fa-storybook"
-      }
+        name: "API",
+        class: "fa-solid fa-gear",
+      },
     ],
   },
   tools: {
@@ -121,16 +117,16 @@ const skillsToolsLearning = {
         class: "fa-brands fa-gitlab",
       },
       {
+        name: "STORYBOOK",
+        class: "fa-brands fa-storybook"
+      },
+      {
         name: "FIGMA",
         class: "fa-brands fa-figma",
       },
       {
         name: "CANVA",
         class: "fa-solid fa-pencil",
-      },
-      {
-        name: "WORDPRESS",
-        class: "fa-brands fa-wordpress",
       },
       {
         name: "TYPO3",
@@ -151,7 +147,7 @@ const skillsToolsLearning = {
     types: [
       {
         name: "COMPONENT-DRIVEN DEVELOPMENT",
-        class: "fa-solid fa-wrench",
+        class: "fa-solid fa-cubes-stacked",
       },
     ],
   },
