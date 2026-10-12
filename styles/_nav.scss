@@ -130,7 +130,7 @@
     text-underline-offset: rem(8);
   }
 
-  &:has(.navbar-collapse.show):focus-within {
+  &:has(.navbar-toggler[aria-expanded="true"]):focus-within {
     transform: none;
   }
 }
