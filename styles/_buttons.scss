@@ -1,11 +1,22 @@
 .btn-main {
   @include button;
   background: $primary-color;
-  color: white;
+  color: $tertiary-color;
+  border: 1px solid $quaternary-color;
+  border: 1px solid $tertiary-color;
   &:hover {
     background: $secondary-color;
     color: $quaternary-color;
     border: 1px solid $quaternary-color;
+  }
+
+  &:focus-visible {
+    background: $secondary-color;
+    color: $quaternary-color;
+    border: 1px solid $quaternary-color;
+    box-shadow: none;
+    outline: 3px solid $tertiary-color;
+    outline-offset: 3px;
   }
 }
 
@@ -13,19 +24,27 @@
   @include button;
   color: $quaternary-color;
   border: 1px solid $quaternary-color;
-  &:hover {
+  &:hover,
+  &:focus {
     background: $quaternary-color;
     color: $secondary-color;
+    border: 1px solid $quaternary-color;
+    box-shadow: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $tertiary-color;
+    outline-offset: 3px;
   }
 }
 
 .btn-third {
   @include button;
-  color: $primary-color;
-  border: 1px solid $primary-color;
+  color: $quaternary-color;
+  border: 1px solid $quaternary-color;
   &:hover {
-    color: $primary-color;
-    border: 1px solid $primary-color;
+    color: $quaternary-color;
+    border: 1px solid $quaternary-color;
     cursor: default;
   }
 }
