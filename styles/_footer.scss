@@ -26,6 +26,25 @@ footer {
   }
 }
 
+.contact-cta {
+  margin-top: rem(80);
+  border-top: 1px solid $primary-color;
+  padding: 0 rem(50);
+
+  @include media-breakpoint-up(sm) {
+    padding: 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    border-top: none;
+  }
+}
+
+.contact-cta + footer {
+  margin-top: 0;
+  border-top: none;
+}
+
 .email-link {
   margin: rem(40) 0 rem(20) 0;
   text-decoration: none;
@@ -44,9 +63,9 @@ footer {
     margin: 0 rem(15);
     color: $primary-color;
     background: $secondary-color;
-    padding: rem(10) rem(16);
+    padding: rem(10) rem(12);
     font-size: rem(18);
-    border-radius: 50%;
+    border-radius: rem(23);
     border: 0.5px solid $primary-color;
     transition: $transition;
     transition: $transform;
