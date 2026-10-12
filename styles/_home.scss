@@ -2,7 +2,7 @@
   margin: rem(40) 0;
 
   @include media-breakpoint-up(lg) {
-    margin: rem(20) rem(10) rem(30) rem(80);
+    margin: rem(20) rem(10) rem(30) 0;
   }
 
   p {
