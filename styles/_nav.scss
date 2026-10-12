@@ -76,7 +76,11 @@
   .active {
     color: $quaternary-color !important;
     font-weight: 700;
-    text-decoration: none;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: $quaternary-color;
+    text-decoration-thickness: rem(1.5);
+    text-underline-offset: rem(8);
   }
 
   &:focus-within {
