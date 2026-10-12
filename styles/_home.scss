@@ -10,7 +10,7 @@
     margin: 0 rem(20);
 
     @include media-breakpoint-up(lg) {
-      text-align: justify;
+      text-align: left;
       margin: 0;
     }
   }
