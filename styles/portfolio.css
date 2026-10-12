@@ -12042,11 +12042,12 @@ p {
 
 .contact-details h1, .contact-details .h1 {
   margin-top: 2.5rem;
-  font-size: 3.5rem;
+  font-size: 3rem;
+  padding: 0 1.25rem;
 }
 @media (min-width: 576px) {
   .contact-details h1, .contact-details .h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 @media (min-width: 992px) {
@@ -12072,7 +12073,7 @@ p {
 .contact-details .contact-form {
   border-right: none;
   margin: 0 auto 2.5rem auto;
-  padding: 0 3.75rem;
+  padding: 0 1.25rem;
   text-align: left;
   color: #5c715e;
 }
@@ -12565,14 +12566,14 @@ footer p {
 
 .work .work-title {
   margin-top: 3.125rem;
-  font-size: 3.25rem;
+  font-size: 3rem;
   padding: 0 1.875rem;
   line-height: 1.2;
 }
 @media (min-width: 576px) {
   .work .work-title {
     line-height: 1;
-    font-size: 4rem;
+    font-size: 3.5rem;
     padding: 0;
   }
 }

@@ -1,13 +1,13 @@
 .work {
   .work-title {
     margin-top: rem(50);
-    font-size: rem(52);
+    font-size: rem(48);
     padding: 0 rem(30);
     line-height: 1.2;
 
     @include media-breakpoint-up(sm) {
       line-height: 1;
-      font-size: rem(64);
+      font-size: rem(56);
       padding: 0;
     }
   }
