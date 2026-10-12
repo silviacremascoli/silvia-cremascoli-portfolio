@@ -12597,7 +12597,7 @@ footer p {
   text-decoration-thickness: 0.09375rem;
   text-underline-offset: 0.5rem;
 }
-.navbar:focus-within {
+.navbar:has(.navbar-collapse.show):focus-within {
   transform: none;
 }
 
