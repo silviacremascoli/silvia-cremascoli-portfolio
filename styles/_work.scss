@@ -17,7 +17,7 @@
     margin: rem(10) rem(40);
 
     @include media-breakpoint-up(lg) {
-      display: inline;
+      display: inline-block;
       margin: 0 0 0 rem(20);
     }
   }
