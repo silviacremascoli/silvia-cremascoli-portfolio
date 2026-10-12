@@ -52,3 +52,28 @@ p {
   color: $tertiary-color;
   line-height: 2;
 }
+
+:focus-visible {
+  outline: 3px solid $quaternary-color;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .code-divider i {
+    display: none !important;
+  }
+
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
