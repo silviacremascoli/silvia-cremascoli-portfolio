@@ -12380,8 +12380,12 @@ footer p {
 }
 
 .navbar {
-  background: rgba(252, 249, 244, 0.3);
+  background: #fcf9f4;
   padding: 0.3125rem;
+  transition: transform 250ms ease-in-out;
+}
+.navbar.navbar-hidden {
+  transform: translateY(-100%);
 }
 @media (min-width: 992px) {
   .navbar {

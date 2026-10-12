@@ -1,6 +1,11 @@
 .navbar {
-  background: rgba($quinary-color, 0.3);
+  background: $quinary-color;
   padding: rem(5);
+  transition: transform 250ms ease-in-out;
+
+  &.navbar-hidden {
+    transform: translateY(-100%);
+  }
 
   @include media-breakpoint-up(lg) {
     padding: rem(2) rem(120);
