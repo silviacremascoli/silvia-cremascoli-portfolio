@@ -1,5 +1,5 @@
 footer {
-  margin: rem(80) 0 rem(50) 0;
+  margin: 0 0 rem(50) 0;
   border-top: 1px solid $primary-color;
   padding: 0 rem(50);
 
@@ -8,6 +8,7 @@ footer {
   }
 
   @include media-breakpoint-up(lg) {
+    margin-top: rem(80);
     border-top: none;
   }
 
@@ -17,9 +18,37 @@ footer {
 }
 
 .contact-box {
-  background: $secondary-color;
-  padding: rem(30) rem(120);
-  border-radius: rem(10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(16);
+  padding: rem(24) rem(20) 0;
+  margin-bottom: rem(40);
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: rem(30) rem(48);
+    text-align: left;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-right: rem(120);
+    padding-left: rem(120);
+    background: $secondary-color;
+    border-radius: rem(10);
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-bottom: rem(8);
+    font-size: rem(28);
+
+    @include media-breakpoint-up(md) {
+      font-size: rem(36);
+    }
+  }
 
   p {
     margin: 0;
@@ -28,12 +57,7 @@ footer {
 
 .contact-cta {
   margin-top: rem(80);
-  border-top: 1px solid $primary-color;
-  padding: 0 rem(50);
-
-  @include media-breakpoint-up(sm) {
-    padding: 0;
-  }
+  // border-top: 1px solid $primary-color;
 
   @include media-breakpoint-up(lg) {
     border-top: none;
@@ -54,24 +78,24 @@ footer {
   transition: $transition;
 
   &:hover {
-    color: $primary-color;
+    color: $quaternary-color;
   }
 }
 
 .social-links {
   a {
     margin: 0 rem(15);
-    color: $primary-color;
+    color: $quaternary-color;
     background: $secondary-color;
     padding: rem(10) rem(12);
     font-size: rem(18);
     border-radius: rem(23);
-    border: 0.5px solid $primary-color;
+    border: 1px solid $quaternary-color;
     transition: $transition;
     transition: $transform;
 
     &:hover {
-      color: $secondary-color;
+      color: $tertiary-color;
       background: $primary-color;
       transform: scale(1.2);
     }
@@ -79,11 +103,11 @@ footer {
 }
 
 .github-link {
-  text-decoration: none;
-  color: $primary-color;
+  text-decoration: underline;
+  color: $quaternary-color;
   transition: $transition;
 
   &:hover {
-    text-decoration: underline;
+    color: $tertiary-color;
   }
 }
