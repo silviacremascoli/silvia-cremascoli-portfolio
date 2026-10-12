@@ -189,7 +189,7 @@ function displaySkill() {
     let typeArray = mySkill.types;
     typeArray.forEach((value) => {
       skillHTML =
-        skillHTML + `<p><i class="${value.class}"></i> ${value.name}</p>`;
+        skillHTML + `<p><i class="${value.class}" aria-hidden="true"></i> ${value.name}</p>`;
     });
     skillHTML = skillHTML + `</div>`;
     skill.innerHTML = skillHTML;
@@ -208,14 +208,14 @@ function displayProject() {
     <div class="col-md-6 mb-5">
     <img
         src="/images/${myProject.img}.png"
-        alt="${myProject.alt}"
+        alt="Screenshot of ${myProject.alt}"
         class="img-fluid rounded mb-3"
         id="${myProject.id}"
         data-aos="${myProject["aos-flip"]}"
         data-aos-duration="2000"
         data-aos-easing="ease-in-sine"
     />
-    <h3 class="text-center m-0">${myProject.name}</h3>
+    <h2 class="text-center m-0">${myProject.name}</h2>
     <p class="text-center text-muted">
         Built with ${myProject["built-with"]}
     </p>
@@ -223,13 +223,13 @@ function displayProject() {
         href="${myProject.link}"
         class="btn btn-main"
         target="_blank"
-        title="World clock app"
+        aria-label="Check it out: ${myProject.name}"
     >Check it out</a
     ><a
     href="${myProject.github}"
     class="btn btn-second github-project"
     target="_blank"
-    title="World clock repository"
+    aria-label="See code in GitHub for ${myProject.name}"
     >See code in GitHub</a
     >
     </div>
