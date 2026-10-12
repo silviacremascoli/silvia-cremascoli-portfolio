@@ -12469,6 +12469,10 @@ footer p {
   padding: 0;
   text-align: center;
 }
+.projects .project-description #storybook-title span {
+  display: block;
+  font-size: 1.875rem;
+}
 @media (min-width: 992px) {
   .projects .project-description {
     padding: 3.75rem;

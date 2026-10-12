@@ -72,6 +72,13 @@
     padding: 0;
     text-align: center;
 
+    #storybook-title {
+      span {
+        display: block;
+        font-size: rem(30);
+      }
+    }
+
     @include media-breakpoint-up(lg) {
       padding: rem(60);
       text-align: left;
