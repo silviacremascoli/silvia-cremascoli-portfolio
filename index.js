@@ -38,6 +38,8 @@ function displayLanguage() {
         languageHTML = languageHTML +
             `<i
                 class="${value.class}"
+                    role="img"
+                    aria-label="${value.title}"
                 title="${value.title}"
                 data-aos="zoom-in"
                 data-aos-duration="${value.AOS}"
