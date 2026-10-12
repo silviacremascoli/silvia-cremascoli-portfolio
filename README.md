@@ -75,7 +75,7 @@ These projects demonstrate my ability to work with reusable UI components, APIs,
 
 ## Future improvements
 
-I plan to refactor repeated interface patterns in this portfolio to use reusable components from my [Storybook component library](https://github.com/silviacremascoli/core-ui-library). This will reduce code duplication, make future updates more consistent, and provide a foundation for improving the site's performance.
+I plan to refactor repeated interface patterns in this portfolio (such as the navigation bar, the footer, the buttons and the form inputs) to use reusable components from my [Storybook component library](https://github.com/silviacremascoli/core-ui-library). This will reduce code duplication, make future updates more consistent, and provide a foundation for improving the site's performance.
 
 ## Run locally
 
