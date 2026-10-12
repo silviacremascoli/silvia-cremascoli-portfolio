@@ -51,6 +51,20 @@
       color: $quaternary-color;
     }
 
+    input,
+    select,
+    textarea {
+      border-color: $quaternary-color;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      border: 2px solid $tertiary-color;
+      box-shadow: none;
+      outline: none !important;
+      outline-offset: 0 !important;
+    }
+
     .btn-second {
       font-size: $standard-font-size;
       padding: rem(10) rem(20);
@@ -65,11 +79,11 @@
   }
 
   .contact-link {
-    color: $primary-color;
-    text-decoration: none;
+    color: $quaternary-color;
+    text-decoration: underline;
     transition: $transition;
     &:hover {
-      color: $quaternary-color;
+      color: $tertiary-color;
     }
   }
 }
