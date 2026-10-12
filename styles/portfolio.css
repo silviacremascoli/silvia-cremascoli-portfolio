@@ -12146,7 +12146,7 @@ p {
 }
 
 .content-container {
-  padding: 0 0.3125rem 0.625rem 0.3125rem;
+  padding: 0 0.75rem 0.625rem 0.75rem;
   text-align: center;
 }
 @media (min-width: 992px) {
