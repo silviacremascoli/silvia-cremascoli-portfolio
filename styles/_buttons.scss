@@ -4,17 +4,17 @@
   color: white;
   &:hover {
     background: $secondary-color;
-    color: $primary-color;
-    border: 1px solid $primary-color;
+    color: $quaternary-color;
+    border: 1px solid $quaternary-color;
   }
 }
 
 .btn-second {
   @include button;
-  color: $primary-color;
-  border: 1px solid $primary-color;
+  color: $quaternary-color;
+  border: 1px solid $quaternary-color;
   &:hover {
-    background: $primary-color;
+    background: $quaternary-color;
     color: $secondary-color;
   }
 }
