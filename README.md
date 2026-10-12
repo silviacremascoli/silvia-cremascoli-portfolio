@@ -48,12 +48,16 @@ This portfolio serves as a digital CV and a showcase of the work I have built ac
 ## Project structure
 
 - `index.html` — home page with profile overview and featured work
-- `work.html` — portfolio projects and technologies
-- `contact.html` — communication and contact details
-- `index.js` — homepage technology/icon rendering
-- `work.js` — structured project and skills data
-- `styles/` — SCSS/CSS styles and layout assets
-- `images/` — project screenshots and branding assets
+- `work.html` — project showcase
+- `contact.html` — contact details
+- `index.js` — homepage technology and icon rendering
+- `work.js` — project and skills data
+- `nav.js` — navigation script
+- `styles/portfolio.scss` — Sass entry point for the portfolio styles
+- `styles/_*.scss` — modular styles for shared layout and page sections
+- `styles/portfolio.css` — compiled portfolio stylesheet
+- `styles/bootstrap-*.css` and `styles/bootstrap-5.3.2/` — Bootstrap styles and source files
+- `images/` — project screenshots, logos, and portrait assets
 
 ## Featured work
 
@@ -68,6 +72,10 @@ The project includes examples of work across different stack combinations, inclu
 - Travel landing page
 
 These projects demonstrate my ability to work with reusable UI components, APIs, responsive layouts, and clean front-end architecture.
+
+## Future improvements
+
+I plan to refactor repeated interface patterns in this portfolio to use reusable components from my [Storybook component library](https://github.com/silviacremascoli/core-ui-library). This will reduce code duplication, make future updates more consistent, and provide a foundation for improving the site's performance.
 
 ## Run locally
 
