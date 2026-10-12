@@ -12360,12 +12360,13 @@ footer p {
   font-weight: normal;
   font-size: 1.25rem;
   line-height: 1.6;
-  margin-top: 1.25rem;
+  padding: 0 5rem;
 }
 @media (min-width: 992px) {
   .hero h2, .hero .h2 {
     font-size: 1.5rem;
     line-height: 1.5;
+    padding: 0;
   }
 }
 .hero i {
@@ -12394,7 +12395,7 @@ footer p {
 }
 @media (min-width: 992px) {
   .about-me {
-    margin: 1.25rem 0.625rem 1.875rem 5rem;
+    margin: 1.25rem 0.625rem 1.875rem 0;
   }
 }
 .about-me p {
@@ -12484,7 +12485,7 @@ footer p {
 }
 @media (min-width: 992px) {
   .navbar {
-    padding: 0.5rem 7.5rem;
+    padding: 0.75rem 0;
     background: #fcf9f4;
   }
 }
