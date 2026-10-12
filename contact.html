@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"
+      content="width=device-width, initial-scale=1.0"
     />
-    <title>Contact Silvia Cremascoli - Front-end Web Developer</title>
+    <title>Contact Silvia Cremascoli - Front-end Developer</title>
     <link rel="icon" href="/images/Portfolio logo.png" type="image/x-icon" />
     <meta
       name="description"
@@ -31,13 +31,14 @@
     ></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg shadow sticky-top">
+    <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
+    <nav class="navbar navbar-expand-lg shadow sticky-top" aria-label="Primary">
       <div class="container">
         <a class="navbar-brand" href="/index.html" title="Go to homepage"
           ><img
             src="/images/Portfolio logo.png"
             alt="Silvia Cremascoli logo"
-            class="logo me-5"
+            class="logo"
         /></a>
         <button
           class="navbar-toggler"
@@ -54,7 +55,6 @@
           <div class="navbar-nav ms-auto">
             <a
               class="nav-link"
-              aria-current="page"
               href="/index.html"
               title="Go to homepage"
               >Home 🏠</a
@@ -67,6 +67,7 @@
             >
             <a
               class="nav-link active contact-nav-link"
+              aria-current="page"
               href="/contact.html"
               title="Contact Silvia Cremascoli"
               >Contact 📩</a
@@ -75,6 +76,7 @@
         </div>
       </div>
     </nav>
+    <main id="main-content" tabindex="-1">
     <div class="contact-details content-container container">
       <h1 class="mb-5 text-center">
         <span class="h1-emoji">👋</span><span>Let's get in touch!</span>
@@ -86,7 +88,7 @@
             <form method="POST" name="contact" netlify>
               <div class="form-group mb-3">
                 <label for="name-surname" class="ms-2"
-                  >Name and surname 👩👨</label
+                  >Name and surname:​</label
                 >
                 <input
                   type="text"
@@ -97,7 +99,7 @@
                 />
               </div>
               <div class="form-group mb-3">
-                <label for="email-address" class="ms-2">Email address 💻</label>
+                <label for="email-address" class="ms-2">Email address:​</label>
                 <input
                   type="email"
                   class="form-control mt-2"
@@ -135,7 +137,7 @@
           <div class="col-lg-6 mt-5 d-flex flex-column justify-content-center">
             <div class="text-center">
               <h2 class="mb-5">Or find me here:</h2>
-              <h3><i class="fa-regular fa-envelope me-2"></i>Email</h3>
+              <h3><i class="fa-regular fa-envelope me-2" aria-hidden="true"></i>Email</h3>
               <p>
                 <a
                   href="mailto:silcremascoli@gmail.com"
@@ -144,7 +146,7 @@
                   >silcremascoli@gmail.com</a
                 >
               </p>
-              <h3><i class="fa-brands fa-linkedin me-2"></i>LinkedIn</h3>
+              <h3><i class="fa-brands fa-linkedin me-2" aria-hidden="true"></i>LinkedIn</h3>
               <p>
                 <a
                   href="https://www.linkedin.com/in/silvia-cremascoli/"
@@ -159,32 +161,37 @@
         </div>
       </div>
     </div>
+    </main>
     <div class="container">
       <footer class="contact-footer">
         <div class="social-links d-flex justify-content-center">
           <a
             href="https://www.linkedin.com/in/silvia-cremascoli/"
             target="_blank"
+            aria-label="LinkedIn profile for Silvia Cremascoli"
             title="LinkedIn Silvia Cremascoli"
-            ><i class="fa-brands fa-linkedin"></i
+            ><i class="fa-brands fa-linkedin" aria-hidden="true"></i
           ></a>
           <a
             href="https://github.com/silviacremascoli"
             target="_blank"
+            aria-label="GitHub profile for Silvia Cremascoli"
             title="GitHub Silvia Cremascoli"
-            ><i class="fa-brands fa-github"></i
+            ><i class="fa-brands fa-github" aria-hidden="true"></i
           ></a>
           <a
             href="https://drive.google.com/file/d/1lcpjhCugvGs7G4qIBis6Uv1gtVaqoWjo/view?usp=drive_link"
             target="_blank"
+            aria-label="Silvia Cremascoli résumé"
             title="Resume Silvia Cremascoli"
-            ><i class="fa-solid fa-file"></i
+            ><i class="fa-solid fa-file" aria-hidden="true"></i
           ></a>
           <a
             href="https://drive.google.com/file/d/1-nZm2vqTzP2DF2JLJHuSTcbyV-6yny3t/view?usp=share_link"
             target="_blank"
+            aria-label="Silvia Cremascoli certificates"
             title="Certificates Silvia Cremascoli"
-            ><i class="fa-solid fa-certificate"></i
+            ><i class="fa-solid fa-certificate" aria-hidden="true"></i
           ></a>
         </div>
         <p class="text-center mt-4 fs-6 lh-sm">
