@@ -12337,16 +12337,14 @@ footer p {
 }
 
 .personal-image {
-  margin-top: 0;
-}
-@media (min-width: 992px) {
-  .personal-image {
-    margin-top: 2.5rem;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .personal-image .portrait {
   border-radius: 25rem;
   margin: 0 0 2.5rem 0;
+  width: 100%;
   max-width: 21.875rem;
 }
 @media (min-width: 576px) {
@@ -12357,7 +12355,7 @@ footer p {
 @media (min-width: 992px) {
   .personal-image .portrait {
     max-width: 31.25rem;
-    margin-left: 3.125rem;
+    margin-bottom: 0;
   }
 }
 
