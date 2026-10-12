@@ -11890,7 +11890,7 @@ h6,
 body {
   font-family: "Poppins", serif;
   background: #fcf9f4;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 h1, .h1,
@@ -12244,10 +12244,11 @@ footer p {
 }
 
 .contact-cta {
-  margin-top: 5rem;
+  margin-top: 0;
 }
 @media (min-width: 992px) {
   .contact-cta {
+    margin-top: 5rem;
     border-top: none;
   }
 }
@@ -12552,7 +12553,7 @@ footer p {
 .navbar .active {
   color: #5c715e !important;
   font-weight: 700;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .navbar:focus-within {
   transform: none;

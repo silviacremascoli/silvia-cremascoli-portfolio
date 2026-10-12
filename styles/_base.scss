@@ -11,7 +11,7 @@ h6 {
 body {
   font-family: $default-font-family;
   background: #fcf9f4;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 h1,

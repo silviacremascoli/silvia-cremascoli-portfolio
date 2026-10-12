@@ -56,10 +56,10 @@ footer {
 }
 
 .contact-cta {
-  margin-top: rem(80);
-  // border-top: 1px solid $primary-color;
+  margin-top: 0;
 
   @include media-breakpoint-up(lg) {
+    margin-top: rem(80);
     border-top: none;
   }
 }
