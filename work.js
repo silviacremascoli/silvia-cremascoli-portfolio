@@ -5,7 +5,7 @@ const projects = [
     alt: "storybook component library project",
     id: "storybook-project",
     "built-with": "Storybook, Twig, React.js and Vue.js",
-    "aos-flip": "flip-right",
+    "aos-fade": "fade-right",
     github: "https://github.com/silviacremascoli/core-ui-library",
     link: "https://storybook-components-library.netlify.app/",
   },
@@ -15,7 +15,7 @@ const projects = [
     alt: "portfolio project",
     id: "portfolio-project",
     "built-with": "HTML, CSS and Vue.js",
-    "aos-flip": "flip-left",
+    "aos-fade": "fade-left",
     github: "https://github.com/silviacremascoli/professional-portfolio",
     link: "https://vue-js-personal-portfolio.netlify.app/",
   },
@@ -25,7 +25,7 @@ const projects = [
     alt: "finance tracker project",
     id: "personal-finance-tracker",
     "built-with": "HTML, CSS and JavaScript",
-    "aos-flip": "flip-right",
+    "aos-fade": "fade-right",
     github: "https://github.com/silviacremascoli/personal-finance-tracker",
     link: "https://finance-tracker-tool.netlify.app/",
   },
@@ -35,7 +35,7 @@ const projects = [
     alt: "weather project",
     id: "weather-project",
     "built-with": "HTML, CSS and React.js",
-    "aos-flip": "flip-left",
+    "aos-fade": "fade-left",
     github: "https://github.com/silviacremascoli/react-weather-app",
     link: "https://react-weather-app-silvia-cremascoli.netlify.app/",
   },
@@ -45,7 +45,7 @@ const projects = [
     alt: "dictionary project",
     id: "dictionary-project",
     "built-with": "HTML, CSS and React.js",
-    "aos-flip": "flip-right",
+    "aos-fade": "fade-right",
     github: "https://github.com/silviacremascoli/react-dictionary-app",
     link: "https://react-dictionary-silvia-cremascoli.netlify.app/",
   },
@@ -55,7 +55,7 @@ const projects = [
     alt: "world clock project",
     id: "world-clock-project",
     "built-with": "HTML, CSS and JavaScript",
-    "aos-flip": "flip-left",
+    "aos-fade": "fade-left",
     github: "https://github.com/silviacremascoli/world-clock",
     link: "https://my-world-clock-app-silvia-cremascoli.netlify.app/",
   },
@@ -65,7 +65,7 @@ const projects = [
     alt: "travel page project",
     id: "travel-page-project",
     "built-with": "HTML and CSS",
-    "aos-flip": "flip-right",
+    "aos-fade": "fade-right",
     github: "https://github.com/silviacremascoli/travel-page-bali",
     link: "https://travel-page-bali-silvia-cremascoli.netlify.app/",
   },
@@ -211,7 +211,7 @@ function displayProject() {
         alt="Screenshot of ${myProject.alt}"
         class="img-fluid rounded mb-3"
         id="${myProject.id}"
-        data-aos="${myProject["aos-flip"]}"
+        data-aos="${myProject["aos-fade"]}"
         data-aos-duration="2000"
         data-aos-easing="ease-in-sine"
     />
@@ -229,8 +229,8 @@ function displayProject() {
     href="${myProject.github}"
     class="btn btn-second github-project"
     target="_blank"
-    aria-label="See code in GitHub for ${myProject.name}"
-    >See code in GitHub</a
+    aria-label="See code on GitHub for ${myProject.name}"
+    >See code on GitHub</a
     >
     </div>
     `;
