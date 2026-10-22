@@ -5,7 +5,7 @@
     rgb(242, 249, 241) 100%
   );
   text-align: center;
-  padding: rem(60) 0;
+  padding: rem(40) 0 rem(60) 0;
 
   @include media-breakpoint-up(lg) {
     padding: rem(100);
@@ -55,6 +55,7 @@
 
   .btn-main {
     margin: 0;
+    font-size: rem(18);
 
     @include media-breakpoint-up(sm) {
       margin-top: rem(15) 0;
