@@ -136,7 +136,7 @@ function displayProject() {
       `
     <div class="col-md-6 mb-5">
     <img
-        src="/images/${myProject.img}.png"
+        src="/assets/images/${myProject.img}.png"
         alt="Screenshot of ${myProject.alt}"
         class="img-fluid rounded mb-3"
         id="${myProject.id}"

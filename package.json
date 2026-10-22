@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build:css": "sass assets/styles/portfolio.scss assets/styles/portfolio.css"
+  },
+  "devDependencies": {
+    "sass": "^1.106.1"
+  }
+}

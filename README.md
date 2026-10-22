@@ -47,17 +47,13 @@ This portfolio serves as a digital CV and a showcase of the work I have built ac
 
 ## Project structure
 
-- `index.html` — home page with profile overview and featured work
-- `work.html` — project showcase
-- `contact.html` — contact details
-- `index.js` — homepage technology and icon rendering
-- `work.js` — project and skills data
-- `nav.js` — navigation script
-- `styles/portfolio.scss` — Sass entry point for the portfolio styles
-- `styles/_*.scss` — modular styles for shared layout and page sections
-- `styles/portfolio.css` — compiled portfolio stylesheet
-- `styles/bootstrap-*.css` and `styles/bootstrap-5.3.2/` — Bootstrap styles and source files
-- `images/` — project screenshots, logos, and portrait assets
+- `index.html`, `work.html`, `contact.html` — page entry points
+- `scripts/` — page behavior, navigation, and shared project data
+- `assets/images/` — project screenshots, logos, and portrait assets
+- `assets/styles/portfolio.scss` — Sass entry point for the portfolio styles
+- `assets/styles/_*.scss` — modular styles for shared layout and page sections
+- `assets/styles/portfolio.css` — compiled portfolio stylesheet
+- `styles/bootstrap-5.3.2/` — original Bootstrap source tree, retained for reference
 
 ## Featured work
 
@@ -79,9 +75,7 @@ I plan to refactor repeated interface patterns in this portfolio (such as the na
 
 ## Run locally
 
-Because this is a static portfolio site, you can preview it by opening the HTML file directly in a browser.
-
-For a local server:
+Because this is a static portfolio site, run it from the project root with a local server:
 
 ```bash
 python3 -m http.server 8000
@@ -91,6 +85,15 @@ Then open:
 
 ```text
 http://localhost:8000
+```
+
+## Build custom styles
+
+Bootstrap CSS and JavaScript are loaded from the pinned CDN links in the HTML pages. The compiled portfolio stylesheet contains only custom styles.
+
+```bash
+npm install
+npm run build:css
 ```
 
 ## License
