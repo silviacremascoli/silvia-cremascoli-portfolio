@@ -58,6 +58,10 @@ footer {
 .contact-cta {
   margin-top: 0;
 
+  .btn, .text-muted {
+    font-size: rem(18);
+  }
+
   @include media-breakpoint-up(lg) {
     margin-top: rem(80);
     border-top: none;
