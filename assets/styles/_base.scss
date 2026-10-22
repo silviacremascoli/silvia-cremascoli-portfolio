@@ -53,6 +53,25 @@ p {
   line-height: 2;
 }
 
+.skip-link {
+  position: fixed;
+  top: rem(12);
+  left: rem(12);
+  z-index: 1100;
+  padding: rem(8) rem(14);
+  color: $tertiary-color;
+  background-color: $quinary-color;
+  border: 2px solid $quaternary-color;
+  border-radius: rem(6);
+  font-weight: 600;
+  text-decoration: none;
+
+  &:focus-visible {
+    outline: 3px solid $quaternary-color;
+    outline-offset: 2px;
+  }
+}
+
 :focus-visible {
   outline: 3px solid $quaternary-color;
   outline-offset: 3px;
