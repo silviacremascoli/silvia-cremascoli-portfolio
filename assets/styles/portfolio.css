@@ -152,7 +152,7 @@ p {
   box-shadow: none;
 }
 .btn-second:focus-visible {
-  outline: 3px solid #272142;
+  outline: 3px solid #5c715e;
   outline-offset: 3px;
 }
 
@@ -238,7 +238,7 @@ p {
 }
 .contact-details .contact-form .form-control:focus,
 .contact-details .contact-form .form-select:focus {
-  border: 2px solid #272142;
+  border: 2px solid #5c715e;
   box-shadow: none;
   outline: none !important;
   outline-offset: 0 !important;
@@ -258,7 +258,12 @@ p {
 .contact-details .contact-link {
   color: #5c715e;
   text-decoration: underline;
+  border-radius: 0.25rem;
   transition: all 300ms ease-in-out;
+}
+.contact-details .contact-link:focus-visible {
+  outline: 3px solid #5c715e;
+  outline-offset: 3px;
 }
 .contact-details .contact-link:hover {
   color: #272142;
@@ -384,6 +389,9 @@ footer p {
 .contact-cta {
   margin-top: 0;
 }
+.contact-cta .btn, .contact-cta .text-muted {
+  font-size: 1.125rem;
+}
 @media (min-width: 992px) {
   .contact-cta {
     margin-top: 5rem;
@@ -478,7 +486,7 @@ footer p {
 .hero {
   background: linear-gradient(180deg, rgb(182, 205, 189) 0%, rgb(242, 249, 241) 100%);
   text-align: center;
-  padding: 3.75rem 0;
+  padding: 2.5rem 0 3.75rem 0;
 }
 @media (min-width: 992px) {
   .hero {
@@ -523,6 +531,7 @@ footer p {
 }
 .hero .btn-main {
   margin: 0;
+  font-size: 1.125rem;
 }
 @media (min-width: 576px) {
   .hero .btn-main {
