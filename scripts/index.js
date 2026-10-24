@@ -1,3 +1,7 @@
+import "./shared.js";
+import "./projects.js";
+import AOS from "aos";
+
 const languages = [
     {
         class: "fa-brands fa-storybook",

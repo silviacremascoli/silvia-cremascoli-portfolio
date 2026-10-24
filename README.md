@@ -36,6 +36,7 @@ This portfolio serves as a digital CV and a showcase of the work I have built ac
 - HTML5
 - CSS3 / SASS
 - JavaScript
+- Vite
 - Bootstrap 5
 - React.js
 - Vue.js
@@ -48,11 +49,11 @@ This portfolio serves as a digital CV and a showcase of the work I have built ac
 ## Project structure
 
 - `index.html`, `work.html`, `contact.html` — page entry points
-- `scripts/` — page behavior, navigation, and shared project data
+- `scripts/` — Vite page entries, page behavior, navigation, and shared project data
 - `assets/images/` — project screenshots, logos, and portrait assets
-- `assets/styles/portfolio.scss` — Sass entry point for the portfolio styles
+- `assets/styles/portfolio.scss` — Sass entry point imported by Vite
 - `assets/styles/_*.scss` — modular styles for shared layout and page sections
-- `assets/styles/portfolio.css` — compiled portfolio stylesheet
+- `vite.config.mjs` — multi-page build configuration and static image copying
 - `styles/bootstrap-5.3.2/` — original Bootstrap source tree, retained for reference
 
 ## Featured work
@@ -75,24 +76,25 @@ I plan to refactor repeated interface patterns in this portfolio (such as the na
 
 ## Run locally
 
-Because this is a static portfolio site, run it from the project root with a local server:
+Install dependencies and start the Vite development server from the project root:
 
 ```bash
-python3 -m http.server 8000
+npm install
+npm run dev
 ```
 
-Then open:
+Vite prints the local URL in the terminal. To create and preview a production build:
 
-```text
-http://localhost:8000
+```bash
+npm run build
+npm run preview
 ```
 
 ## Build custom styles
 
-Bootstrap CSS and JavaScript are loaded from the pinned CDN links in the HTML pages. The compiled portfolio stylesheet contains only custom styles.
+Bootstrap, AOS, and Font Awesome are installed through npm and bundled locally with the portfolio Sass by Vite. The Sass can also be compiled separately with:
 
 ```bash
-npm install
 npm run build:css
 ```
 

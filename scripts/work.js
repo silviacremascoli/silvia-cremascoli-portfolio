@@ -1,3 +1,7 @@
+import "./shared.js";
+import "./projects.js";
+import AOS from "aos";
+
 const projects = window.portfolioProjects;
 
 const skillsToolsLearning = {
