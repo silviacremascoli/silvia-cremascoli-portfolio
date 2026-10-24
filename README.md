@@ -38,6 +38,7 @@ This portfolio serves as a digital CV and a showcase of the work I have built ac
 - JavaScript
 - Vite
 - Bootstrap 5
+- Core UI Library
 - React.js
 - Vue.js
 - TypeScript
@@ -49,11 +50,14 @@ This portfolio serves as a digital CV and a showcase of the work I have built ac
 ## Project structure
 
 - `index.html`, `work.html`, `contact.html` — page entry points
-- `scripts/` — Vite page entries, page behavior, navigation, and shared project data
+- `scripts/index.js`, `scripts/work.js`, `scripts/contact.js` — page modules loaded directly by their HTML pages
+- `scripts/shared.js` — shared styles, Bootstrap behavior, and navigation setup
+- `scripts/projects.js` — project data shared by the home and work pages
 - `assets/images/` — project screenshots, logos, and portrait assets
 - `assets/styles/portfolio.scss` — Sass entry point imported by Vite
 - `assets/styles/_*.scss` — modular styles for shared layout and page sections
 - `vite.config.mjs` — multi-page build configuration and static image copying
+- `core-ui-library` — local component library dependency, expected at `../core-ui-library`
 - `styles/bootstrap-5.3.2/` — original Bootstrap source tree, retained for reference
 
 ## Featured work
@@ -70,13 +74,15 @@ The project includes examples of work across different stack combinations, inclu
 
 These projects demonstrate my ability to work with reusable UI components, APIs, responsive layouts, and clean front-end architecture.
 
-## Future improvements
+## Component library
 
-I plan to refactor repeated interface patterns in this portfolio (such as the navigation bar, the footer, the buttons and the form inputs) to use reusable components from my [Storybook component library](https://github.com/silviacremascoli/core-ui-library). This will reduce code duplication, make future updates more consistent, and provide a foundation for improving the site's performance.
+The project uses the [Core UI Library](https://github.com/silviacremascoli/core-ui-library) as a local npm dependency. Its stylesheet is imported site-wide from `scripts/shared.js`; existing page markup has not yet been replaced with library components.
+
+Because the dependency uses `file:../core-ui-library`, clone or place that repository next to this one before running `npm install`. The library package exposes React, Vue, and Twig component entry points for future integration.
 
 ## Run locally
 
-Install dependencies and start the Vite development server from the project root:
+With the Core UI Library repository available at `../core-ui-library`, install dependencies and start the Vite development server from the project root:
 
 ```bash
 npm install
@@ -92,11 +98,13 @@ npm run preview
 
 ## Build custom styles
 
-Bootstrap, AOS, and Font Awesome are installed through npm and bundled locally with the portfolio Sass by Vite. The Sass can also be compiled separately with:
+Vite bundles Bootstrap, AOS, Font Awesome, Core UI Library styles, and the portfolio Sass locally. Build the complete multi-page site with:
 
 ```bash
-npm run build:css
+npm run build
 ```
+
+`npm run build:css` remains available to compile only the portfolio Sass to `assets/styles/portfolio.css`.
 
 ## License
 
