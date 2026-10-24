@@ -1,14 +1,17 @@
-footer {
-  margin: 0 0 rem(50) 0;
-  border-top: 1px solid $primary-color;
-  padding: 0 rem(50);
+@use "mixins";
+@use "variables";
 
-  @include media-breakpoint-up(sm) {
+footer {
+  margin: 0 0 mixins.rem(50) 0;
+  border-top: 1px solid variables.$primary-color;
+  padding: 0 mixins.rem(50);
+
+  @include mixins.media-breakpoint-up(sm) {
     padding: 0;
   }
 
-  @include media-breakpoint-up(lg) {
-    margin-top: rem(80);
+  @include mixins.media-breakpoint-up(lg) {
+    margin-top: mixins.rem(80);
     border-top: none;
   }
 
@@ -21,32 +24,32 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: rem(16);
-  padding: rem(24) rem(20) 0;
-  margin-bottom: rem(40);
+  gap: mixins.rem(16);
+  padding: mixins.rem(24) mixins.rem(20) 0;
+  margin-bottom: mixins.rem(40);
   text-align: center;
 
-  @include media-breakpoint-up(md) {
+  @include mixins.media-breakpoint-up(md) {
     flex-direction: row;
     justify-content: space-between;
-    padding: rem(30) rem(48);
+    padding: mixins.rem(30) mixins.rem(48);
     text-align: left;
   }
 
-  @include media-breakpoint-up(lg) {
-    padding-right: rem(120);
-    padding-left: rem(120);
-    background: $secondary-color;
-    border-radius: rem(10);
+  @include mixins.media-breakpoint-up(lg) {
+    padding-right: mixins.rem(120);
+    padding-left: mixins.rem(120);
+    background: variables.$secondary-color;
+    border-radius: mixins.rem(10);
     margin-bottom: 0;
   }
 
   h2 {
-    margin-bottom: rem(8);
-    font-size: rem(28);
+    margin-bottom: mixins.rem(8);
+    font-size: mixins.rem(28);
 
-    @include media-breakpoint-up(md) {
-      font-size: rem(36);
+    @include mixins.media-breakpoint-up(md) {
+      font-size: mixins.rem(36);
     }
   }
 
@@ -59,11 +62,11 @@ footer {
   margin-top: 0;
 
   .btn, .text-muted {
-    font-size: rem(18);
+    font-size: mixins.rem(18);
   }
 
-  @include media-breakpoint-up(lg) {
-    margin-top: rem(80);
+  @include mixins.media-breakpoint-up(lg) {
+    margin-top: mixins.rem(80);
     border-top: none;
   }
 }
@@ -74,33 +77,33 @@ footer {
 }
 
 .email-link {
-  margin: rem(40) 0 rem(20) 0;
+  margin: mixins.rem(40) 0 mixins.rem(20) 0;
   text-decoration: none;
-  font-size: rem(22);
-  color: $quaternary-color;
+  font-size: mixins.rem(22);
+  color: variables.$quaternary-color;
   font-weight: 500;
-  transition: $transition;
+  transition: variables.$transition;
 
   &:hover {
-    color: $quaternary-color;
+    color: variables.$quaternary-color;
   }
 }
 
 .social-links {
   a {
-    margin: 0 rem(15);
-    color: $quaternary-color;
-    background: $secondary-color;
-    padding: rem(10) rem(12);
-    font-size: rem(18);
-    border-radius: rem(23);
-    border: 1px solid $quaternary-color;
-    transition: $transition;
-    transition: $transform;
+    margin: 0 mixins.rem(15);
+    color: variables.$quaternary-color;
+    background: variables.$secondary-color;
+    padding: mixins.rem(10) mixins.rem(12);
+    font-size: mixins.rem(18);
+    border-radius: mixins.rem(23);
+    border: 1px solid variables.$quaternary-color;
+    transition: variables.$transition;
+    transition: variables.$transform;
 
     &:hover {
-      color: $tertiary-color;
-      background: $primary-color;
+      color: variables.$tertiary-color;
+      background: variables.$primary-color;
       transform: scale(1.2);
     }
   }
@@ -108,10 +111,10 @@ footer {
 
 .github-link {
   text-decoration: underline;
-  color: $quaternary-color;
-  transition: $transition;
+  color: variables.$quaternary-color;
+  transition: variables.$transition;
 
   &:hover {
-    color: $tertiary-color;
+    color: variables.$tertiary-color;
   }
 }

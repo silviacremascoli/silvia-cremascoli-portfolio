@@ -1,51 +1,54 @@
+@use "mixins";
+@use "variables";
+
 .container {
   h2 {
-    margin-bottom: rem(25);
+    margin-bottom: mixins.rem(25);
   }
   .skills h2 {
-    font-size: rem(40);
-    margin-top: rem(20);
+    font-size: mixins.rem(40);
+    margin-top: mixins.rem(20);
   }
 }
 
 .content-container {
-  padding: 0 rem(12) rem(10) rem(12);
+  padding: 0 mixins.rem(12) mixins.rem(10) mixins.rem(12);
   text-align: center;
 
-  @include media-breakpoint-up(lg) {
-    padding: rem(50) rem(20);
+  @include mixins.media-breakpoint-up(lg) {
+    padding: mixins.rem(50) mixins.rem(20);
     text-align: left;
   }
 
   p {
-    font-size: $standard-font-size;
+    font-size: variables.$standard-font-size;
   }
   .work {
-    padding: rem(40) rem(20);
+    padding: mixins.rem(40) mixins.rem(20);
   }
 }
 
 .content {
-  margin: rem(30);
+  margin: mixins.rem(30);
   h1 {
-    font-size: rem(64);
-    line-height: rem(80);
+    font-size: mixins.rem(64);
+    line-height: mixins.rem(80);
   }
 
   h2 {
-    font-family: $default-font-family;
-    font-size: rem(18);
+    font-family: variables.$default-font-family;
+    font-size: mixins.rem(18);
     line-height: 1;
   }
 
   h3 {
-    font-family: $default-font-family;
-    font-size: rem(24);
+    font-family: variables.$default-font-family;
+    font-size: mixins.rem(24);
     font-weight: bold;
     line-height: 1.5;
   }
 
   p {
-    font-size: rem(14);
+    font-size: mixins.rem(14);
   }
 }

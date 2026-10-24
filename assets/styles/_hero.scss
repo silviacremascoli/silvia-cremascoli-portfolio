@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 .hero {
   background: linear-gradient(
     180deg,
@@ -5,18 +8,18 @@
     rgb(242, 249, 241) 100%
   );
   text-align: center;
-  padding: rem(40) 0 rem(60) 0;
+  padding: mixins.rem(40) 0 mixins.rem(60) 0;
 
-  @include media-breakpoint-up(lg) {
-    padding: rem(100);
+  @include mixins.media-breakpoint-up(lg) {
+    padding: mixins.rem(100);
   }
 
   .my-name {
     background-image: linear-gradient(
       to right,
-      $quaternary-color 0%,
-      $primary-color 50%,
-      $quaternary-color 100%
+      variables.$quaternary-color 0%,
+      variables.$primary-color 50%,
+      variables.$quaternary-color 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
@@ -24,41 +27,41 @@
     background-size: 100%;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-    -webkit-text-stroke: 1px $quaternary-color;
+    -webkit-text-stroke: 1px variables.$quaternary-color;
   }
 
   h2 {
-    font-family: $default-font-family;
+    font-family: variables.$default-font-family;
     font-weight: normal;
-    font-size: rem(20);
+    font-size: mixins.rem(20);
     line-height: 1.6;
-    padding: 0 rem(80);
+    padding: 0 mixins.rem(80);
 
-    @include media-breakpoint-up(lg) {
-      font-size: rem(24);
+    @include mixins.media-breakpoint-up(lg) {
+      font-size: mixins.rem(24);
       line-height: 1.5;
       padding: 0;
     }
   }
 
   i {
-    padding: rem(8);
-    font-size: rem(26);
-    margin-bottom: rem(15);
-    color: $quaternary-color;
+    padding: mixins.rem(8);
+    font-size: mixins.rem(26);
+    margin-bottom: mixins.rem(15);
+    color: variables.$quaternary-color;
 
-    @include media-breakpoint-up(sm) {
-      font-size: rem(30);
-      padding: rem(15);
+    @include mixins.media-breakpoint-up(sm) {
+      font-size: mixins.rem(30);
+      padding: mixins.rem(15);
     }
   }
 
   .btn-main {
     margin: 0;
-    font-size: rem(18);
+    font-size: mixins.rem(18);
 
-    @include media-breakpoint-up(sm) {
-      margin-top: rem(15) 0;
+    @include mixins.media-breakpoint-up(sm) {
+      margin-top: mixins.rem(15) 0;
     }
   }
 }

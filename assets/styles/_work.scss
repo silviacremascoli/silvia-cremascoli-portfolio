@@ -1,55 +1,58 @@
+@use "mixins";
+@use "variables";
+
 .work {
   .work-title {
-    margin-top: rem(50);
-    font-size: rem(48);
-    padding: 0 rem(30);
+    margin-top: mixins.rem(50);
+    font-size: mixins.rem(48);
+    padding: 0 mixins.rem(30);
     line-height: 1.2;
 
-    @include media-breakpoint-up(sm) {
+    @include mixins.media-breakpoint-up(sm) {
       line-height: 1;
-      font-size: rem(56);
+      font-size: mixins.rem(56);
       padding: 0;
     }
   }
 
   .github-project {
     display: block;
-    margin: rem(10) rem(40);
+    margin: mixins.rem(10) mixins.rem(40);
 
-    @include media-breakpoint-up(lg) {
+    @include mixins.media-breakpoint-up(lg) {
       display: inline-block;
-      margin: 0 0 0 rem(20);
+      margin: 0 0 0 mixins.rem(20);
     }
   }
 }
 
 .skills {
-  background: $secondary-color;
+  background: variables.$secondary-color;
   margin: 0;
-  padding: rem(40);
+  padding: mixins.rem(40);
   max-width: 100%;
 
   .row {
-    margin: 0 rem(30);
+    margin: 0 mixins.rem(30);
 
-    @include media-breakpoint-up(lg) {
-      margin: 0 rem(60);
+    @include mixins.media-breakpoint-up(lg) {
+      margin: 0 mixins.rem(60);
     }
   }
 
   h2 {
-    margin-top: rem(30);
-    font-size: rem(48);
+    margin-top: mixins.rem(30);
+    font-size: mixins.rem(48);
 
-    @include media-breakpoint-up(lg) {
+    @include mixins.media-breakpoint-up(lg) {
       margin-top: 0;
-      font-size: rem(56);
+      font-size: mixins.rem(56);
     }
   }
 
   p,
   i {
-    color: $quaternary-color;
-    font-size: rem(18);
+    color: variables.$quaternary-color;
+    font-size: mixins.rem(18);
   }
 }

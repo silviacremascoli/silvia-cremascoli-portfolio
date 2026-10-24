@@ -1,9 +1,11 @@
+@use "variables";
+
 .white-curve {
-  background: $secondary-color;
-  fill: $quinary-color;
+  background: variables.$secondary-color;
+  fill: variables.$quinary-color;
 }
 
 .green-curve {
-  background: $quinary-color;
-  fill: $secondary-color;
+  background: variables.$quinary-color;
+  fill: variables.$secondary-color;
 }

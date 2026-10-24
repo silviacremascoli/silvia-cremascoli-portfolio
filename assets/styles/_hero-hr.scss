@@ -1,7 +1,10 @@
+@use "mixins";
+@use "variables";
+
 .code-divider {
   width: 100%;
   height: 0;
-  border-top: rem(4) dotted $quaternary-color;
+  border-top: mixins.rem(4) dotted variables.$quaternary-color;
   position: relative;
   overflow: visible;
   margin: 0;
@@ -9,16 +12,16 @@
   i {
     position: absolute;
     left: 0;
-    top: rem(-20);
+    top: mixins.rem(-20);
     display: grid;
     place-items: center;
-    width: rem(36);
-    height: rem(36);
-    font-size: rem(16);
-    border: 2px solid $quinary-color;
+    width: mixins.rem(36);
+    height: mixins.rem(36);
+    font-size: mixins.rem(16);
+    border: 2px solid variables.$quinary-color;
     border-radius: 50%;
-    background-color: $quaternary-color;
-    color: $quinary-color;
+    background-color: variables.$quaternary-color;
+    color: variables.$quinary-color;
     animation: code-travel 20s infinite linear;
   }
 
@@ -37,7 +40,7 @@
 
 @keyframes code-travel {
   from {
-    transform: translateX(rem(-36));
+    transform: translateX(mixins.rem(-36));
   }
 
   to {

@@ -1,3 +1,5 @@
+@use "variables";
+
 @mixin media-breakpoint-up($breakpoint) {
   @if $breakpoint == sm {
     @media (min-width: 576px) {
@@ -22,15 +24,15 @@
 }
 
 @mixin button {
-  font-size: $standard-font-size;
-  font-family: $default-font-family;
+  font-size: variables.$standard-font-size;
+  font-family: variables.$default-font-family;
   line-height: rem(27);
   border-radius: rem(24);
   padding: rem(15) rem(30);
-  transition: $transition;
-  transition: $transform;
+  transition: variables.$transition;
+  transition: variables.$transform;
   &:hover {
-    transform: $scale;
+    transform: variables.$scale;
   }
 }
 

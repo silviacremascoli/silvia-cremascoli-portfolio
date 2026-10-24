@@ -1,19 +1,22 @@
+@use "mixins";
+@use "variables";
+
 .navbar {
-  background: $quinary-color;
-  padding: rem(5) 0;
+  background: variables.$quinary-color;
+  padding: mixins.rem(5) 0;
   transition: transform 250ms ease-in-out;
 
   &.navbar-hidden {
     transform: translateY(-100%);
   }
 
-  @include media-breakpoint-up(lg) {
-    padding: rem(12) 0;
-    background: $quinary-color;
+  @include mixins.media-breakpoint-up(lg) {
+    padding: mixins.rem(12) 0;
+    background: variables.$quinary-color;
   }
 
   &:hover {
-    background: $quinary-color;
+    background: variables.$quinary-color;
   }
 
   .navbar-brand {
@@ -22,30 +25,30 @@
 
     &:focus-visible {
       outline-offset: -2px !important;
-      border-radius: rem(4);
+      border-radius: mixins.rem(4);
     }
 
     .logo {
-      max-width: rem(60);
+      max-width: mixins.rem(60);
     }
   }
 
   .nav-link {
     width: fit-content;
-    padding: rem(8) rem(8) rem(4) rem(8);
-    line-height: rem(25);
-    color: $tertiary-color;
+    padding: mixins.rem(8) mixins.rem(8) mixins.rem(4) mixins.rem(8);
+    line-height: mixins.rem(25);
+    color: variables.$tertiary-color;
     font-weight: 500;
-    font-size: rem(18);
-    border-radius: rem(5);
+    font-size: mixins.rem(18);
+    border-radius: mixins.rem(5);
     transition: all 300ms ease-in-out;
     transition: transform 0.5s;
 
     &:first-child {
-      margin-top: rem(16);
+      margin-top: mixins.rem(16);
     }
 
-    @include media-breakpoint-up(lg) {
+    @include mixins.media-breakpoint-up(lg) {
       padding: 0;
 
       &:first-child {
@@ -54,24 +57,24 @@
     }
 
     &:hover {
-      color: $quaternary-color;
+      color: variables.$quaternary-color;
       transform: none;
 
-      @include media-breakpoint-up(lg) {
+      @include mixins.media-breakpoint-up(lg) {
         transform: scale(1.1);
       }
     }
 
     &:focus-visible {
-      outline: 3px solid $quaternary-color !important;
+      outline: 3px solid variables.$quaternary-color !important;
       outline-offset: 2px !important;
       box-shadow: none !important;
     }
 
     &.contact-nav-link {
-      margin-bottom: rem(12);
+      margin-bottom: mixins.rem(12);
 
-      @include media-breakpoint-up(lg) {
+      @include mixins.media-breakpoint-up(lg) {
         margin-bottom: 0;
       }
     }
@@ -87,18 +90,18 @@
     border: 0;
 
     &:focus-visible {
-      outline: 3px solid $quaternary-color;
+      outline: 3px solid variables.$quaternary-color;
       outline-offset: 3px;
     }
   }
 
   .navbar-toggler-icon {
     position: relative;
-    width: rem(24);
-    height: rem(2);
+    width: mixins.rem(24);
+    height: mixins.rem(2);
     background-image: none;
-    background-color: $tertiary-color;
-    border-radius: rem(2);
+    background-color: variables.$tertiary-color;
+    border-radius: mixins.rem(2);
     transition: background-color 200ms ease-in-out;
 
     &::before,
@@ -109,17 +112,17 @@
       width: 100%;
       height: 100%;
       content: "";
-      background-color: $tertiary-color;
+      background-color: variables.$tertiary-color;
       border-radius: inherit;
       transition: transform 200ms ease-in-out;
     }
 
     &::before {
-      transform: translateY(rem(-7));
+      transform: translateY(mixins.rem(-7));
     }
 
     &::after {
-      transform: translateY(rem(7));
+      transform: translateY(mixins.rem(7));
     }
   }
 
@@ -136,13 +139,13 @@
   }
 
   .active {
-    color: $quaternary-color !important;
+    color: variables.$quaternary-color !important;
     font-weight: 700;
     text-decoration-line: underline;
     text-decoration-style: wavy;
-    text-decoration-color: $quaternary-color;
-    text-decoration-thickness: rem(1.5);
-    text-underline-offset: rem(8);
+    text-decoration-color: variables.$quaternary-color;
+    text-decoration-thickness: mixins.rem(1.5);
+    text-underline-offset: mixins.rem(8);
   }
 
   &:has(.navbar-toggler[aria-expanded="true"]):focus-within {
