@@ -30,9 +30,10 @@
 
   .project-title {
     display: flex;
-    min-height: 2em;
     align-items: center;
     justify-content: center;
+    line-height: 1.2;
+    text-wrap: balance;
   }
 
   .github-project {
@@ -49,11 +50,8 @@
   }
 
   .project-subtitle {
-    line-height: 1.4;
-
-    @media (min-width: 992px) and (max-width: 1199.98px) {
-      min-height: 2.8em;
-    }
+    line-height: 1.35;
+    text-wrap: balance;
   }
 
   .project-actions {
