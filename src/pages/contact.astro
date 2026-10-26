@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Contact Silvia Cremascoli - Front-end Developer"
+  description="Find here all the contact details to work with Silvia Cremascoli."
+  page="contact"
+>
+  <div class="contact-details content-container container">
+    <h1 class="text-center">
+      <span class="h1-emoji" aria-hidden="true">👋</span><span>Let's get in touch!</span>
+    </h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mt-5 contact-form">
+          <h2 class="mb-5 text-center">Write me a message</h2>
+          <form method="POST" name="contact" netlify>
+            <div class="form-group mb-3">
+              <label for="name-surname">Name and surname:&#8203;</label>
+              <input type="text" class="form-control mt-2" id="name-surname" name="name" required />
+            </div>
+            <div class="form-group mb-3">
+              <label for="email-address">Email address:&#8203;</label>
+              <input type="email" class="form-control mt-2" id="email-address" name="email" required />
+            </div>
+            <div class="form-group mb-3">
+              <label for="I-want-to">I want to:</label>
+              <select class="form-select mt-2" id="I-want-to" name="offer" required>
+                <option>Discuss a role</option>
+                <option>Collaborate on an open-source project</option>
+                <option>Have a conversation</option>
+              </select>
+            </div>
+            <div class="form-group mb-4">
+              <label for="your-message">Your message:</label>
+              <textarea class="form-control mt-2" id="your-message" rows="8" name="message" required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-second" title="Send message">Send message</button>
+          </form>
+        </div>
+        <div class="col-lg-6 mt-5 d-flex flex-column justify-content-center">
+          <div class="text-center">
+            <h2 class="mb-5">Or find me here:</h2>
+            <h3><i class="fa-regular fa-envelope me-2" aria-hidden="true"></i>Email</h3>
+            <p>
+              <a
+                href="mailto:silcremascoli@gmail.com"
+                class="contact-link"
+                title="Email Silvia Cremascoli">silcremascoli@gmail.com</a
+              >
+            </p>
+            <h3><i class="fa-brands fa-linkedin me-2" aria-hidden="true"></i>LinkedIn</h3>
+            <p>
+              <a
+                href="https://www.linkedin.com/in/silvia-cremascoli/"
+                class="contact-link"
+                target="_blank"
+                title="LinkedIn Silvia Cremascoli">@Silvia Cremascoli</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

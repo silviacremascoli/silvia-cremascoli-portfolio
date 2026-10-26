@@ -1,0 +1,53 @@
+---
+interface Props {
+  current: "home" | "work" | "contact";
+}
+
+const { current } = Astro.props;
+
+const links = [
+  { key: "home", href: "/", label: "Home", title: "Go to homepage", extraClass: "" },
+  { key: "work", href: "/work", label: "My work", title: "Projects by Silvia Cremascoli", extraClass: "" },
+  { key: "contact", href: "/contact", label: "Contact", title: "Contact Silvia Cremascoli", extraClass: "contact-nav-link" },
+];
+---
+
+<nav class="navbar navbar-expand-lg sticky-top shadow" aria-label="Primary">
+  <div class="container">
+    <a class="navbar-brand" href="/" title="Go to homepage"
+      ><img
+        src="/assets/images/Portfolio logo.png"
+        alt="Silvia Cremascoli logo"
+        class="logo"
+      /></a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      title="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        {
+          links.map((link) => (
+            <a
+              class:list={["nav-link", { active: link.key === current }, link.extraClass]}
+              aria-current={link.key === current ? "page" : undefined}
+              href={link.href}
+              title={link.title}
+            >
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</nav>

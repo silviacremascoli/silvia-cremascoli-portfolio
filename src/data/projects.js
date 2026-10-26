@@ -1,5 +1,4 @@
-// window is used here to attach the array to the global scope and make it accessible from other scripts
-window.portfolioProjects = [
+export const projects = [
   {
     name: "Storybook Component Library",
     img: "Storybook",

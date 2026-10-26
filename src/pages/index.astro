@@ -1,0 +1,150 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Curve from "../components/Curve.astro";
+import ContactCta from "../components/ContactCta.astro";
+import { languages } from "../data/languages.js";
+import { projects } from "../data/projects.js";
+
+const featuredProjects = projects.filter((project) => project.homeDescription);
+---
+
+<Layout
+  title="Front-End Developer - Silvia Cremascoli"
+  description="I'm a front-end developer with a passion for web design and knowledge in JavaScript, React.js, Vue.js, TypeScript, Storybook and Twig Templates. Check my projects and contact me to work together!"
+  page="home"
+>
+  <div class="hero">
+    <h1 class="mt-3"><span class="my-name">Silvia Cremascoli</span></h1>
+    <h2 class="mt-5">
+      Front-End Developer, based in Graz <span aria-label="Austria" role="img">🇦🇹</span>
+    </h2>
+    <div class="mt-3">
+      <div>
+        {
+          languages.map((language) => (
+            <i
+              class={language.class}
+              role="img"
+              aria-label={language.title}
+              title={language.title}
+              data-aos="zoom-in"
+              data-aos-duration={language.duration}
+              data-aos-easing="ease-in-sine"
+            />
+          ))
+        }
+      </div>
+    </div>
+    <div class="mt-3">
+      <a href="/contact" class="btn btn-main" title="Contact Silvia Cremascoli">Contact me!</a>
+    </div>
+  </div>
+  <div class="code-divider" aria-hidden="true">
+    <i class="fa-solid fa-code" aria-hidden="true"></i>
+    <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+    <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+    <i class="fa-solid fa-keyboard" aria-hidden="true"></i>
+  </div>
+  <div class="content-container container">
+    <div class="row mt-0">
+      <div class="col-lg-6">
+        <div class="about-me">
+          <h2 class="mb-4">About me</h2>
+          <p class="mb-5">
+            <span class="d-block mb-3">
+              What about me? Well, I love languages (spoken by humans or not 🤖), technology, and
+              improving things for the better. That's why after working many years as a
+              <strong>translator</strong> and <strong>content manager</strong>
+              — picking up plenty of <strong>SEO</strong> tricks along the way — I decided to embark
+              on a new journey to learn programming languages and I became a
+              <strong>committed front-end developer</strong>.
+            </span>
+            <span class="d-block mb-3">
+              Since a translator must be particularly precise in the delivery of words and meanings
+              into another language, I bring the same <strong>accuracy</strong> and
+              <strong>attention to detail</strong> into my code.
+            </span>
+            <span class="d-block mb-3">
+              Over the past three years I built <strong>UI component libraries</strong> and
+              <strong>design systems</strong>
+              with <strong>Storybook and Twig templates</strong>, integrated into enterprise
+              <strong>TYPO3</strong> platforms — and I can honestly say these are the tools I enjoy the
+              most. I love turning <strong>Figma</strong> designs into creative, pixel-perfect
+              components that don't just look good, but are
+              <strong>accessible to everyone (WCAG 2.1 AA)</strong>
+              — because a beautiful interface that only some people can use is only half the job.
+            </span>
+            <span class="d-block mb-3">
+              I speak Italian, German, English, and Spanish, and bring that
+              <strong>multilingual perspective</strong> to clear interface copy and user experiences that
+              work across cultures.
+            </span>
+            I am committed to <strong>constant learning</strong> and personal development, because monotony
+            is just too boring for me 😉
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1GErs_AAYWhfZPVALLyCl7tc8_PYl6bvS/view?usp=sharing"
+            class="btn btn-main resume-link"
+            title="See résumé of Silvia Cremascoli"
+            target="_blank">See my résumé</a
+          >
+          <a
+            href="https://drive.google.com/file/d/1-nZm2vqTzP2DF2JLJHuSTcbyV-6yny3t/view?usp=share_link"
+            target="_blank"
+            class="btn btn-main certificate-link"
+            title="See certificates of Silvia Cremascoli">See my certificates</a
+          >
+        </div>
+      </div>
+      <div
+        class="col-lg-6 personal-image"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-sine"
+      >
+        <img src="/assets/images/portrait.png" alt="Silvia Cremascoli" class="img-fluid portrait wrap" />
+      </div>
+    </div>
+  </div>
+  <Curve variant="green" />
+  <div class="projects">
+    <div class="container">
+      {
+        featuredProjects.map((project, index) => {
+          const imageOnLeft = index % 2 === 0;
+          const image = (
+            <div
+              class="col d-none d-lg-block"
+              data-aos={imageOnLeft ? "fade-right" : "fade-left"}
+              data-aos-duration="1500"
+              data-aos-easing="ease-in-sine"
+            >
+              <img src={`/assets/images/${project.img}.png`} alt={project.homeAlt} class="img-fluid rounded" />
+            </div>
+          );
+          const description = (
+            <div class="col">
+              <div class="project-description">
+                <h2 id={project.homeTitleId}>{project.homeTitle}{project.homeStatus && <span class="mt-3">({project.homeStatus})</span>}</h2>
+                <p class="mb-4 text-muted">{project.homeDescription}</p>
+                <div>
+                  <a href="/work" class="btn btn-second" title={project.homeCta}>
+                    {project.homeCta}
+                  </a>
+                </div>
+              </div>
+            </div>
+          );
+
+          return (
+            <div class="row align-items-center mb-5">
+              {imageOnLeft ? [image, description] : [description, image]}
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+  <Curve variant="white" />
+  <ContactCta />
+</Layout>

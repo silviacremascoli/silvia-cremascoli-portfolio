@@ -1,0 +1,45 @@
+---
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "aos/dist/aos.css";
+import "core-ui-library/styles";
+import "../styles/portfolio.scss";
+import "../styles/view-transitions.css";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  page: "home" | "work" | "contact";
+}
+
+const { title, description, page } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="icon" href="/assets/images/Portfolio logo.png" type="image/x-icon" />
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
+    <Nav current={page} />
+    <main id="main-content" tabindex="-1">
+      <slot />
+    </main>
+    <Footer compact={page === "contact"} />
+    <script>
+      import "bootstrap";
+      import AOS from "aos";
+      import "../scripts/nav.js";
+
+      AOS.init();
+    </script>
+  </body>
+</html>

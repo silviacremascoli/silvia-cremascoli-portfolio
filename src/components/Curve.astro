@@ -1,0 +1,22 @@
+---
+interface Props {
+  variant: "green" | "white";
+}
+
+const { variant } = Astro.props;
+const height = variant === "green" ? 100 : 75;
+---
+
+<svg
+  class={`${variant}-curve`}
+  xmlns="http://www.w3.org/2000/svg"
+  width="100%"
+  height={height}
+  viewBox="0 0 100 100"
+  preserveAspectRatio="none"
+  aria-hidden="true"
+  role="presentation"
+  focusable="false"
+>
+  <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+</svg>

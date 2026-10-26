@@ -1,0 +1,70 @@
+---
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+
+const socialLinks = [
+  {
+    href: "https://www.linkedin.com/in/silvia-cremascoli/",
+    label: "LinkedIn profile for Silvia Cremascoli",
+    title: "LinkedIn Silvia Cremascoli",
+    icon: "fa-brands fa-linkedin",
+  },
+  {
+    href: "https://github.com/silviacremascoli",
+    label: "GitHub profile for Silvia Cremascoli",
+    title: "GitHub Silvia Cremascoli",
+    icon: "fa-brands fa-github",
+  },
+  {
+    href: "https://drive.google.com/file/d/1GErs_AAYWhfZPVALLyCl7tc8_PYl6bvS/view?usp=sharing",
+    label: "Silvia Cremascoli résumé",
+    title: "Resume Silvia Cremascoli",
+    icon: "fa-solid fa-file",
+  },
+  {
+    href: "https://drive.google.com/file/d/1-nZm2vqTzP2DF2JLJHuSTcbyV-6yny3t/view?usp=share_link",
+    label: "Silvia Cremascoli certificates",
+    title: "Certificates Silvia Cremascoli",
+    icon: "fa-solid fa-certificate",
+  },
+];
+---
+
+<div class="container">
+  <footer class:list={{ "contact-footer": compact }}>
+    {
+      !compact && (
+        <div class="d-flex justify-content-center">
+          <a
+            href="mailto:silcremascoli@gmail.com"
+            class="email-link"
+            title="Email Silvia Cremascoli"
+          >
+            silcremascoli@gmail.com
+          </a>
+        </div>
+      )
+    }
+    <div class="social-links d-flex justify-content-center">
+      {
+        socialLinks.map((link) => (
+          <a href={link.href} target="_blank" aria-label={link.label} title={link.title}>
+            <i class={link.icon} aria-hidden="true" />
+          </a>
+        ))
+      }
+    </div>
+    <p class:list={["text-center", compact ? "mt-4" : "mt-5", "fs-6 lh-sm"]}>
+      Coded by Silvia Cremascoli and open-sourced on
+      <a
+        href="https://github.com/silviacremascoli/silvia-cremascoli-portfolio"
+        target="_blank"
+        title="GitHub Silvia Cremascoli"
+        class="github-link">GitHub</a
+      >
+    </p>
+  </footer>
+</div>

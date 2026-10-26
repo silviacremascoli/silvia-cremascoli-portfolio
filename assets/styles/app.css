@@ -1,9 +1,0 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
-@import "@fortawesome/fontawesome-free/css/all.min.css";
-@import "aos/dist/aos.css";
-@import "core-ui-library/styles";
-@import "./portfolio.scss";
-
-@view-transition {
-  navigation: auto;
-}
