@@ -20,28 +20,34 @@ import { skillGroups } from "../data/skills.js";
           {
             projects.map((project) => (
               <div class="col-md-6 mb-5">
-                <img
-                  src={`/assets/images/${project.img}.png`}
-                  alt={`Screenshot of ${project.alt}`}
-                  class="img-fluid rounded mb-3"
-                  id={project.id}
-                  data-aos={project["aos-fade"]}
-                  data-aos-duration="2000"
-                  data-aos-easing="ease-in-sine"
-                />
-                <h2 class="text-center m-0">{project.name}</h2>
-                <p class="text-center text-muted">Built with {project["built-with"]}</p>
-                <a
-                  href={project.link}
-                  class="btn btn-main"
-                  target="_blank"
-                  aria-label={`Check it out: ${project.name}`}>Check it out</a
-                ><a
-                  href={project.github}
-                  class="btn btn-second github-project"
-                  target="_blank"
-                  aria-label={`See code on GitHub for ${project.name}`}>See code on GitHub</a
-                >
+                <article class="project-card">
+                  <img
+                    src={`/assets/images/${project.img}.png`}
+                    alt={`Screenshot of ${project.alt}`}
+                    class="project-image rounded mb-4"
+                    id={project.id}
+                    data-aos={project["aos-fade"]}
+                    data-aos-duration="2000"
+                    data-aos-easing="ease-in-sine"
+                  />
+                  <h2 class="project-title text-center m-0">{project.name}</h2>
+                  <p class="project-subtitle text-center text-muted">
+                    Built with {project["built-with"]}
+                  </p>
+                  <div class="project-actions">
+                    <a
+                      href={project.link}
+                      class="btn btn-main"
+                      target="_blank"
+                      aria-label={`Check it out: ${project.name}`}>Check it out</a
+                    ><a
+                      href={project.github}
+                      class="btn btn-second github-project"
+                      target="_blank"
+                      aria-label={`See code on GitHub for ${project.name}`}>See code on GitHub</a
+                    >
+                  </div>
+                </article>
               </div>
             ))
           }

@@ -15,13 +15,65 @@
     }
   }
 
+  .project-card {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  .project-title {
+    display: flex;
+    min-height: 2em;
+    align-items: center;
+    justify-content: center;
+  }
+
   .github-project {
     display: block;
-    margin: mixins.rem(10) mixins.rem(40);
+    margin: 0;
+    padding-right: mixins.rem(16);
+    padding-left: mixins.rem(16);
 
     @include mixins.media-breakpoint-up(lg) {
       display: inline-block;
-      margin: 0 0 0 mixins.rem(20);
+      padding-right: mixins.rem(30);
+      padding-left: mixins.rem(30);
+    }
+  }
+
+  .project-subtitle {
+    line-height: 1.4;
+
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      min-height: 2.8em;
+    }
+  }
+
+  .project-actions {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: mixins.rem(12);
+    margin-top: auto;
+
+    .btn {
+      font-size: mixins.rem(16);
+      line-height: 1.4;
+      padding-top: mixins.rem(10);
+      padding-bottom: mixins.rem(10);
+    }
+
+    @include mixins.media-breakpoint-up(lg) {
+      flex-direction: row;
+      justify-content: center;
     }
   }
 }
