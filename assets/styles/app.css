@@ -3,3 +3,7 @@
 @import "aos/dist/aos.css";
 @import "core-ui-library/styles";
 @import "./portfolio.scss";
+
+@view-transition {
+  navigation: auto;
+}
