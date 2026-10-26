@@ -100,7 +100,7 @@ npm run preview
 
 Astro bundles Bootstrap, AOS, Font Awesome, the Core UI Library styles, and the portfolio Sass locally, so no CDN links are needed. The production site is written to `dist/`.
 
-The page transition animation uses the browser's native cross-document view transitions (`src/styles/view-transitions.css`) in browsers that support them.
+Internal links use Astro's `ClientRouter` for client-side page transitions, including a fallback animation in browsers without native cross-document view transitions. The contact form opts out so Netlify receives a normal form submission.
 
 ## License
 

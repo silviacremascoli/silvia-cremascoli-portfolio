@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import "core-ui-library/styles";
 import "../styles/portfolio.scss";
 import "../styles/view-transitions.css";
+import { ClientRouter } from "astro:transitions";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 
@@ -26,6 +27,7 @@ const { title, description, page } = Astro.props;
     <title>{title}</title>
     <link rel="icon" href="/assets/images/Portfolio logo.png" type="image/x-icon" />
     <meta name="description" content={description} />
+    <ClientRouter />
   </head>
   <body>
     <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
@@ -40,6 +42,7 @@ const { title, description, page } = Astro.props;
       import "../scripts/nav.js";
 
       AOS.init();
+      document.addEventListener("astro:page-load", () => AOS.refreshHard());
     </script>
   </body>
 </html>
