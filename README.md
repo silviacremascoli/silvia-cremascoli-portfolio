@@ -36,7 +36,7 @@ This portfolio serves as a digital CV and a showcase of the work I have built ac
 - HTML5
 - CSS3 / SASS
 - JavaScript
-- Vite
+- Astro
 - Bootstrap 5
 - Core UI Library
 - React.js
@@ -49,15 +49,15 @@ This portfolio serves as a digital CV and a showcase of the work I have built ac
 
 ## Project structure
 
-- `index.html`, `work.html`, `contact.html` — page entry points
-- `scripts/index.js`, `scripts/work.js`, `scripts/contact.js` — page modules loaded directly by their HTML pages
-- `scripts/shared.js` — shared styles, Bootstrap behavior, and navigation setup
-- `scripts/projects.js` — project data shared by the home and work pages
-- `assets/images/` — project screenshots, logos, and portrait assets
-- `assets/styles/portfolio.scss` — Sass entry point imported by Vite
-- `assets/styles/_*.scss` — modular styles for shared layout and page sections
-- `vite.config.mjs` — multi-page build configuration and static image copying
-- `core-ui-library` — local component library dependency, expected at `../core-ui-library`
+- `src/pages/` — the home, work, and contact pages (`index.astro`, `work.astro`, `contact.astro`)
+- `src/layouts/Layout.astro` — shared `<head>`, global styles, navigation, footer, and client script
+- `src/components/` — reusable pieces: `Nav`, `Footer`, `Curve` (section dividers), and `ContactCta`
+- `src/data/` — projects, skills, and languages rendered by the pages
+- `src/scripts/nav.js` — hide-on-scroll behavior for the navigation bar
+- `src/styles/portfolio.scss` — Sass entry point; `_*.scss` partials hold the modular styles
+- `public/assets/images/` — project screenshots, logos, and portrait assets, served as-is
+- `astro.config.mjs` — Astro configuration
+- `netlify.toml` — Netlify build and caching configuration
 - `styles/bootstrap-5.3.2/` — original Bootstrap source tree, retained for reference
 
 ## Featured work
@@ -76,35 +76,31 @@ These projects demonstrate my ability to work with reusable UI components, APIs,
 
 ## Component library
 
-The project uses the [Core UI Library](https://github.com/silviacremascoli/core-ui-library) as a local npm dependency. Its stylesheet is imported site-wide from `scripts/shared.js`; existing page markup has not yet been replaced with library components.
+The project installs the [Core UI Library](https://github.com/silviacremascoli/core-ui-library) from GitHub (`github:silviacremascoli/core-ui-library#main`); its `prepare` script builds the package during `npm install`. Its stylesheet is imported site-wide from `src/layouts/Layout.astro`; existing page markup has not yet been replaced with library components.
 
-Because the dependency uses `file:../core-ui-library`, clone or place that repository next to this one before running `npm install`. The library package exposes React, Vue, and Twig component entry points for future integration.
+The library package exposes React, Vue, and Twig component entry points for future integration.
 
 ## Run locally
 
-With the Core UI Library repository available at `../core-ui-library`, install dependencies and start the Vite development server from the project root:
+Install dependencies and start the Astro development server from the project root (Node.js 22.23.4 or newer is required):
 
 ```bash
 npm install
 npm run dev
 ```
 
-Vite prints the local URL in the terminal. To create and preview a production build:
+Astro prints the local URL in the terminal (`http://localhost:4321` by default). To create and preview a production build:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Build custom styles
+## Styles and assets
 
-Vite bundles Bootstrap, AOS, Font Awesome, Core UI Library styles, and the portfolio Sass locally. Build the complete multi-page site with:
+Astro bundles Bootstrap, AOS, Font Awesome, the Core UI Library styles, and the portfolio Sass locally, so no CDN links are needed. The production site is written to `dist/`.
 
-```bash
-npm run build
-```
-
-`npm run build:css` remains available to compile only the portfolio Sass to `assets/styles/portfolio.css`.
+The page transition animation uses the browser's native cross-document view transitions (`src/styles/view-transitions.css`) in browsers that support them.
 
 ## License
 
