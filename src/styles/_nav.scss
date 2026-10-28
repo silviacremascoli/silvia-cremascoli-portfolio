@@ -12,11 +12,6 @@
 
   @include mixins.media-breakpoint-up(lg) {
     padding: mixins.rem(12) 0;
-    background: variables.$quinary-color;
-  }
-
-  &:hover {
-    background: variables.$quinary-color;
   }
 
   .navbar-brand {
@@ -42,15 +37,36 @@
     font-weight: variables.$font-weight-medium;
     font-size: mixins.rem(18);
     border-radius: mixins.rem(5);
-    transition: all 300ms ease-in-out;
-    transition: transform 0.5s;
+    transition: color 300ms ease-in-out;
 
     &:first-child {
       margin-top: mixins.rem(16);
     }
 
     @include mixins.media-breakpoint-up(lg) {
+      position: relative;
       padding: 0;
+
+      // overlay repeats the label so its wavy text decoration matches `.active` exactly
+      &::after {
+        content: attr(data-label) / "";
+        position: absolute;
+        inset: 0 var(--bs-navbar-nav-link-padding-x, 0);
+        color: transparent;
+        white-space: nowrap;
+        pointer-events: none;
+        @include mixins.wavy-underline;
+        clip-path: inset(mixins.rem(-16) 100% mixins.rem(-16) 0);
+        transition: clip-path 400ms ease-in-out;
+      }
+
+      &:hover::after {
+        clip-path: inset(mixins.rem(-16) 0);
+      }
+
+      &.active::after {
+        display: none;
+      }
 
       &:first-child {
         margin-top: 0;
@@ -59,11 +75,6 @@
 
     &:hover {
       color: variables.$quaternary-color;
-      transform: none;
-
-      @include mixins.media-breakpoint-up(lg) {
-        transform: scale(1.1);
-      }
     }
 
     &:focus-visible {
@@ -142,11 +153,7 @@
   .active {
     color: variables.$quaternary-color !important;
     font-weight: variables.$font-weight-bold;
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-decoration-color: variables.$quaternary-color;
-    text-decoration-thickness: mixins.rem(1.5);
-    text-underline-offset: mixins.rem(8);
+    @include mixins.wavy-underline;
   }
 
   &:has(.navbar-toggler[aria-expanded="true"]):focus-within {

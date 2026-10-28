@@ -30,10 +30,29 @@
   border-radius: rem(24);
   padding: rem(15) rem(30);
   transition: variables.$transition;
-  transition: variables.$transform;
+}
+
+@mixin wipe-hover($fill) {
+  background-image: linear-gradient($fill, $fill);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0 100%;
+  transition:
+    background-size 400ms ease-in-out,
+    color 400ms ease-in-out,
+    border-color 400ms ease-in-out;
+
   &:hover {
-    transform: variables.$scale;
+    background-size: 100% 100%;
   }
+}
+
+@mixin wavy-underline {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: variables.$quaternary-color;
+  text-decoration-thickness: rem(1.5);
+  text-underline-offset: rem(8);
 }
 
 @mixin hero-hr {
