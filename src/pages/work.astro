@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Icon from "../components/Icon.astro";
 import Layout from "../layouts/Layout.astro";
 import Curve from "../components/Curve.astro";
 import ContactCta from "../components/ContactCta.astro";
@@ -75,7 +76,7 @@ const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager
               <h2 class="mb-4">{group.title}</h2>
               {group.items.map((item) => (
                 <p>
-                  <i class={item.icon} aria-hidden="true" /> {item.name}
+                  <Icon name={item.icon} aria-hidden="true" /> {item.name}
                 </p>
               ))}
             </div>

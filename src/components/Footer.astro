@@ -1,4 +1,6 @@
 ---
+import Icon from "./Icon.astro";
+
 interface Props {
   compact?: boolean;
 }
@@ -52,7 +54,7 @@ const socialLinks = [
       {
         socialLinks.map((link) => (
           <a href={link.href} target="_blank" aria-label={link.label} title={link.title}>
-            <i class={link.icon} aria-hidden="true" />
+            <Icon name={link.icon} aria-hidden="true" />
           </a>
         ))
       }

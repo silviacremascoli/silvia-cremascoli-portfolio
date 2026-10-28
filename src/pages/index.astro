@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Icon from "../components/Icon.astro";
 import Layout from "../layouts/Layout.astro";
 import Curve from "../components/Curve.astro";
 import ContactCta from "../components/ContactCta.astro";
@@ -24,8 +25,8 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
       <div>
         {
           languages.map((language) => (
-            <i
-              class={language.class}
+            <Icon
+              name={language.class}
               role="img"
               aria-label={language.title}
               title={language.title}
@@ -42,10 +43,10 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
     </div>
   </div>
   <div class="code-divider" aria-hidden="true">
-    <i class="fa-solid fa-code" aria-hidden="true"></i>
-    <i class="fa-solid fa-terminal" aria-hidden="true"></i>
-    <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
-    <i class="fa-solid fa-keyboard" aria-hidden="true"></i>
+    <Icon name="fa-solid fa-code" aria-hidden="true" />
+    <Icon name="fa-solid fa-terminal" aria-hidden="true" />
+    <Icon name="fa-solid fa-code-branch" aria-hidden="true" />
+    <Icon name="fa-solid fa-keyboard" aria-hidden="true" />
   </div>
   <div class="content-container container">
     <div class="row mt-0">
@@ -110,7 +111,7 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
           class="img-fluid portrait wrap"
           widths={[400, 800]}
           sizes="(min-width: 992px) 50vw, 100vw"
-          loading="eager"
+          loading="lazy"
           fetchpriority="high"
         />
       </div>

@@ -1,0 +1,37 @@
+---
+import { icon } from "@fortawesome/fontawesome-svg-core";
+import * as solid from "@fortawesome/free-solid-svg-icons";
+import * as brands from "@fortawesome/free-brands-svg-icons";
+import * as regular from "@fortawesome/free-regular-svg-icons";
+
+interface Props {
+  // Font Awesome class string, for example "fa-brands fa-github"
+  name: string;
+  [attr: string]: unknown;
+}
+
+const packs: Record<string, Record<string, any>> = {
+  "fa-solid": solid,
+  "fa-brands": brands,
+  "fa-regular": regular,
+};
+
+const { name, ...attrs } = Astro.props;
+const [style, iconClass] = name.split(" ");
+const exportName =
+  "fa" +
+  iconClass
+    .replace(/^fa-/, "")
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join("");
+const definition = packs[style]?.[exportName];
+
+if (!definition) {
+  throw new Error(`Unknown Font Awesome icon: ${name} (${style}/${exportName})`);
+}
+
+const svg = icon(definition).html[0];
+---
+
+<i {...attrs} set:html={svg} />

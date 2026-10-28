@@ -88,6 +88,11 @@ p {
   outline-offset: 3px;
 }
 
+// Font Awesome's default 1.25em width adds blank space around narrower glyphs
+i .svg-inline--fa {
+  width: auto;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
