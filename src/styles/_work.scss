@@ -83,7 +83,7 @@
   max-width: 100%;
 
   .row {
-    margin: 0 mixins.rem(30);
+    margin: 0;
 
     @include mixins.media-breakpoint-up(lg) {
       margin: 0 mixins.rem(60);
