@@ -81,7 +81,7 @@ footer {
   text-decoration: none;
   font-size: mixins.rem(22);
   color: variables.$quaternary-color;
-  font-weight: 500;
+  font-weight: variables.$font-weight-medium;
   transition: variables.$transition;
 
   &:hover {

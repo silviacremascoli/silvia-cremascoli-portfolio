@@ -32,7 +32,7 @@
 
   h2 {
     font-family: variables.$default-font-family;
-    font-weight: normal;
+    font-weight: variables.$font-weight-normal;
     font-size: mixins.rem(20);
     line-height: 1.6;
     padding: 0 mixins.rem(80);

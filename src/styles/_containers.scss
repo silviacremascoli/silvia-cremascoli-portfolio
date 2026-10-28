@@ -44,7 +44,7 @@
   h3 {
     font-family: variables.$default-font-family;
     font-size: mixins.rem(24);
-    font-weight: bold;
+    font-weight: variables.$font-weight-bold;
     line-height: 1.5;
   }
 
