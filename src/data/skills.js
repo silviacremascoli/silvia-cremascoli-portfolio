@@ -11,6 +11,7 @@ export const skillGroups = [
       { name: "TWIG", icon: "fa-solid fa-leaf" },
       { name: "REACT.JS", icon: "fa-brands fa-react" },
       { name: "VUE.JS", icon: "fa-brands fa-vuejs" },
+      { name: "ASTRO", icon: "fa-solid fa-rocket" },
       { name: "API", icon: "fa-solid fa-gear" },
     ],
   },
