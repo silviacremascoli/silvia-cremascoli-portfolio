@@ -35,7 +35,7 @@
     font-weight: variables.$font-weight-normal;
     font-size: mixins.rem(20);
     line-height: 1.6;
-    padding: 0 mixins.rem(80);
+    padding: 0 mixins.rem(48);
 
     @include mixins.media-breakpoint-up(lg) {
       font-size: mixins.rem(24);
