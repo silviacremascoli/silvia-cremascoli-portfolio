@@ -1,10 +1,12 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Curve from "../components/Curve.astro";
 import ContactCta from "../components/ContactCta.astro";
 import { languages } from "../data/languages.js";
 import { projects } from "../data/projects.js";
 
+const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager: true, import: "default" });
 const featuredProjects = projects.filter((project) => project.homeDescription);
 ---
 
@@ -102,7 +104,15 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
         data-aos-duration="1000"
         data-aos-easing="ease-in-sine"
       >
-        <img src="/assets/images/portrait.png" alt="Silvia Cremascoli" class="img-fluid portrait wrap" />
+        <Image
+          src={images["../assets/images/portrait.png"]}
+          alt="Silvia Cremascoli"
+          class="img-fluid portrait wrap"
+          widths={[400, 800]}
+          sizes="(min-width: 992px) 50vw, 100vw"
+          loading="eager"
+          fetchpriority="high"
+        />
       </div>
     </div>
   </div>
@@ -119,7 +129,13 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
               data-aos-duration="1500"
               data-aos-easing="ease-in-sine"
             >
-              <img src={`/assets/images/${project.img}.png`} alt={project.homeAlt} class="img-fluid rounded" />
+              <Image
+                src={images[`../assets/images/${project.img}.png`]}
+                alt={project.homeAlt}
+                class="img-fluid rounded"
+                widths={[480, 960]}
+                sizes="(min-width: 992px) 45vw, 100vw"
+              />
             </div>
           );
           const description = (

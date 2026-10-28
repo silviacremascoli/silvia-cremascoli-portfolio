@@ -1,9 +1,12 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Curve from "../components/Curve.astro";
 import ContactCta from "../components/ContactCta.astro";
 import { projects } from "../data/projects.js";
 import { skillGroups } from "../data/skills.js";
+
+const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager: true, import: "default" });
 ---
 
 <Layout
@@ -21,8 +24,10 @@ import { skillGroups } from "../data/skills.js";
             projects.map((project) => (
               <div class="col-md-6 mb-5">
                 <article class="project-card">
-                  <img
-                    src={`/assets/images/${project.img}.png`}
+                  <Image
+                    src={images[`../assets/images/${project.img}.png`]}
+                    widths={[400, 800]}
+                    sizes="(min-width: 768px) 45vw, 100vw"
                     alt={`Screenshot of ${project.alt}`}
                     class="project-image rounded mb-4"
                     id={project.id}

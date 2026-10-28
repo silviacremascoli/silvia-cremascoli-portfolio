@@ -30,6 +30,7 @@
 
     .logo {
       max-width: mixins.rem(60);
+      height: auto;
     }
   }
 
@@ -38,7 +39,7 @@
     padding: mixins.rem(8) mixins.rem(8) mixins.rem(4) mixins.rem(8);
     line-height: mixins.rem(25);
     color: variables.$tertiary-color;
-    font-weight: 500;
+    font-weight: variables.$font-weight-medium;
     font-size: mixins.rem(18);
     border-radius: mixins.rem(5);
     transition: all 300ms ease-in-out;
@@ -140,7 +141,7 @@
 
   .active {
     color: variables.$quaternary-color !important;
-    font-weight: 700;
+    font-weight: variables.$font-weight-bold;
     text-decoration-line: underline;
     text-decoration-style: wavy;
     text-decoration-color: variables.$quaternary-color;
