@@ -92,19 +92,20 @@ footer {
 .social-links {
   a {
     margin: 0 mixins.rem(15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: mixins.rem(48);
+    height: mixins.rem(48);
     color: variables.$quaternary-color;
     background: variables.$secondary-color;
-    padding: mixins.rem(10) mixins.rem(12);
     font-size: mixins.rem(18);
-    border-radius: mixins.rem(23);
+    border-radius: 50%;
     border: 1px solid variables.$quaternary-color;
-    transition: variables.$transition;
-    transition: variables.$transform;
+    @include mixins.wipe-hover(variables.$primary-color);
 
     &:hover {
       color: variables.$tertiary-color;
-      background: variables.$primary-color;
-      transform: scale(1.2);
     }
   }
 }
