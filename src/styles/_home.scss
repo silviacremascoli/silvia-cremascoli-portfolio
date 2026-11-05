@@ -18,25 +18,19 @@
     }
   }
 
-  .resume-link {
-    margin-bottom: mixins.rem(15);
-    margin-right: 0;
-
-    @include mixins.media-breakpoint-up(sm) {
-      margin-right: mixins.rem(15);
-    }
+  .about-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: mixins.rem(15);
+    justify-content: center;
 
     @include mixins.media-breakpoint-up(lg) {
-      margin-right: mixins.rem(20);
-      margin-bottom: 0;
+      justify-content: flex-start;
+      gap: mixins.rem(20);
     }
-  }
 
-  .certificate-link {
-    margin-bottom: mixins.rem(15);
-
-    @include mixins.media-breakpoint-up(lg) {
-      margin-bottom: 0;
+    .btn {
+      margin: 0;
     }
   }
 }
