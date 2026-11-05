@@ -17,7 +17,7 @@ export const projects = [
   },
   {
     name: "Portfolio Prototype Project",
-    img: "portfolio-home",
+    img: "portfolio-prototype-project",
     alt: "portfolio prototype project",
     id: "portfolio-project",
     "built-with": "HTML, CSS and Vue.js",
