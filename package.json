@@ -8,6 +8,7 @@
     "sass": "^1.106.1"
   },
   "dependencies": {
+    "@astrojs/vue": "^7.1.4",
     "@fortawesome/fontawesome-svg-core": "^7.3.1",
     "@fortawesome/free-brands-svg-icons": "^7.3.1",
     "@fortawesome/free-regular-svg-icons": "^7.3.1",
@@ -15,6 +16,7 @@
     "aos": "^2.3.4",
     "astro": "^7.4.2",
     "bootstrap": "^5.3.8",
-    "core-ui-library": "github:silviacremascoli/core-ui-library#main"
+    "core-ui-library": "github:silviacremascoli/core-ui-library#main",
+    "vue": "^3.5.45"
   }
 }
