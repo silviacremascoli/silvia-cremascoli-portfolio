@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import Icon from "../components/Icon.astro";
 import Layout from "../layouts/Layout.astro";
 import Curve from "../components/Curve.astro";
 import ContactCta from "../components/ContactCta.astro";
 import { projects } from "../data/projects.js";
 import { skillGroups } from "../data/skills.js";
+import { Button, Icon } from "core-ui-library/vue";
 
 const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager: true, import: "default" });
 ---
@@ -41,17 +41,26 @@ const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager
                     Built with {project["built-with"]}
                   </p>
                   <div class="project-actions">
-                    <a
+                    <Button
+                      shape="pill"
+                      size="medium"
                       href={project.link}
-                      class="btn btn-main"
                       target="_blank"
-                      aria-label={`Check it out: ${project.name}`}>Check it out</a
-                    ><a
-                      href={project.github}
-                      class="btn btn-second github-project"
-                      target="_blank"
-                      aria-label={`See code on GitHub for ${project.name}`}>See code on GitHub</a
+                      ariaLabel={`Check it out: ${project.name}`}
                     >
+                      Check it out
+                    </Button>
+                    <Button
+                      shape="pill"
+                      size="medium"
+                      variant="outline"
+                      href={project.github}
+                      class="github-project"
+                      target="_blank"
+                      aria-label={`See code on GitHub for ${project.name}`}
+                    >
+                      See code on GitHub
+                    </Button>
                   </div>
                 </article>
               </div>
@@ -76,7 +85,7 @@ const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager
               <h2 class="mb-4">{group.title}</h2>
               {group.items.map((item) => (
                 <p>
-                  <Icon name={item.icon} aria-hidden="true" /> {item.name}
+                  <Icon icon={item.icon} size="xl" color="text-light" ariaHidden={true} /> {item.name}
                 </p>
               ))}
             </div>

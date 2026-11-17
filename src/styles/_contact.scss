@@ -68,16 +68,17 @@
       outline: none !important;
       outline-offset: 0 !important;
     }
+  }
 
-    .btn-second {
-      font-size: variables.$standard-font-size;
-      padding: mixins.rem(10) mixins.rem(20);
-      display: block;
-      margin: 0 auto;
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: mixins.rem(8);
 
-      @include mixins.media-breakpoint-up(lg) {
-        display: inline;
-        margin: 0;
+    span {
+      &:first-child {
+        margin-top: mixins.rem(1);
       }
     }
   }

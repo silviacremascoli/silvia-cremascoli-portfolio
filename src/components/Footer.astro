@@ -1,5 +1,5 @@
 ---
-import Icon from "./Icon.astro";
+import { Button, Icon } from "core-ui-library/vue";
 
 interface Props {
   compact?: boolean;
@@ -11,26 +11,26 @@ const socialLinks = [
   {
     href: "https://www.linkedin.com/in/silvia-cremascoli/",
     label: "LinkedIn profile for Silvia Cremascoli",
-    title: "LinkedIn of Silvia Cremascoli",
-    icon: "fa-brands fa-linkedin",
+    title: "LinkedIn profile of Silvia Cremascoli",
+    icon: "linkedin",
   },
   {
     href: "https://github.com/silviacremascoli",
     label: "GitHub profile for Silvia Cremascoli",
-    title: "GitHub of Silvia Cremascoli",
-    icon: "fa-brands fa-github",
+    title: "GitHub profile of Silvia Cremascoli",
+    icon: "github",
   },
   {
     href: "https://drive.google.com/file/d/1GErs_AAYWhfZPVALLyCl7tc8_PYl6bvS/view?usp=drive_link",
     label: "Silvia Cremascoli resume",
     title: "Resume of Silvia Cremascoli",
-    icon: "fa-solid fa-file",
+    icon: "file",
   },
   {
     href: "https://drive.google.com/file/d/1vzbtdzQ6MFRw9BZ-xZ4lbdku51ahim5m/view?usp=drive_link",
     label: "Silvia Cremascoli certificates",
     title: "Recommendation letter and certificates of Silvia Cremascoli",
-    icon: "fa-solid fa-certificate",
+    icon: "certificate",
   },
 ];
 ---
@@ -53,9 +53,16 @@ const socialLinks = [
     <div class="social-links d-flex justify-content-center">
       {
         socialLinks.map((link) => (
-          <a href={link.href} target="_blank" aria-label={link.label} title={link.title}>
-            <Icon name={link.icon} aria-hidden="true" />
-          </a>
+            <Button
+                href={link.href}
+                iconOnly={true}
+                iconLeft={link.icon}
+                iconSize="lg"
+                shape="pill"
+                target="_blank"
+                ariaLabel={link.label}
+                title={link.title}
+            ></Button>
         ))
       }
     </div>

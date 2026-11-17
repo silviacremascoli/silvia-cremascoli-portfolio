@@ -9,7 +9,7 @@
   overflow: visible;
   margin: 0;
 
-  i {
+  .cui-icon {
     position: absolute;
     left: 0;
     top: mixins.rem(-20);
@@ -17,30 +17,28 @@
     place-items: center;
     width: mixins.rem(36);
     height: mixins.rem(36);
-    font-size: mixins.rem(16);
     border: 2px solid variables.$quinary-color;
     border-radius: 50%;
     background-color: variables.$quaternary-color;
-    color: variables.$quinary-color;
     animation: code-travel 20s infinite linear;
   }
 
-  i:nth-child(2) {
+  .cui-icon:nth-child(2) {
     animation-delay: -5s;
   }
 
-  i:nth-child(3) {
+  .cui-icon:nth-child(3) {
     animation-delay: -10s;
   }
 
-  i:nth-child(4) {
+  .cui-icon:nth-child(4) {
     animation-delay: -15s;
   }
 }
 
 @keyframes code-travel {
   from {
-    transform: translateX(mixins.rem(-36));
+    transform: translateX(mixins.rem(-24));
   }
 
   to {

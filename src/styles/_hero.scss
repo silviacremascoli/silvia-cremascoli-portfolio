@@ -44,24 +44,11 @@
     }
   }
 
-  i {
-    padding: mixins.rem(8);
-    font-size: mixins.rem(26);
-    margin-bottom: mixins.rem(15);
-    color: variables.$quaternary-color;
-
-    @include mixins.media-breakpoint-up(sm) {
-      font-size: mixins.rem(30);
-      padding: mixins.rem(15);
-    }
+  .languages {
+    display: flex;
+    justify-content: center;
+    gap: mixins.rem(16);
   }
 
-  .btn-main {
-    margin: 0;
-    font-size: mixins.rem(18);
 
-    @include mixins.media-breakpoint-up(sm) {
-      margin-top: mixins.rem(15) 0;
-    }
-  }
 }

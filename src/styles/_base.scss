@@ -88,9 +88,13 @@ p {
   outline-offset: 3px;
 }
 
-// Font Awesome's default 1.25em width adds blank space around narrower glyphs
-i .svg-inline--fa {
-  width: auto;
+.cui-icon > span {
+  display: flex;
+}
+
+.cui-icon > span > svg {
+  width: 1em;
+  height: 1em;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -103,7 +107,7 @@ i .svg-inline--fa {
     transition-duration: 0.01ms !important;
   }
 
-  .code-divider i {
+  .code-divider .cui-icon {
     display: none !important;
   }
 

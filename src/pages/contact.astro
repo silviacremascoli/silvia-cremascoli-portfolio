@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Icon from "../components/Icon.astro";
+import { Button, Icon } from "core-ui-library/vue";
 ---
 
 <Layout
@@ -38,13 +38,16 @@ import Icon from "../components/Icon.astro";
               <textarea class="form-control mt-2" id="your-message" rows="8" name="message" required
               ></textarea>
             </div>
-            <button type="submit" class="btn btn-second" title="Send message">Send message</button>
+            <Button type="submit" shape="pill" variant="outline" title="Send message">Send message</Button>
           </form>
         </div>
         <div class="col-lg-6 mt-5 d-flex flex-column justify-content-center">
           <div class="text-center">
             <h2 class="mb-5">Or find me here:</h2>
-            <h3><Icon name="fa-regular fa-envelope" class="me-2" aria-hidden="true" />Email</h3>
+            <h3 class="contact-info">
+                <Icon icon="envelope-regular" size="2xl" color="text-light" ariaHidden={true} />
+                <span>Email</span>
+            </h3>
             <p>
               <a
                 href="mailto:silcremascoli@gmail.com"
@@ -52,7 +55,10 @@ import Icon from "../components/Icon.astro";
                 title="Email Silvia Cremascoli">silcremascoli@gmail.com</a
               >
             </p>
-            <h3><Icon name="fa-brands fa-linkedin" class="me-2" aria-hidden="true" />LinkedIn</h3>
+            <h3 class="contact-info">
+                <Icon icon="linkedin" size="2xl" color="text-light" ariaHidden={true} />
+                <span>LinkedIn</span>
+            </h3>
             <p>
               <a
                 href="https://www.linkedin.com/in/silvia-cremascoli/"

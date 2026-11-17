@@ -101,9 +101,11 @@
     }
   }
 
-  p,
-  i {
+  p {
     color: variables.$quaternary-color;
     font-size: mixins.rem(18);
+    span {
+      margin-right: mixins.rem(2);
+    }
   }
 }

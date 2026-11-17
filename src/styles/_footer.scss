@@ -61,10 +61,6 @@ footer {
 .contact-cta {
   margin-top: 0;
 
-  .btn, .text-muted {
-    font-size: mixins.rem(18);
-  }
-
   @include mixins.media-breakpoint-up(lg) {
     margin-top: mixins.rem(80);
     border-top: none;
@@ -91,26 +87,6 @@ footer {
 
 .social-links {
   gap: mixins.rem(30);
-
-  a {
-    flex: 0 0 48px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: mixins.rem(48);
-    height: mixins.rem(48);
-    color: variables.$quaternary-color;
-    background: variables.$secondary-color;
-    font-size: mixins.rem(18);
-    border-radius: 50%;
-    border: 1px solid variables.$quaternary-color;
-    @include mixins.wipe-hover(variables.$primary-color);
-
-    &:hover {
-      color: variables.$tertiary-color;
-    }
-  }
 }
 
 .github-link {
