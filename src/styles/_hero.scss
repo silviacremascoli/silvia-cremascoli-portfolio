@@ -47,7 +47,8 @@
   .languages {
     display: flex;
     justify-content: center;
-    gap: mixins.rem(16);
+    gap: mixins.rem(24);
+    color: var(--cui-color-primary-active);
   }
 
 

@@ -37,19 +37,6 @@
     text-wrap: balance;
   }
 
-  .github-project {
-    display: block;
-    margin: 0;
-    padding-right: mixins.rem(16);
-    padding-left: mixins.rem(16);
-
-    @include mixins.media-breakpoint-up(lg) {
-      display: inline-block;
-      padding-right: mixins.rem(30);
-      padding-left: mixins.rem(30);
-    }
-  }
-
   .project-subtitle {
     line-height: 1.35;
     text-wrap: balance;
@@ -62,13 +49,6 @@
     align-items: center;
     gap: mixins.rem(12);
     margin-top: auto;
-
-    .btn {
-      font-size: mixins.rem(16);
-      line-height: 1.4;
-      padding-top: mixins.rem(10);
-      padding-bottom: mixins.rem(10);
-    }
 
     @include mixins.media-breakpoint-up(lg) {
       flex-direction: row;
