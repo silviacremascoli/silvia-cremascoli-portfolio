@@ -17,11 +17,11 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
   page="home"
 >
   <div class="hero">
-    <h1 class="mt-3"><span class="my-name">Silvia Cremascoli</span></h1>
-    <h2 class="mt-5">
+    <h1 class="cui-mt-lg"><span class="my-name">Silvia Cremascoli</span></h1>
+    <h2 class="cui-mt-3xl">
       Front-End Developer, <span class="text-nowrap">based in Graz <span aria-label="Austria" role="img">🇦🇹</span></span>
     </h2>
-    <div class="mt-4">
+    <div class="cui-mt-xl">
       <div class="languages">
         {
           languages.map((language) => (
@@ -40,7 +40,7 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
         }
       </div>
     </div>
-    <div class="mt-4">
+    <div class="cui-mt-xl">
         <Button size="large" shape="pill" href="/contact" title="Contact Silvia Cremascoli">
             Contact me!
         </Button>
@@ -53,12 +53,12 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
     <Icon icon="keyboard" color="inverse" ariaHidden={true} />
   </div>
   <div class="content-container container">
-    <div class="row mt-0">
+    <div class="row cui-mt-0">
       <div class="col-lg-6">
         <div class="about-me">
-          <h2 class="mb-4">About me</h2>
-          <p class="mb-5">
-            <span class="d-block mb-3">
+          <h2 class="cui-mb-xl">About me</h2>
+          <p class="cui-mb-3xl">
+            <span class="d-block cui-mb-lg">
               What about me? Well, I love languages (spoken by humans or not 🤖), technology, and
               improving things for the better. That's why after working many years as a
               <strong>translator</strong> and <strong>content manager</strong>
@@ -66,12 +66,12 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
               on a new journey to learn programming languages and I became a
               <strong>committed front-end developer</strong>.
             </span>
-            <span class="d-block mb-3">
+            <span class="d-block cui-mb-lg">
               Since a translator must be particularly precise in the delivery of words and meanings
               into another language, I bring the same <strong>accuracy</strong> and
               <strong>attention to detail</strong> into my code.
             </span>
-            <span class="d-block mb-3">
+            <span class="d-block cui-mb-lg">
               Over the past three years I built <strong>UI component libraries</strong> and
               <strong>design systems</strong>
               with <strong>Storybook and Twig templates</strong>, integrated into enterprise
@@ -81,7 +81,7 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
               <strong>accessible to everyone (WCAG 2.1 AA)</strong>
               — because a beautiful interface that only some people can use is only half the job.
             </span>
-            <span class="d-block mb-3">
+            <span class="d-block cui-mb-lg">
               I speak Italian, German, English, and Spanish, and bring that
               <strong>multilingual perspective</strong> to clear interface copy and user experiences that
               work across cultures.
@@ -160,8 +160,8 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
           const description = (
             <div class="col">
               <div class="project-description">
-                <h2 id={project.homeTitleId}>{project.homeTitle}{project.homeStatus && <span class="mt-3">({project.homeStatus})</span>}</h2>
-                <p class="mb-4 text-muted">{project.homeDescription}</p>
+                <h2 id={project.homeTitleId}>{project.homeTitle}{project.homeStatus && <span class="cui-mt-lg">({project.homeStatus})</span>}</h2>
+                <p class="cui-mb-xl text-muted">{project.homeDescription}</p>
                 <div>
                   <Button shape="pill" href="/work" variant="outline" title={project.homeCta}>
                     {project.homeCta}
@@ -172,7 +172,7 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
           );
 
           return (
-            <div class="row align-items-center mb-5">
+            <div class="row align-items-center cui-mb-3xl">
               {imageOnLeft ? [image, description] : [description, image]}
             </div>
           );
