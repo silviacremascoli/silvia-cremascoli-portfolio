@@ -50,12 +50,18 @@
       margin: 0 auto;
     }
 
-    input,
+    h2 {
+      text-align: center;
+
+      @include mixins.media-breakpoint-up(lg) {
+        text-align: left;
+      }
+    }
+
     select {
       color: variables.$quaternary-color;
     }
 
-    input,
     select,
     textarea {
       border-color: variables.$quaternary-color;
