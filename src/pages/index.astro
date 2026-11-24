@@ -160,7 +160,7 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
           const description = (
             <div class="col">
               <div class="project-description">
-                <h2 id={project.homeTitleId}>{project.homeTitle}{project.homeStatus && <span class="cui-mt-lg">({project.homeStatus})</span>}</h2>
+                <h2 class="cui-mb-xl" id={project.homeTitleId}>{project.homeTitle}{project.homeStatus && <span class="cui-mt-lg">({project.homeStatus})</span>}</h2>
                 <p class="cui-mb-xl text-muted">{project.homeDescription}</p>
                 <div>
                   <Button shape="pill" href="/work" variant="outline" title={project.homeCta}>
