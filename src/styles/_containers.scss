@@ -2,9 +2,6 @@
 @use "variables";
 
 .container {
-  h2 {
-    margin-bottom: mixins.rem(25);
-  }
   .skills h2 {
     font-size: mixins.rem(40);
     margin-top: mixins.rem(20);
