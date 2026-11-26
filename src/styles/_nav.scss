@@ -6,6 +6,13 @@
   padding: mixins.rem(5) 0;
   transition: transform 250ms ease-in-out;
 
+  > .cui-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   &.navbar-hidden {
     transform: translateY(-100%);
   }

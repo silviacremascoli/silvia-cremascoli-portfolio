@@ -5,7 +5,7 @@ import Curve from "../components/Curve.astro";
 import ContactCta from "../components/ContactCta.astro";
 import { projects } from "../data/projects.js";
 import { skillGroups } from "../data/skills.js";
-import { Button, Icon } from "core-ui-library/vue";
+import { Button, Icon, Container, Row, Col } from "core-ui-library/vue";
 
 const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager: true, import: "default" });
 ---
@@ -15,29 +15,29 @@ const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager
   description="Find here all the front-end development projects that Silvia Cremascoli has been working on."
   page="work"
 >
-  <div class="content-container container work">
-    <div class="content cui-mt-0 cui-mb-0 text-center">
+  <Container size="full" queryable className="content-container work">
+    <div class="content cui-mt-0 cui-mb-0 cui-text-center">
       <h1 class="cui-mb-3xl work-title">My latest projects</h1>
       <br />
       <div>
-        <div class="row">
+        <Row>
           {
             projects.map((project) => (
-              <div class="col-md-6 cui-mb-3xl">
+              <Col md={6} className="cui-mb-3xl">
                 <article class="project-card">
                   <Image
                     src={images[`../assets/images/${project.img}.png`]}
                     widths={[400, 800]}
                     sizes="(min-width: 768px) 45vw, 100vw"
                     alt={`Screenshot of ${project.alt}`}
-                    class="project-image rounded cui-mb-xl"
+                    class="project-image cui-rounded-md cui-mb-xl"
                     id={project.id}
                     data-aos={project["aos-fade"]}
                     data-aos-duration="2000"
                     data-aos-easing="ease-in-sine"
                   />
-                  <h2 class="project-title text-center cui-m-0">{project.name}</h2>
-                  <p class="project-subtitle text-center text-muted cui-mt-sm">
+                  <h2 class="project-title cui-text-center">{project.name}</h2>
+                  <p class="project-subtitle cui-text-center cui-text-muted cui-mt-sm">
                     Built with {project["built-with"]}
                   </p>
                   <div class="project-actions">
@@ -61,21 +61,25 @@ const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager
                     </Button>
                   </div>
                 </article>
-              </div>
+              </Col>
             ))
           }
-        </div>
+        </Row>
       </div>
     </div>
-  </div>
+  </Container>
   <Curve variant="green" />
-  <div class="container skills">
-    <div>
-      <div class="row justify-content-center">
+  <div class="skills">
+    <Container size="full" queryable className="content-container">
+      <div>
+      <Row justifyContent="center">
         {
           skillGroups.map((group) => (
-            <div
-              class="col-12 col-md-6 col-lg-4 text-center"
+            <Col
+              span={12}
+              md={6}
+              lg={4}
+              className="cui-text-center"
               data-aos="fade-up"
               data-aos-duration="2000"
               data-aos-easing="ease-in-sine"
@@ -83,14 +87,15 @@ const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager
               <h2 class="cui-mb-xl">{group.title}</h2>
               {group.items.map((item) => (
                 <p>
-                  <Icon icon={item.icon} size="xl" color="text-light" ariaHidden={true} /> {item.name}
+                  <Icon icon={item.icon} size="xl" color="text-light" ariaHidden={true} className="cui-mr-sm" /> {item.name}
                 </p>
               ))}
-            </div>
+            </Col>
           ))
         }
+      </Row>
       </div>
-    </div>
+    </Container>
   </div>
   <Curve variant="white" />
   <ContactCta />

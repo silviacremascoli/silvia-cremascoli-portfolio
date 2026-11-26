@@ -59,17 +59,6 @@
 
 .skills {
   background: variables.$secondary-color;
-  margin: 0;
-  padding: mixins.rem(40);
-  max-width: 100%;
-
-  .row {
-    margin: 0;
-
-    @include mixins.media-breakpoint-up(lg) {
-      margin: 0 mixins.rem(60);
-    }
-  }
 
   h2 {
     margin-top: mixins.rem(30);
@@ -82,10 +71,10 @@
   }
 
   p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: variables.$quaternary-color;
     font-size: mixins.rem(18);
-    span {
-      margin-right: mixins.rem(2);
-    }
   }
 }

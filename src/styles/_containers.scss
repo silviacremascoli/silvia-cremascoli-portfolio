@@ -1,13 +1,11 @@
 @use "mixins";
 @use "variables";
 
-.container {
-  .skills h2 {
-    font-size: mixins.rem(40);
-    margin-top: mixins.rem(20);
-  }
-}
-
+/* Shared section style for full-size Containers (home about/projects, work,
+   contact). Kept in CSS because the cui-* utilities have no breakpoint
+   variants and no horizontal-only padding, so the responsive values below
+   can't be expressed with utility classes. Everything else (paragraph font
+   size, text alignment inside sections) is inherited or set by the sections. */
 .content-container {
   padding: 0 mixins.rem(12) mixins.rem(10) mixins.rem(12);
   text-align: center;
@@ -16,17 +14,11 @@
     padding: mixins.rem(50) mixins.rem(20);
     text-align: left;
   }
-
-  p {
-    font-size: variables.$standard-font-size;
-  }
-  .work {
-    padding: mixins.rem(40) mixins.rem(20);
-  }
 }
 
 .content {
-  margin: mixins.rem(30);
+  margin-right: mixins.rem(30);
+  margin-left: mixins.rem(30);
   h1 {
     font-size: mixins.rem(64);
     line-height: mixins.rem(80);

@@ -35,7 +35,7 @@
 
   .contact-form {
     border-right: none;
-    margin: 0 auto mixins.rem(40) auto;
+    margin: 0 0 mixins.rem(40);
     padding: 0 mixins.rem(20);
     text-align: left;
     color: variables.$quaternary-color;
@@ -47,7 +47,6 @@
     @include mixins.media-breakpoint-up(lg) {
       border-right: 1px solid variables.$primary-color;
       padding: 0 mixins.rem(40);
-      margin: 0 auto;
     }
 
     h2 {

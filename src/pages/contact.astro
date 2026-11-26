@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Button, Icon, Label, Input } from "core-ui-library/vue";
+import { Button, Icon, Label, Input, Typography, Container, Row, Col } from "core-ui-library/vue";
 ---
 
 <Layout
@@ -8,13 +8,14 @@ import { Button, Icon, Label, Input } from "core-ui-library/vue";
   description="Find here all the contact details to work with Silvia Cremascoli."
   page="contact"
 >
-  <div class="contact-details content-container container">
-    <h1 class="text-center">
-      <span class="h1-emoji" aria-hidden="true">👋</span><span>Let's get in touch!</span>
-    </h1>
-    <div class="container">
-      <div class="row cui-mt-3xl">
-        <div class="col-lg-6 cui-mt-3xl contact-form">
+  <Container size="full" queryable className="contact-details content-container">
+    <Typography variant="h1" fontFamily="Playfair" class="cui-text-center">
+      <span class="h1-emoji" aria-hidden="true">👋</span>
+      <span>Let's get in touch!</span>
+    </Typography>
+    <Container size="full" queryable>
+      <Row className="cui-mt-3xl">
+        <Col lg={6} className="contact-form">
           <h2 class="cui-mb-3xl">Write me a message</h2>
           <form method="POST" name="contact" netlify data-astro-reload>
             <div class="cui-form-group">
@@ -40,9 +41,9 @@ import { Button, Icon, Label, Input } from "core-ui-library/vue";
             </div>
             <Button type="submit" shape="pill" variant="outline" title="Send message">Send message</Button>
           </form>
-        </div>
-        <div class="col-lg-6 cui-mt-3xl d-flex flex-column justify-content-center">
-          <div class="text-center">
+        </Col>
+        <Col lg={6} className="cui-flex cui-flex-col cui-justify-center">
+          <div class="cui-text-center">
             <h2 class="cui-mb-3xl">Or find me here:</h2>
             <h3 class="contact-info">
                 <Icon icon="envelope-regular" size="2xl" color="text-light" ariaHidden={true} />
@@ -68,8 +69,8 @@ import { Button, Icon, Label, Input } from "core-ui-library/vue";
               >
             </p>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        </Col>
+      </Row>
+    </Container>
+  </Container>
 </Layout>

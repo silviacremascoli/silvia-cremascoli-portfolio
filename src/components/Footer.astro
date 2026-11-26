@@ -1,5 +1,5 @@
 ---
-import { Button, Icon } from "core-ui-library/vue";
+import { Button, Icon, Container } from "core-ui-library/vue";
 
 interface Props {
   compact?: boolean;
@@ -35,11 +35,11 @@ const socialLinks = [
 ];
 ---
 
-<div class="container">
+<Container size="full">
   <footer class:list={{ "contact-footer": compact }}>
     {
       !compact && (
-        <div class="d-flex justify-content-center">
+        <div class="cui-flex cui-justify-center">
           <a
             href="mailto:silcremascoli@gmail.com"
             class="email-link"
@@ -50,7 +50,7 @@ const socialLinks = [
         </div>
       )
     }
-    <div class="social-links d-flex justify-content-center">
+    <div class="social-links cui-flex cui-justify-center">
       {
         socialLinks.map((link) => (
             <Button
@@ -66,7 +66,7 @@ const socialLinks = [
         ))
       }
     </div>
-    <p class:list={["text-center", compact ? "mt-4" : "mt-5", "fs-6 lh-sm"]}>
+    <p class:list={["cui-text-center", compact ? "cui-mt-xl" : "cui-mt-3xl", "cui-text-base cui-line-height-tight"]}>
       Coded by Silvia Cremascoli and open-sourced on
       <a
         href="https://github.com/silviacremascoli/silvia-cremascoli-portfolio"
@@ -76,4 +76,4 @@ const socialLinks = [
       >
     </p>
   </footer>
-</div>
+</Container>
