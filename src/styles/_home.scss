@@ -9,12 +9,10 @@
   }
 
   p {
-    text-align: center;
     margin-right: mixins.rem(20);
     margin-left: mixins.rem(20);
 
     @include mixins.media-breakpoint-up(lg) {
-      text-align: left;
       margin-right: 0;
       margin-left: 0;
     }
@@ -66,13 +64,6 @@
   }
 
   .project-description {
-    #storybook-title {
-      span {
-        display: block;
-        font-size: mixins.rem(30);
-      }
-    }
-
     @include mixins.media-breakpoint-up(lg) {
       padding: 0 mixins.rem(60);
     }

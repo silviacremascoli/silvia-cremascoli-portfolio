@@ -3,9 +3,11 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Curve from "../components/Curve.astro";
 import ContactCta from "../components/ContactCta.astro";
+import Heading from "../components/Heading.astro";
+import Paragraph from "../components/Paragraph.astro";
 import { languages } from "../data/languages.js";
 import { projects } from "../data/projects.js";
-import { Button, Icon, Typography, Container, Row, Col } from "core-ui-library/vue";
+import { Button, Icon, Container, Row, Col } from "core-ui-library/vue";
 
 const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager: true, import: "default" });
 const featuredProjects = projects.filter((project) => project.homeDescription);
@@ -17,10 +19,10 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
   page="home"
 >
   <div class="hero">
-    <h1 class="cui-mt-lg"><span class="my-name">Silvia Cremascoli</span></h1>
-    <h2 class="cui-mt-3xl">
+    <Heading level="display1" class="cui-mt-lg"><span class="my-name">Silvia Cremascoli</span></Heading>
+    <Heading level={2} class="cui-mt-3xl">
       Front-End Developer, <span class="cui-text-nowrap">based in Graz <span aria-label="Austria" role="img">🇦🇹</span></span>
-    </h2>
+    </Heading>
     <div class="cui-mt-xl">
       <div class="languages">
         {
@@ -52,12 +54,12 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
     <Icon icon="code-branch" color="inverse" ariaHidden={true} />
     <Icon icon="keyboard" color="inverse" ariaHidden={true} />
   </div>
-  <Container size="full" queryable className="content-container">
+  <Container size="full" queryable className="content-container cui-text-center cui-text-left-lg">
     <Row className="cui-mt-0">
       <Col lg={6}>
         <div class="about-me">
-          <h2 class="cui-mb-xl">About me</h2>
-          <p class="cui-mb-3xl">
+          <Heading level={2} class="cui-mb-xl">About me</Heading>
+          <Paragraph class="cui-mb-3xl">
             <span class="cui-block cui-mb-lg">
               What about me? Well, I love languages (spoken by humans or not 🤖), technology, and
               improving things for the better. That's why after working many years as a
@@ -88,7 +90,7 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
             </span>
             I am committed to <strong>constant learning</strong> and personal development, because monotony
             is just too boring for me 😉
-          </p>
+          </Paragraph>
           <div class="about-links cui-mt-2xl">
             <Button
                 shape="pill"
@@ -137,8 +139,8 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
     </Row>
   </Container>
   <Curve variant="green" />
-  <div class="projects">
-    <Container size="full" queryable>
+  <div class="projects cui-text-center cui-text-left-lg">
+    <Container size="full" queryable className="cui-px-md">
       {
         featuredProjects.map((project, index) => {
           const imageOnLeft = index % 2 === 0;
@@ -161,9 +163,9 @@ const featuredProjects = projects.filter((project) => project.homeDescription);
           );
           const description = (
             <Col lg={6}>
-              <div class="project-description">
-                <h2 class="cui-mb-xl" id={project.homeTitleId}>{project.homeTitle}{project.homeStatus && <span class="cui-mt-lg">({project.homeStatus})</span>}</h2>
-                <p class="cui-mb-xl cui-text-muted">{project.homeDescription}</p>
+              <div class="project-description cui-px-md">
+                <Heading level={2} class="cui-mb-xl" id={project.homeTitleId}>{project.homeTitle}{project.homeStatus && <span class="cui-block cui-text-3xl cui-mt-lg">({project.homeStatus})</span>}</Heading>
+                <Paragraph class="cui-mb-xl cui-text-muted">{project.homeDescription}</Paragraph>
                 <div>
                   <Button shape="pill" href="/work" variant="outline" title={project.homeCta}>
                     {project.homeCta}

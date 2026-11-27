@@ -4,33 +4,21 @@
 .contact-details {
   h1 {
     margin-top: mixins.rem(40);
-    font-size: mixins.rem(48);
     padding: 0 mixins.rem(20);
-
-    @include mixins.media-breakpoint-up(sm) {
-      font-size: mixins.rem(56);
-    }
 
     @include mixins.media-breakpoint-up(lg) {
       margin-top: mixins.rem(30);
     }
-
-    .h1-emoji {
-      display: block;
-      margin-bottom: mixins.rem(10);
-
-      @include mixins.media-breakpoint-up(lg) {
-        margin-bottom: mixins.rem(20);
-      }
-    }
   }
 
+  // Column headings stay smaller than the global h2/h3 scale: fluid, capped
+  // at the previous fixed sizes (36px / 24px) from ~800px up.
   h2 {
-    font-size: mixins.rem(36);
+    font-size: clamp(1.75rem, 1.5rem + 1.5vw, 2.25rem);
   }
 
   h3 {
-    font-size: mixins.rem(24);
+    font-size: clamp(1.25rem, 1.1rem + 1vw, 1.5rem);
   }
 
   .contact-form {
@@ -49,14 +37,6 @@
       padding: 0 mixins.rem(40);
     }
 
-    h2 {
-      text-align: center;
-
-      @include mixins.media-breakpoint-up(lg) {
-        text-align: left;
-      }
-    }
-
     select {
       color: variables.$quaternary-color;
     }
@@ -72,19 +52,6 @@
       box-shadow: none;
       outline: none !important;
       outline-offset: 0 !important;
-    }
-  }
-
-  .contact-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: mixins.rem(8);
-
-    span {
-      &:first-child {
-        margin-top: mixins.rem(1);
-      }
     }
   }
 

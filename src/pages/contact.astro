@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Button, Icon, Label, Input, Typography, Container, Row, Col } from "core-ui-library/vue";
+import Heading from "../components/Heading.astro";
+import Paragraph from "../components/Paragraph.astro";
+import { Button, Icon, Label, Input, Container, Row, Col } from "core-ui-library/vue";
 ---
 
 <Layout
@@ -8,15 +10,15 @@ import { Button, Icon, Label, Input, Typography, Container, Row, Col } from "cor
   description="Find here all the contact details to work with Silvia Cremascoli."
   page="contact"
 >
-  <Container size="full" queryable className="contact-details content-container">
-    <Typography variant="h1" fontFamily="Playfair" class="cui-text-center">
-      <span class="h1-emoji" aria-hidden="true">👋</span>
+  <Container size="full" queryable className="contact-details content-container cui-text-center cui-text-left-lg">
+    <Heading level={1} class="cui-text-center cui-mt-lg">
+      <span class="cui-block cui-mb-sm" aria-hidden="true">👋</span>
       <span>Let's get in touch!</span>
-    </Typography>
+    </Heading>
     <Container size="full" queryable>
       <Row className="cui-mt-3xl">
         <Col lg={6} className="contact-form">
-          <h2 class="cui-mb-3xl">Write me a message</h2>
+          <Heading level={2} class="cui-mb-3xl cui-text-center cui-text-left-lg">Write me a message</Heading>
           <form method="POST" name="contact" netlify data-astro-reload>
             <div class="cui-form-group">
               <Label color="primary" for="name-surname">Name and surname:&#8203;</Label>
@@ -44,30 +46,31 @@ import { Button, Icon, Label, Input, Typography, Container, Row, Col } from "cor
         </Col>
         <Col lg={6} className="cui-flex cui-flex-col cui-justify-center">
           <div class="cui-text-center">
-            <h2 class="cui-mb-3xl">Or find me here:</h2>
-            <h3 class="contact-info">
-                <Icon icon="envelope-regular" size="2xl" color="text-light" ariaHidden={true} />
-                <span>Email</span>
-            </h3>
-            <p>
+            <Heading level={2} class="cui-mb-3xl">Or find me here:</Heading>
+            <Heading level={3} class="cui-flex cui-items-center cui-justify-center cui-gap-sm">
+                <Icon icon="envelope-regular" size="2xl" ariaHidden={true} className="cui-mt-xs" />
+                Email
+            </Heading>
+            <Paragraph>
               <a
                 href="mailto:silcremascoli@gmail.com"
-                class="contact-link"
-                title="Email Silvia Cremascoli">silcremascoli@gmail.com</a
-              >
-            </p>
-            <h3 class="contact-info">
-                <Icon icon="linkedin" size="2xl" color="text-light" ariaHidden={true} />
-                <span>LinkedIn</span>
-            </h3>
-            <p>
+                class="contact-link">
+                silcremascoli@gmail.com
+              </a>
+            </Paragraph>
+            <Heading level={3} class="cui-flex cui-items-center cui-justify-center cui-gap-sm cui-mt-xl">
+                <Icon icon="linkedin" size="2xl" ariaHidden={true} className="cui-mt-xs" />
+                LinkedIn
+            </Heading>
+            <Paragraph>
               <a
                 href="https://www.linkedin.com/in/silvia-cremascoli/"
                 class="contact-link"
                 target="_blank"
-                title="LinkedIn Silvia Cremascoli">@Silvia Cremascoli</a
+                rel="noopener noreferrer"
+                aria-label="LinkedIn profile of Silvia Cremascoli">@Silvia Cremascoli</a
               >
-            </p>
+            </Paragraph>
           </div>
         </Col>
       </Row>

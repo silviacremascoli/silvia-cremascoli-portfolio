@@ -3,6 +3,9 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Curve from "../components/Curve.astro";
 import ContactCta from "../components/ContactCta.astro";
+import Heading from "../components/Heading.astro";
+import Paragraph from "../components/Paragraph.astro";
+import Subtitle from "../components/Subtitle.astro";
 import { projects } from "../data/projects.js";
 import { skillGroups } from "../data/skills.js";
 import { Button, Icon, Container, Row, Col } from "core-ui-library/vue";
@@ -15,9 +18,9 @@ const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager
   description="Find here all the front-end development projects that Silvia Cremascoli has been working on."
   page="work"
 >
-  <Container size="full" queryable className="content-container work">
-    <div class="content cui-mt-0 cui-mb-0 cui-text-center">
-      <h1 class="cui-mb-3xl work-title">My latest projects</h1>
+  <Container size="full" queryable className="content-container work cui-text-center cui-text-left-lg">
+    <div class="cui-mt-0 cui-mb-0 cui-mx-2xl cui-text-center">
+      <Heading level={1} class="cui-mb-3xl work-title">My latest projects</Heading>
       <br />
       <div>
         <Row>
@@ -36,10 +39,10 @@ const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager
                     data-aos-duration="2000"
                     data-aos-easing="ease-in-sine"
                   />
-                  <h2 class="project-title cui-text-center">{project.name}</h2>
-                  <p class="project-subtitle cui-text-center cui-text-muted cui-mt-sm">
+                  <Heading level={2} fontFamily="text" class="project-title cui-text-center cui-mb-sm">{project.name}</Heading>
+                  <Subtitle class="project-subtitle cui-text-base cui-text-center cui-mt-xs cui-mb-lg">
                     Built with {project["built-with"]}
-                  </p>
+                  </Subtitle>
                   <div class="project-actions">
                     <Button
                       shape="pill"
@@ -70,25 +73,26 @@ const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager
   </Container>
   <Curve variant="green" />
   <div class="skills">
-    <Container size="full" queryable className="content-container">
+    <Container size="full" queryable className="content-container cui-text-center cui-text-left-lg">
       <div>
-      <Row justifyContent="center">
+      <Row justifyContent="center" className="cui-mb-3xl">
         {
           skillGroups.map((group) => (
             <Col
               span={12}
               md={6}
               lg={4}
-              className="cui-text-center"
+              className="cui-text-center cui-flex cui-flex-col cui-gap-xl"
               data-aos="fade-up"
               data-aos-duration="2000"
               data-aos-easing="ease-in-sine"
             >
-              <h2 class="cui-mb-xl">{group.title}</h2>
+              <Heading level={2}>{group.title}</Heading>
               {group.items.map((item) => (
-                <p>
-                  <Icon icon={item.icon} size="xl" color="text-light" ariaHidden={true} className="cui-mr-sm" /> {item.name}
-                </p>
+                <Paragraph class="cui-text-lg cui-text-center" color="primary">
+                  <Icon icon={item.icon} size="xl" ariaHidden={true} className="cui-mr-sm" />
+                  <span>{item.name}</span>
+                </Paragraph>
               ))}
             </Col>
           ))

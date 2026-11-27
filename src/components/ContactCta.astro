@@ -1,13 +1,15 @@
 ---
-import { Button, Typography, Container } from "core-ui-library/vue";
+import { Button, Container } from "core-ui-library/vue";
+import Heading from "./Heading.astro";
+import Paragraph from "./Paragraph.astro";
 ---
 
 <Container size="full">
   <section class="contact-cta">
-    <div class="contact-box">
+    <div class="contact-box cui-text-center cui-text-left-md">
       <div>
-        <Typography tag="h2" fontFamily={"heading"} weight={"bold"}>Do you like what you see?</Typography>
-        <Typography tag="p">Let's work together!</Typography>
+        <Heading level={2}>Do you like <span class="cui-text-nowrap">what you see?</span></Heading>
+        <Paragraph>Let's work together!</Paragraph>
       </div>
       <div>
         <Button shape="pill" href="/contact" title="Contact Silvia Cremascoli">Contact me</Button>

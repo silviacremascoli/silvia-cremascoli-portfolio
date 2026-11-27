@@ -2,42 +2,20 @@
 @use "variables";
 
 /* Shared section style for full-size Containers (home about/projects, work,
-   contact). Kept in CSS because the cui-* utilities have no breakpoint
-   variants and no horizontal-only padding, so the responsive values below
-   can't be expressed with utility classes. Everything else (paragraph font
-   size, text alignment inside sections) is inherited or set by the sections. */
+   contact). Only the responsive padding lives here — cui-px-* has no
+   breakpoint variants, so it can't be expressed with utility classes.
+   Text alignment is set in markup with cui-text-center cui-text-left-lg. */
 .content-container {
   padding: 0 mixins.rem(12) mixins.rem(10) mixins.rem(12);
-  text-align: center;
+
+  // Page-title size shared by the work and contact pages (fluid: smaller on
+  // mobile/tablet, 4rem from ~1000px up). The home hero h1 is a display1
+  // outside .content-container and keeps the bigger scale from _base.scss.
+  h1 {
+    font-size: clamp(3rem, 1.5rem + 4vw, 4rem);
+  }
 
   @include mixins.media-breakpoint-up(lg) {
     padding: mixins.rem(50) mixins.rem(20);
-    text-align: left;
-  }
-}
-
-.content {
-  margin-right: mixins.rem(30);
-  margin-left: mixins.rem(30);
-  h1 {
-    font-size: mixins.rem(64);
-    line-height: mixins.rem(80);
-  }
-
-  h2 {
-    font-family: variables.$default-font-family;
-    font-size: mixins.rem(18);
-    line-height: 1;
-  }
-
-  h3 {
-    font-family: variables.$default-font-family;
-    font-size: mixins.rem(24);
-    font-weight: variables.$font-weight-bold;
-    line-height: 1.5;
-  }
-
-  p {
-    font-size: mixins.rem(14);
   }
 }

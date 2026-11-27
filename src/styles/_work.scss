@@ -4,13 +4,9 @@
 .work {
   .work-title {
     margin-top: mixins.rem(50);
-    font-size: mixins.rem(48);
     padding: 0 mixins.rem(30);
-    line-height: 1.2;
 
     @include mixins.media-breakpoint-up(sm) {
-      line-height: 1;
-      font-size: mixins.rem(56);
       padding: 0;
     }
   }
@@ -29,17 +25,16 @@
     object-fit: cover;
   }
 
+  .project-title, .project-subtitle {
+    text-wrap: balance;
+    line-height: 1.2;
+  }
+
   .project-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 1.2;
-    text-wrap: balance;
-  }
-
-  .project-subtitle {
-    line-height: 1.35;
-    text-wrap: balance;
+    font-size: mixins.rem(22);
   }
 
   .project-actions {
@@ -62,19 +57,9 @@
 
   h2 {
     margin-top: mixins.rem(30);
-    font-size: mixins.rem(48);
 
     @include mixins.media-breakpoint-up(lg) {
       margin-top: 0;
-      font-size: mixins.rem(56);
     }
-  }
-
-  p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: variables.$quaternary-color;
-    font-size: mixins.rem(18);
   }
 }

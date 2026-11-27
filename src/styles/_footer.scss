@@ -27,13 +27,11 @@ footer {
   gap: mixins.rem(16);
   padding: mixins.rem(24) mixins.rem(20) 0;
   margin-bottom: mixins.rem(40);
-  text-align: center;
 
   @include mixins.media-breakpoint-up(md) {
     flex-direction: row;
     justify-content: space-between;
     padding: mixins.rem(30) mixins.rem(48);
-    text-align: left;
   }
 
   @include mixins.media-breakpoint-up(lg) {

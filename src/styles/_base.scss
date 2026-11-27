@@ -1,6 +1,55 @@
 @use "mixins";
 @use "variables";
 
+// Align the core-ui-library Typography scale (used by the Typography-based
+// Heading/Paragraph/Subtitle/Caption components) with the portfolio design.
+// Scoped to the typography classes on purpose: Icon, Button, Input and Label
+// share the base --cui-font-size-* / --cui-line-height-* tokens, so overriding
+// those tokens globally would inflate those components. Plain class selectors
+// tie with the library's and win by load order; descendant rules like .hero h2
+// keep a higher specificity and still win.
+.cui-typography--display1,
+.cui-typography--h1 {
+  font-size: #{mixins.rem(56)};
+}
+
+.cui-typography--h2 {
+  font-size: #{mixins.rem(36)};
+}
+
+.cui-typography--h3 {
+  font-size: #{mixins.rem(28)};
+}
+
+@include mixins.media-breakpoint-up(sm) {
+  .cui-typography--display1,
+  .cui-typography--h1 {
+    font-size: #{mixins.rem(64)};
+  }
+}
+
+@include mixins.media-breakpoint-up(md) {
+  .cui-typography--display1,
+  .cui-typography--h1 {
+    font-size: #{mixins.rem(72)};
+  }
+}
+
+@include mixins.media-breakpoint-up(lg) {
+  .cui-typography--display1,
+  .cui-typography--h1 {
+    font-size: #{mixins.rem(104)};
+  }
+
+  .cui-typography--h2 {
+    font-size: #{mixins.rem(56)};
+  }
+
+  .cui-typography--h3 {
+    font-size: #{mixins.rem(48)};
+  }
+}
+
 h1,
 h2,
 h3,
@@ -62,7 +111,7 @@ h3 {
 p {
   font-size: variables.$standard-font-size;
   color: variables.$tertiary-color;
-  line-height: 2;
+  line-height: 1.5;
 }
 
 .skip-link {

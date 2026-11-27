@@ -1,0 +1,17 @@
+---
+import { Typography } from "core-ui-library/vue";
+import type { TypographyProps, TypographyVariant } from "core-ui-library/vue";
+
+interface Props {
+  level?: 1 | 2 | 3 | 4 | 5 | 6 | "display1" | "display2";
+  fontFamily?: TypographyProps["fontFamily"];
+  color?: TypographyProps["color"];
+  class?: string;
+  id?: string;
+}
+
+const { level = 2, fontFamily, color, class: className, id } = Astro.props;
+const variant: TypographyVariant = typeof level === "number" ? `h${level}` : level;
+---
+
+<Typography variant={variant} color={color} fontFamily={fontFamily} className={className} id={id}><slot /></Typography>

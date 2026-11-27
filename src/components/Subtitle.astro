@@ -1,0 +1,15 @@
+---
+import { Typography } from "core-ui-library/vue";
+import type { TypographyProps } from "core-ui-library/vue";
+
+interface Props {
+  variant?: "subtitle1" | "subtitle2";
+  color?: TypographyProps["color"];
+  class?: string;
+  id?: string;
+}
+
+const { variant = "subtitle1", color, class: className, id } = Astro.props;
+---
+
+<Typography variant={variant} color={color} className={className} id={id}><slot /></Typography>

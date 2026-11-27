@@ -51,7 +51,7 @@ This portfolio serves as a digital CV and a showcase of the work I have built ac
 
 - `src/pages/` — the home, work, and contact pages (`index.astro`, `work.astro`, `contact.astro`)
 - `src/layouts/Layout.astro` — shared `<head>`, global styles, navigation, footer, and client script
-- `src/components/` — reusable pieces: `Nav`, `Footer`, `Curve` (section dividers), and `ContactCta`
+- `src/components/` — reusable pieces: `Nav`, `Footer`, `Curve` (section dividers), `ContactCta`, and the semantic text components `Heading`, `Paragraph`, `Subtitle`, `Caption`
 - `src/data/` — projects, skills, and languages rendered by the pages
 - `src/scripts/nav.js` — hide-on-scroll behavior for the navigation bar
 - `src/styles/portfolio.scss` — Sass entry point; `_*.scss` partials hold the modular styles
@@ -76,9 +76,7 @@ These projects demonstrate my ability to work with reusable UI components, APIs,
 
 ## Component library
 
-The project installs the [Core UI Library](https://github.com/silviacremascoli/core-ui-library) from GitHub (`github:silviacremascoli/core-ui-library#main`); its `prepare` script builds the package during `npm install`. Its stylesheet is imported site-wide from `src/layouts/Layout.astro`; existing page markup has not yet been replaced with library components.
-
-The library package exposes React, Vue, and Twig component entry points for future integration.
+The project installs the [Core UI Library](https://github.com/silviacremascoli/core-ui-library) from GitHub (`github:silviacremascoli/core-ui-library#main`); its `prepare` script builds the package during `npm install`. Its stylesheet is imported site-wide from `src/layouts/Layout.astro`. Pages use library components for buttons, icons, and layout (`Button`, `Icon`, `Container`, `Row`, `Col` from `core-ui-library/vue`), while text goes through the local semantic components (`Heading`, `Paragraph`, `Subtitle`, `Caption`) in `src/components/` — thin wrappers around the library's `Typography`, with the library's type scale aligned to the portfolio design via scoped overrides in `src/styles/_base.scss`.
 
 ## Run locally
 
