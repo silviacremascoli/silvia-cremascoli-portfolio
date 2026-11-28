@@ -35,7 +35,7 @@ const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager
                     alt={`Screenshot of ${project.alt}`}
                     class="project-image cui-rounded-md cui-mb-xl"
                     id={project.id}
-                    data-aos={project["aos-fade"]}
+                    data-aos="zoom-in"
                     data-aos-duration="2000"
                     data-aos-easing="ease-in-sine"
                   />
@@ -83,13 +83,17 @@ const images = import.meta.glob<ImageMetadata>("../assets/images/*.png", { eager
               md={6}
               lg={4}
               className="cui-text-center cui-flex cui-flex-col cui-gap-xl"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              data-aos-easing="ease-in-sine"
             >
               <Heading level={2}>{group.title}</Heading>
-              {group.items.map((item) => (
-                <Paragraph class="cui-text-lg cui-text-center" color="primary">
+              {group.items.map((item, itemIndex) => (
+                <Paragraph
+                  class="cui-text-lg cui-text-center"
+                  color="primary"
+                  data-aos="zoom-in"
+                  data-aos-delay={itemIndex * 100}
+                  data-aos-duration="2000"
+                  data-aos-easing="ease-in-sine"
+                >
                   <Icon icon={item.icon} size="xl" ariaHidden={true} className="cui-mr-sm" />
                   <span>{item.name}</span>
                 </Paragraph>
